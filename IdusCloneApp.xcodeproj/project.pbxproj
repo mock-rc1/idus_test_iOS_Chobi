@@ -28,6 +28,7 @@
 		C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C33F735E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf */; };
 		C33F736F26B5450C00A57CFA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F736026B5450C00A57CFA /* BaseViewController.swift */; };
 		C396857026B5723F004FB9D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396856F26B5723F004FB9D6 /* LoginViewController.swift */; };
+		C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396857126B5753C004FB9D6 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		C33F735E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
 		C33F736026B5450C00A57CFA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C396856F26B5723F004FB9D6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C396857126B5753C004FB9D6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		ED1DD05BE264ABA9505B5062 /* Pods_IdusCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdusCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -183,10 +185,19 @@
 		C33F738626B545B100A57CFA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C396857326B579F8004FB9D6 /* Register */,
 				C33F733E26B5444200A57CFA /* LoginStoryboard.storyboard */,
 				C396856F26B5723F004FB9D6 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		C396857326B579F8004FB9D6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				C396857126B5753C004FB9D6 /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		F71D973486A42E5E13A3129B /* Frameworks */ = {
@@ -320,6 +331,7 @@
 				C33F733B26B5444200A57CFA /* SceneDelegate.swift in Sources */,
 				C33F736A26B5450C00A57CFA /* Color.swift in Sources */,
 				C33F736F26B5450C00A57CFA /* BaseViewController.swift in Sources */,
+				C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,
 				C33F736326B5450C00A57CFA /* Device.swift in Sources */,
 				C33F736126B5450C00A57CFA /* Constant.swift in Sources */,
