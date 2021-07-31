@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6ze-E6-Azm">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Action 메인-->
+        <scene sceneID="SPE-QY-1Qe">
+            <objects>
+                <viewController storyboardIdentifier="ActionViewController" id="YLU-QT-GuU" customClass="ActionViewController" customModule="EduTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LXe-bL-VCk">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="STH-xl-NlG">
+                                <rect key="frame" x="124.66666666666669" y="332" width="141" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzJ-fR-0Ub">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="30"/>
+                                        <state key="normal" title="화면 전환"/>
+                                        <connections>
+                                            <segue destination="kkl-jh-5Yt" kind="show" id="cqW-7R-gEJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3k-4P-807">
+                                        <rect key="frame" x="0.0" y="50" width="141" height="30"/>
+                                        <state key="normal" title="인디케이터 (로딩)"/>
+                                        <connections>
+                                            <action selector="indicatorButtonTapped:" destination="YLU-QT-GuU" eventType="touchUpInside" id="N2g-mT-C9r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlJ-fp-yrH">
+                                        <rect key="frame" x="0.0" y="100" width="141" height="30"/>
+                                        <state key="normal" title="인디케이터 (커스텀 gif)"/>
+                                        <connections>
+                                            <action selector="gifIndicatorButtonTapped:" destination="YLU-QT-GuU" eventType="touchUpInside" id="h71-kl-Qcx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otS-Nq-xWd">
+                                        <rect key="frame" x="0.0" y="150" width="141" height="30"/>
+                                        <state key="normal" title="경고창, 팝업 띄우기"/>
+                                        <connections>
+                                            <segue destination="IBP-hQ-Kt2" kind="show" id="fzt-N0-hWx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I6x-bM-t36"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="STH-xl-NlG" firstAttribute="centerY" secondItem="LXe-bL-VCk" secondAttribute="centerY" id="ENb-Tr-bqL"/>
+                            <constraint firstItem="STH-xl-NlG" firstAttribute="centerX" secondItem="LXe-bL-VCk" secondAttribute="centerX" id="aCt-Ov-rBC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Action 메인" id="xNc-Z6-Oy2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Umq-uX-R1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888.4057971014495" y="34.821428571428569"/>
+        </scene>
+        <!--화면 전환-->
+        <scene sceneID="0Lj-z5-pDA">
+            <objects>
+                <viewController storyboardIdentifier="TransitionViewController" id="kkl-jh-5Yt" customClass="TransitionViewController" customModule="EduTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sgQ-fM-pfk">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CSv-4A-hAw">
+                                <rect key="frame" x="78.666666666666686" y="307" width="233" height="230"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8j-f9-Uca">
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="30"/>
+                                        <state key="normal" title="네비게이션 컨트롤러를 이용한 화면전환"/>
+                                        <connections>
+                                            <segue destination="MQY-on-pfb" kind="show" id="3KR-F2-Prg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDh-TD-D68">
+                                        <rect key="frame" x="0.0" y="50" width="233" height="30"/>
+                                        <state key="normal" title="RootViewController로 이동"/>
+                                        <connections>
+                                            <action selector="changeRootViewControllerButtonTouchUpInside:" destination="kkl-jh-5Yt" eventType="touchUpInside" id="Dw2-9l-NOS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHD-JM-qB6">
+                                        <rect key="frame" x="0.0" y="100" width="233" height="30"/>
+                                        <state key="normal" title="화면의 일부를 덮는 modal"/>
+                                        <connections>
+                                            <segue destination="MQY-on-pfb" kind="presentation" id="494-vg-PLm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxC-ks-sAJ">
+                                        <rect key="frame" x="0.0" y="150" width="233" height="30"/>
+                                        <state key="normal" title="화면의 전체를 덮는 modal"/>
+                                        <connections>
+                                            <segue destination="MQY-on-pfb" kind="presentation" modalPresentationStyle="fullScreen" id="aD9-dx-ZMP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-zQ-JwP">
+                                        <rect key="frame" x="0.0" y="200" width="233" height="30"/>
+                                        <state key="normal" title="새로운 window로 화면전환"/>
+                                        <connections>
+                                            <action selector="changeWindowButtonTouchUpInside:" destination="kkl-jh-5Yt" eventType="touchUpInside" id="Oz5-8V-css"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2uz-G3-yW5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CSv-4A-hAw" firstAttribute="centerX" secondItem="sgQ-fM-pfk" secondAttribute="centerX" id="XHw-Sl-hjr"/>
+                            <constraint firstItem="CSv-4A-hAw" firstAttribute="centerY" secondItem="sgQ-fM-pfk" secondAttribute="centerY" id="xgi-9s-vpT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="화면 전환" id="cnh-Nf-05R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZl-uO-iHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2817" y="-369"/>
+        </scene>
+        <!--경고창, 팝업 띄우기-->
+        <scene sceneID="Kl6-sV-bdE">
+            <objects>
+                <viewController storyboardIdentifier="AlertViewController" id="IBP-hQ-Kt2" customClass="AlertViewController" customModule="EduTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTv-vn-JON">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="25G-Af-HuJ">
+                                <rect key="frame" x="54" y="232" width="282" height="380"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0d-Hd-jPR">
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="30"/>
+                                        <state key="normal" title="제목만 있는 경고창"/>
+                                        <connections>
+                                            <action selector="alertWithTitleButtonTouchUpInside:" destination="IBP-hQ-Kt2" eventType="touchUpInside" id="LOQ-aX-I3M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewy-SU-n9O">
+                                        <rect key="frame" x="0.0" y="50" width="282" height="30"/>
+                                        <state key="normal" title="제목과 본문이 있는 경고창"/>
+                                        <connections>
+                                            <action selector="alertWithTitleAndMessageButtonTouchUpInside:" destination="IBP-hQ-Kt2" eventType="touchUpInside" id="MRr-7U-1vF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kg-q0-rU0">
+                                        <rect key="frame" x="0.0" y="100" width="282" height="30"/>
+                                        <state key="normal" title="취소가 있는 경고창"/>
+                                        <connections>
+                                            <action selector="alertWithCancelButtonTouchUpInside:" destination="IBP-hQ-Kt2" eventType="touchUpInside" id="hUV-Y6-ckS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0R-zT-C4R">
+                                        <rect key="frame" x="0.0" y="150" width="282" height="30"/>
+                                        <state key="normal" title="확인에 completion이 있는 경고창"/>
+                                        <connections>
+                                            <action selector="alertWithCompletionButtonTouchUpInside:" destination="IBP-hQ-Kt2" eventType="touchUpInside" id="VSC-bU-USU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Eo-Cv-4HD">
+                                        <rect key="frame" x="0.0" y="200" width="282" height="30"/>
+                                        <state key="normal" title="커스텀 UIAlertAction이 있는 경고창"/>
+                                        <connections>
+                                            <action selector="alertWithCustomActionButtonTouchUpInside:" destination="IBP-hQ-Kt2" eventType="touchUpInside" id="NjR-9c-tyS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKF-up-dVZ">
+                                        <rect key="frame" x="0.0" y="250" width="282" height="30"/>
+                                        <state key="normal" title="커스텀 UIAlertAction들이 있는 경고창"/>
+                                        <connections>
+                                            <action selector="alertwithCustomActionsButtonTouchUpInside:" destination="IBP-hQ-Kt2" eventType="touchUpInside" id="vMs-Yw-zdh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OjS-zh-fMt">
+                                        <rect key="frame" x="0.0" y="300" width="282" height="30"/>
+                                        <state key="normal" title="커스텀 UIAlertAction들이 있는 Action Sheet"/>
+                                        <connections>
+                                            <action selector="actionSheetWithCustomActionsButtonTouchUpInside:" destination="IBP-hQ-Kt2" eventType="touchUpInside" id="xa7-lR-Onu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCc-tk-CiB">
+                                        <rect key="frame" x="0.0" y="350" width="282" height="30"/>
+                                        <state key="normal" title="커스텀 하단 경고창"/>
+                                        <connections>
+                                            <action selector="customBottomAlertButtonTouchUpInside:" destination="IBP-hQ-Kt2" eventType="touchUpInside" id="ltZ-Vc-Yub"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2jF-O1-e2R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="25G-Af-HuJ" firstAttribute="centerY" secondItem="mTv-vn-JON" secondAttribute="centerY" id="lXg-4X-di0"/>
+                            <constraint firstItem="25G-Af-HuJ" firstAttribute="centerX" secondItem="mTv-vn-JON" secondAttribute="centerX" id="lh3-TO-NV9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="경고창, 팝업 띄우기" id="Bk1-S6-k5w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6m-NJ-CiQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2817" y="436"/>
+        </scene>
+        <!--화면 전환 닫기-->
+        <scene sceneID="DtT-NV-zWg">
+            <objects>
+                <viewController storyboardIdentifier="TransitionNextViewController" id="MQY-on-pfb" customClass="TransitionNextViewController" customModule="EduTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vse-aN-iuR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vXK-uP-N5F">
+                                <rect key="frame" x="78.666666666666686" y="355" width="233" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vZ-VU-SXb">
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="30"/>
+                                        <state key="normal" title="네비게이션 컨트롤러를 이용한 뒤로가기"/>
+                                        <connections>
+                                            <action selector="navigationPopButtonTouchUpInside:" destination="MQY-on-pfb" eventType="touchUpInside" id="oSx-BQ-F6K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwN-3L-Lqe">
+                                        <rect key="frame" x="0.0" y="50" width="233" height="30"/>
+                                        <state key="normal" title="modal 내리기"/>
+                                        <connections>
+                                            <action selector="dismissModalButtonTouchUpInside:" destination="MQY-on-pfb" eventType="touchUpInside" id="rxc-T2-vyF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NdU-a8-IAk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vXK-uP-N5F" firstAttribute="centerY" secondItem="vse-aN-iuR" secondAttribute="centerY" id="Nin-I3-mCK"/>
+                            <constraint firstItem="vXK-uP-N5F" firstAttribute="centerX" secondItem="vse-aN-iuR" secondAttribute="centerX" id="zes-Bu-YFn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="화면 전환 닫기" id="1hq-wg-9Uo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4p-bE-ifh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3746" y="-370"/>
+        </scene>
+        <!--Action Navigation-->
+        <scene sceneID="0zW-vK-Cc3">
+            <objects>
+                <navigationController storyboardIdentifier="ActionNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="6ze-E6-Azm" userLabel="Action Navigation" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Action" image="figure.walk" catalog="system" id="uZg-zc-rUR"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8oF-f3-d7l">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YLU-QT-GuU" kind="relationship" relationship="rootViewController" id="2GX-6v-TeE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUA-Zl-ee7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978.26086956521749" y="34.821428571428569"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="494-vg-PLm"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
