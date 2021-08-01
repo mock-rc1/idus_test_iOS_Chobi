@@ -9,6 +9,7 @@ target 'IdusCloneApp' do
   pod 'KakaoSDKCommon'  # 필수 요소를 담은 공통 모듈
   pod 'KakaoSDKAuth'  # 카카오 로그인
   pod 'KakaoSDKUser'
+  pod 'naveridlogin-sdk-ios' # 네이버 로그인
   pod 'SDWebImage'
   pod 'XLPagerTabStrip', '~> 9.0'
   pod 'MSPeekCollectionViewDelegateImplementation'

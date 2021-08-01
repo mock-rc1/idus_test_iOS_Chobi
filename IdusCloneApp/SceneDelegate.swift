@@ -7,18 +7,25 @@
 
 import UIKit
 import KakaoSDKAuth
+import NaverThirdPartyLogin
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-    //카카오 로그인
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-                if let url = URLContexts.first?.url {
-                    if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                        _ = AuthController.handleOpenUrl(url: url)
+        
+        // MARK: 카카오 로그인
+        if let url = URLContexts.first?.url {
+                if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                    _ = AuthController.handleOpenUrl(url: url)
             }
         }
+        
+        // MARK: 네이버 로그인 (네이버 로그인 화면이 새로 등장 -> 토큰을 요청하는 코드)
+        NaverThirdPartyLoginConnection
+                .getSharedInstance()?
+                .receiveAccessToken(URLContexts.first?.url)
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

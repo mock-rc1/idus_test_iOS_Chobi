@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16D3C4E87CB6EB8E9C796B07 /* Pods_IdusCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1DD05BE264ABA9505B5062 /* Pods_IdusCloneApp.framework */; };
+		C317E00226B67C93004FF5F8 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E00126B67C93004FF5F8 /* EmailLoginViewController.swift */; };
+		C33F690626B66754000B2CA5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33F690526B66754000B2CA5 /* MainStoryboard.storyboard */; };
 		C33F733926B5444200A57CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F733826B5444200A57CFA /* AppDelegate.swift */; };
 		C33F733B26B5444200A57CFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F733A26B5444200A57CFA /* SceneDelegate.swift */; };
 		C33F734026B5444200A57CFA /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33F733E26B5444200A57CFA /* LoginStoryboard.storyboard */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		55478DD2612213937B9B65D5 /* Pods-IdusCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdusCloneApp.release.xcconfig"; path = "Target Support Files/Pods-IdusCloneApp/Pods-IdusCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		8745EE5052FBC46CFF93D564 /* Pods-IdusCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdusCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-IdusCloneApp/Pods-IdusCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C317E00126B67C93004FF5F8 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
+		C33F690526B66754000B2CA5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C33F733526B5444200A57CFA /* IdusCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdusCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33F733826B5444200A57CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C33F733A26B5444200A57CFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,22 @@
 				55478DD2612213937B9B65D5 /* Pods-IdusCloneApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C317E00026B67C6A004FF5F8 /* EmailLogin */ = {
+			isa = PBXGroup;
+			children = (
+				C317E00126B67C93004FF5F8 /* EmailLoginViewController.swift */,
+			);
+			path = EmailLogin;
+			sourceTree = "<group>";
+		};
+		C33F690426B66626000B2CA5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C33F690526B66754000B2CA5 /* MainStoryboard.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		C33F732C26B5444200A57CFA = {
@@ -177,6 +197,7 @@
 		C33F737026B5451300A57CFA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C33F690426B66626000B2CA5 /* Main */,
 				C33F738626B545B100A57CFA /* Login */,
 			);
 			path = Sources;
@@ -185,6 +206,7 @@
 		C33F738626B545B100A57CFA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C317E00026B67C6A004FF5F8 /* EmailLogin */,
 				C396857326B579F8004FB9D6 /* Register */,
 				C33F733E26B5444200A57CFA /* LoginStoryboard.storyboard */,
 				C396856F26B5723F004FB9D6 /* LoginViewController.swift */,
@@ -270,6 +292,7 @@
 				C33F736D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf in Resources */,
 				C33F734526B5444200A57CFA /* LaunchScreen.storyboard in Resources */,
 				C33F734226B5444200A57CFA /* Assets.xcassets in Resources */,
+				C33F690626B66754000B2CA5 /* MainStoryboard.storyboard in Resources */,
 				C33F734026B5444200A57CFA /* LoginStoryboard.storyboard in Resources */,
 				C33F736C26B5450C00A57CFA /* NotoSansCJKkr-Medium.otf in Resources */,
 				C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */,
@@ -334,6 +357,7 @@
 				C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,
 				C33F736326B5450C00A57CFA /* Device.swift in Sources */,
+				C317E00226B67C93004FF5F8 /* EmailLoginViewController.swift in Sources */,
 				C33F736126B5450C00A57CFA /* Constant.swift in Sources */,
 				C33F736526B5450C00A57CFA /* String.swift in Sources */,
 				C33F736926B5450C00A57CFA /* UIFont.swift in Sources */,
