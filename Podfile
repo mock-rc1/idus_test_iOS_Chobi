@@ -6,6 +6,12 @@ target 'IdusCloneApp' do
   use_frameworks!
 
   # Pods for IdusCloneApp
+  pod 'KakaoSDKCommon'  # 필수 요소를 담은 공통 모듈
+  pod 'KakaoSDKAuth'  # 카카오 로그인
+  pod 'KakaoSDKUser'
+  pod 'SDWebImage'
+  pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'MSPeekCollectionViewDelegateImplementation'
   pod 'Alamofire'
   pod 'AlamofireNetworkActivityIndicator'
   pod 'SnapKit'

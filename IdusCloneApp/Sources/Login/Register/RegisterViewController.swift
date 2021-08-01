@@ -109,3 +109,8 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate{
 }
 
 
+//git 올리기용- 나중에 사용 예정임
+//import SDWebImage
+//import XLPagerTabStrip
+//import MSPeekCollectionViewDelegateImplementation
+//
