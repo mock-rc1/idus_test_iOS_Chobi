@@ -31,7 +31,7 @@ DEPENDENCIES:
   - naveridlogin-sdk-ios
   - SDWebImage
   - SnapKit
-  - XLPagerTabStrip (~> 9.0)
+  - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
@@ -58,6 +58,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 36b44fa15a9bdcf78c7df78514a59995941499f0
+PODFILE CHECKSUM: bc29ab664171b77b35876bccea6e2a935460049c
 
 COCOAPODS: 1.10.1

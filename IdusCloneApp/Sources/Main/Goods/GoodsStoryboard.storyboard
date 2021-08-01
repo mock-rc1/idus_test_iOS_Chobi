@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BeE-Zm-0GF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--작품-->
+        <scene sceneID="Veh-xb-GZO">
+            <objects>
+                <navigationController storyboardIdentifier="GoodsNavigationController" id="BeE-Zm-0GF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="작품" image="탭바_작품" id="IfW-oo-Kyj"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bo0-cI-qw7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Vru-0c-jlT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="697-Io-eHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-841" y="76"/>
+        </scene>
+        <!--Goods View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="GoodsViewController" id="Y6W-OH-hqX" customClass="GoodsViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="geP-A4-6Md" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="88" width="414" height="62"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="ehL-10-a0n"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rxX-aN-CEZ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wrz-gu-5rY">
+                                <rect key="frame" x="0.0" y="150" width="414" height="663"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="geP-A4-6Md" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="7ch-f5-d4u"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wrz-gu-5rY" secondAttribute="trailing" id="SDd-i4-Qid"/>
+                            <constraint firstItem="geP-A4-6Md" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="b6D-fM-ne9"/>
+                            <constraint firstItem="geP-A4-6Md" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="g6m-yy-iMc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Wrz-gu-5rY" secondAttribute="bottom" id="rgx-fR-MIx"/>
+                            <constraint firstItem="Wrz-gu-5rY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rqf-CD-jUx"/>
+                            <constraint firstItem="Wrz-gu-5rY" firstAttribute="top" secondItem="geP-A4-6Md" secondAttribute="bottom" id="wA6-j6-MDL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W52-Ku-CYW">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" image="상단_장바구니" id="Dai-8i-E5M">
+                            <color key="tintColor" systemColor="systemGrayColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonBarView" destination="geP-A4-6Md" id="bB2-xe-vFT"/>
+                        <outlet property="containerView" destination="Wrz-gu-5rY" id="7Pa-KY-eYc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="상단_장바구니" width="25" height="23"/>
+        <image name="탭바_작품" width="25" height="26"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

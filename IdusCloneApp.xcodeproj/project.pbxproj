@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		16D3C4E87CB6EB8E9C796B07 /* Pods_IdusCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED1DD05BE264ABA9505B5062 /* Pods_IdusCloneApp.framework */; };
 		C317E00226B67C93004FF5F8 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E00126B67C93004FF5F8 /* EmailLoginViewController.swift */; };
+		C317E00526B68887004FF5F8 /* GoodsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E00426B68887004FF5F8 /* GoodsStoryboard.storyboard */; };
+		C317E00726B688B8004FF5F8 /* GoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E00626B688B7004FF5F8 /* GoodsViewController.swift */; };
+		C317E00E26B6903A004FF5F8 /* ClassStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E00D26B6903A004FF5F8 /* ClassStoryboard.storyboard */; };
+		C317E01026B690AC004FF5F8 /* ClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317E00F26B690AC004FF5F8 /* ClassViewController.swift */; };
+		C317E01226B691E9004FF5F8 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E01126B691E9004FF5F8 /* SearchStoryboard.storyboard */; };
+		C317E01426B693A6004FF5F8 /* CategoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E01326B693A6004FF5F8 /* CategoryStoryboard.storyboard */; };
+		C317E01626B69464004FF5F8 /* MyInfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E01526B69464004FF5F8 /* MyInfoStoryboard.storyboard */; };
 		C33F690626B66754000B2CA5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C33F690526B66754000B2CA5 /* MainStoryboard.storyboard */; };
 		C33F733926B5444200A57CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F733826B5444200A57CFA /* AppDelegate.swift */; };
 		C33F733B26B5444200A57CFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F733A26B5444200A57CFA /* SceneDelegate.swift */; };
@@ -29,6 +36,12 @@
 		C33F736D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C33F735D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf */; };
 		C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C33F735E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf */; };
 		C33F736F26B5450C00A57CFA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F736026B5450C00A57CFA /* BaseViewController.swift */; };
+		C3825FAD26B6BEEE009CAD58 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3825FAC26B6BEEE009CAD58 /* TodayViewController.swift */; };
+		C3825FB026B6C207009CAD58 /* TodayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3825FAF26B6C207009CAD58 /* TodayStoryboard.storyboard */; };
+		C3825FB226B6C31A009CAD58 /* NewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3825FB126B6C31A009CAD58 /* NewStoryboard.storyboard */; };
+		C3825FB426B6C33B009CAD58 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3825FB326B6C33B009CAD58 /* NewViewController.swift */; };
+		C3825FB626B6C3FA009CAD58 /* RealtimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3825FB526B6C3FA009CAD58 /* RealtimeViewController.swift */; };
+		C3825FB826B6C445009CAD58 /* RealtimeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3825FB726B6C445009CAD58 /* RealtimeStoryboard.storyboard */; };
 		C396857026B5723F004FB9D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396856F26B5723F004FB9D6 /* LoginViewController.swift */; };
 		C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396857126B5753C004FB9D6 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +50,13 @@
 		55478DD2612213937B9B65D5 /* Pods-IdusCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdusCloneApp.release.xcconfig"; path = "Target Support Files/Pods-IdusCloneApp/Pods-IdusCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		8745EE5052FBC46CFF93D564 /* Pods-IdusCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdusCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-IdusCloneApp/Pods-IdusCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C317E00126B67C93004FF5F8 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
+		C317E00426B68887004FF5F8 /* GoodsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoodsStoryboard.storyboard; sourceTree = "<group>"; };
+		C317E00626B688B7004FF5F8 /* GoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsViewController.swift; sourceTree = "<group>"; };
+		C317E00D26B6903A004FF5F8 /* ClassStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClassStoryboard.storyboard; sourceTree = "<group>"; };
+		C317E00F26B690AC004FF5F8 /* ClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewController.swift; sourceTree = "<group>"; };
+		C317E01126B691E9004FF5F8 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
+		C317E01326B693A6004FF5F8 /* CategoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryStoryboard.storyboard; sourceTree = "<group>"; };
+		C317E01526B69464004FF5F8 /* MyInfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyInfoStoryboard.storyboard; sourceTree = "<group>"; };
 		C33F690526B66754000B2CA5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C33F733526B5444200A57CFA /* IdusCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdusCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C33F733826B5444200A57CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +79,12 @@
 		C33F735D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		C33F735E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
 		C33F736026B5450C00A57CFA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C3825FAC26B6BEEE009CAD58 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		C3825FAF26B6C207009CAD58 /* TodayStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodayStoryboard.storyboard; sourceTree = "<group>"; };
+		C3825FB126B6C31A009CAD58 /* NewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewStoryboard.storyboard; sourceTree = "<group>"; };
+		C3825FB326B6C33B009CAD58 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		C3825FB526B6C3FA009CAD58 /* RealtimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeViewController.swift; sourceTree = "<group>"; };
+		C3825FB726B6C445009CAD58 /* RealtimeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RealtimeStoryboard.storyboard; sourceTree = "<group>"; };
 		C396856F26B5723F004FB9D6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C396857126B5753C004FB9D6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		ED1DD05BE264ABA9505B5062 /* Pods_IdusCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdusCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,9 +119,59 @@
 			path = EmailLogin;
 			sourceTree = "<group>";
 		};
+		C317E00326B687C4004FF5F8 /* Goods */ = {
+			isa = PBXGroup;
+			children = (
+				C3825FA926B6BEB7009CAD58 /* Today */,
+				C3825FAA26B6BEC9009CAD58 /* Realtime */,
+				C3825FAB26B6BED8009CAD58 /* New */,
+				C317E00426B68887004FF5F8 /* GoodsStoryboard.storyboard */,
+				C317E00626B688B7004FF5F8 /* GoodsViewController.swift */,
+			);
+			path = Goods;
+			sourceTree = "<group>";
+		};
+		C317E00826B68F46004FF5F8 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				C317E00D26B6903A004FF5F8 /* ClassStoryboard.storyboard */,
+				C317E00F26B690AC004FF5F8 /* ClassViewController.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		C317E00926B68F4C004FF5F8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C317E01126B691E9004FF5F8 /* SearchStoryboard.storyboard */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C317E00A26B68F54004FF5F8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C317E01326B693A6004FF5F8 /* CategoryStoryboard.storyboard */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C317E00B26B68F8F004FF5F8 /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C317E01526B69464004FF5F8 /* MyInfoStoryboard.storyboard */,
+			);
+			path = MyInfo;
+			sourceTree = "<group>";
+		};
 		C33F690426B66626000B2CA5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C317E00326B687C4004FF5F8 /* Goods */,
+				C317E00826B68F46004FF5F8 /* Class */,
+				C317E00926B68F4C004FF5F8 /* Search */,
+				C317E00A26B68F54004FF5F8 /* Category */,
+				C317E00B26B68F8F004FF5F8 /* MyInfo */,
 				C33F690526B66754000B2CA5 /* MainStoryboard.storyboard */,
 			);
 			path = Main;
@@ -214,6 +290,33 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		C3825FA926B6BEB7009CAD58 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				C3825FAC26B6BEEE009CAD58 /* TodayViewController.swift */,
+				C3825FAF26B6C207009CAD58 /* TodayStoryboard.storyboard */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		C3825FAA26B6BEC9009CAD58 /* Realtime */ = {
+			isa = PBXGroup;
+			children = (
+				C3825FB526B6C3FA009CAD58 /* RealtimeViewController.swift */,
+				C3825FB726B6C445009CAD58 /* RealtimeStoryboard.storyboard */,
+			);
+			path = Realtime;
+			sourceTree = "<group>";
+		};
+		C3825FAB26B6BED8009CAD58 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				C3825FB126B6C31A009CAD58 /* NewStoryboard.storyboard */,
+				C3825FB326B6C33B009CAD58 /* NewViewController.swift */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
 		C396857326B579F8004FB9D6 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,12 +392,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3825FB826B6C445009CAD58 /* RealtimeStoryboard.storyboard in Resources */,
+				C3825FB226B6C31A009CAD58 /* NewStoryboard.storyboard in Resources */,
+				C317E01426B693A6004FF5F8 /* CategoryStoryboard.storyboard in Resources */,
+				C3825FB026B6C207009CAD58 /* TodayStoryboard.storyboard in Resources */,
 				C33F736D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf in Resources */,
+				C317E01226B691E9004FF5F8 /* SearchStoryboard.storyboard in Resources */,
 				C33F734526B5444200A57CFA /* LaunchScreen.storyboard in Resources */,
 				C33F734226B5444200A57CFA /* Assets.xcassets in Resources */,
+				C317E00E26B6903A004FF5F8 /* ClassStoryboard.storyboard in Resources */,
 				C33F690626B66754000B2CA5 /* MainStoryboard.storyboard in Resources */,
 				C33F734026B5444200A57CFA /* LoginStoryboard.storyboard in Resources */,
 				C33F736C26B5450C00A57CFA /* NotoSansCJKkr-Medium.otf in Resources */,
+				C317E01626B69464004FF5F8 /* MyInfoStoryboard.storyboard in Resources */,
+				C317E00526B68887004FF5F8 /* GoodsStoryboard.storyboard in Resources */,
 				C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,11 +459,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C317E00726B688B8004FF5F8 /* GoodsViewController.swift in Sources */,
 				C396857026B5723F004FB9D6 /* LoginViewController.swift in Sources */,
+				C3825FB626B6C3FA009CAD58 /* RealtimeViewController.swift in Sources */,
 				C33F733926B5444200A57CFA /* AppDelegate.swift in Sources */,
+				C3825FAD26B6BEEE009CAD58 /* TodayViewController.swift in Sources */,
 				C33F736426B5450C00A57CFA /* Date.swift in Sources */,
 				C33F733B26B5444200A57CFA /* SceneDelegate.swift in Sources */,
 				C33F736A26B5450C00A57CFA /* Color.swift in Sources */,
+				C3825FB426B6C33B009CAD58 /* NewViewController.swift in Sources */,
 				C33F736F26B5450C00A57CFA /* BaseViewController.swift in Sources */,
 				C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,
@@ -362,6 +477,7 @@
 				C33F736526B5450C00A57CFA /* String.swift in Sources */,
 				C33F736926B5450C00A57CFA /* UIFont.swift in Sources */,
 				C33F736226B5450C00A57CFA /* IndicatorView.swift in Sources */,
+				C317E01026B690AC004FF5F8 /* ClassViewController.swift in Sources */,
 				C33F736826B5450C00A57CFA /* UINavigationBar.swift in Sources */,
 				C33F736626B5450C00A57CFA /* UIButton.swift in Sources */,
 			);

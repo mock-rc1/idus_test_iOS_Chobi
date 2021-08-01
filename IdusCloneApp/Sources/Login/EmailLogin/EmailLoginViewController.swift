@@ -23,7 +23,8 @@ class EmailLoginViewController: BaseViewController {
     
     //MARK: - Helpers
     @IBAction func btnLogin(_ sender: Any) {
-        
+        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+        changeRootViewController(mainTabBarController)
     }
     
     @IBAction func btnBack(_ sender: Any) {

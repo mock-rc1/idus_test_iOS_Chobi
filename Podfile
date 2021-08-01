@@ -11,7 +11,7 @@ target 'IdusCloneApp' do
   pod 'KakaoSDKUser'
   pod 'naveridlogin-sdk-ios' # 네이버 로그인
   pod 'SDWebImage'
-  pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'XLPagerTabStrip'
   pod 'MSPeekCollectionViewDelegateImplementation'
   pod 'Alamofire'
   pod 'AlamofireNetworkActivityIndicator'

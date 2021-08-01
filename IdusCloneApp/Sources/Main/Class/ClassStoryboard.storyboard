@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BBv-LO-HOP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--클래스-->
+        <scene sceneID="S6E-Y1-Kdk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVa-dj-Fo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="ClassNavigationController" id="BBv-LO-HOP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="클래스" image="탭바_클래스" id="eXE-rk-8rm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Za-vP-cSU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="J9j-Cv-KvS" kind="relationship" relationship="rootViewController" id="5ZF-f0-lEl"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-459" y="131"/>
+        </scene>
+        <!--Class View Controller-->
+        <scene sceneID="wuf-PC-rJM">
+            <objects>
+                <viewController id="J9j-Cv-KvS" customClass="ClassViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W5e-hn-3Rd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="클래스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTU-Wf-DNv">
+                                <rect key="frame" x="184.5" y="437.5" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mCj-yK-psZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kTU-Wf-DNv" firstAttribute="centerY" secondItem="W5e-hn-3Rd" secondAttribute="centerY" id="YV4-9N-70F"/>
+                            <constraint firstItem="kTU-Wf-DNv" firstAttribute="centerX" secondItem="W5e-hn-3Rd" secondAttribute="centerX" id="Yjg-Nv-aID"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AWb-Qb-hzU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1QY-iB-dz3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="탭바_클래스" width="25" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
