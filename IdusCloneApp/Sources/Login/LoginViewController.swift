@@ -28,6 +28,7 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
     override func viewDidLoad() {
         super.viewDidLoad()
         loginInstance?.delegate = self
+        
     }
     
     //MARK: - Helpers
@@ -78,9 +79,7 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
     
     //MARK: 이메일 회원가입
     @IBAction func btnEmailLogin(_ sender: Any) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        customAlert()
     }
     
     //MARK: 네이버 로그인
@@ -153,6 +152,30 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
     @IBAction func btnNoLogin(_ sender: Any) {
     }
     
+    func customAlert(){
+        let actionR = UIAlertAction(title: "네이버", style: .default) { action in
+            self.presentBottomAlert(message: "서비스 준비중입니다.")
+        }
+        let actionG = UIAlertAction(title: "페이스북", style: .default) { action in
+            self.presentBottomAlert(message: "서비스 준비중입니다.")
+        }
+        let actionB = UIAlertAction(title: "트위터", style: .default) { action in
+            self.presentBottomAlert(message: "서비스 준비중입니다.")
+        }
+        let actionC = UIAlertAction(title: "이메일", style: .default) { action in
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as? RegisterViewController else { return }
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel) { action in
+            //
+        }
+        self.presentAlert(
+            title: "다른 방법으로 가입하기",
+            preferredStyle: .actionSheet,
+            with: actionR, actionG, actionB, actionC, cancelAction
+        )
+    }
 }
 
 

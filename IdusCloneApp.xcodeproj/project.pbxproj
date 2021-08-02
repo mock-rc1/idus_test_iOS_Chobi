@@ -48,9 +48,19 @@
 		C3825FB826B6C445009CAD58 /* RealtimeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3825FB726B6C445009CAD58 /* RealtimeStoryboard.storyboard */; };
 		C396857026B5723F004FB9D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396856F26B5723F004FB9D6 /* LoginViewController.swift */; };
 		C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396857126B5753C004FB9D6 /* RegisterViewController.swift */; };
+		C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */; };
+		C3B0B80726B8004A00588D2D /* TodayGoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */; };
+		C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */; };
+		C3B0B80B26B8006E00588D2D /* TodayGoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0B80926B8006E00588D2D /* TodayGoodsTableViewCell.xib */; };
+		C3B0B80D26B81EAD00588D2D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80C26B81EAD00588D2D /* UIView.swift */; };
+		C3E2039026B8289C00022591 /* EmailLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */; };
+		C3E2039226B828B500022591 /* EmailLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039126B828B500022591 /* EmailLoginResponse.swift */; };
+		C3E2039426B828E400022591 /* EmailLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039326B828E400022591 /* EmailLoginDataManager.swift */; };
 		C3FF000326B79573000F6988 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF000226B79573000F6988 /* RegisterRequest.swift */; };
 		C3FF000526B79586000F6988 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF000426B79586000F6988 /* RegisterResponse.swift */; };
 		C3FF000726B79716000F6988 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF000626B79716000F6988 /* RegisterDataManager.swift */; };
+		C3FF000F26B7EEB3000F6988 /* DetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FF000E26B7EEB3000F6988 /* DetailStoryboard.storyboard */; };
+		C3FF001126B7EECD000F6988 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF001026B7EECD000F6988 /* DetailViewController.swift */; };
 		C3FFFFFA26B78C75000F6988 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFFF826B78C75000F6988 /* EventCollectionViewCell.swift */; };
 		C3FFFFFB26B78C75000F6988 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3FFFFF926B78C75000F6988 /* EventCollectionViewCell.xib */; };
 		C3FFFFFE26B78CF2000F6988 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFFFC26B78CF2000F6988 /* EventTableViewCell.swift */; };
@@ -102,9 +112,19 @@
 		C3825FB726B6C445009CAD58 /* RealtimeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RealtimeStoryboard.storyboard; sourceTree = "<group>"; };
 		C396856F26B5723F004FB9D6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C396857126B5753C004FB9D6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayGoodsCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsTableViewCell.swift; sourceTree = "<group>"; };
+		C3B0B80926B8006E00588D2D /* TodayGoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayGoodsTableViewCell.xib; sourceTree = "<group>"; };
+		C3B0B80C26B81EAD00588D2D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginRequest.swift; sourceTree = "<group>"; };
+		C3E2039126B828B500022591 /* EmailLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginResponse.swift; sourceTree = "<group>"; };
+		C3E2039326B828E400022591 /* EmailLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginDataManager.swift; sourceTree = "<group>"; };
 		C3FF000226B79573000F6988 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		C3FF000426B79586000F6988 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		C3FF000626B79716000F6988 /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
+		C3FF000E26B7EEB3000F6988 /* DetailStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailStoryboard.storyboard; sourceTree = "<group>"; };
+		C3FF001026B7EECD000F6988 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C3FFFFF826B78C75000F6988 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3FFFFF926B78C75000F6988 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3FFFFFC26B78CF2000F6988 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,6 +156,8 @@
 		C317E00026B67C6A004FF5F8 /* EmailLogin */ = {
 			isa = PBXGroup;
 			children = (
+				C3E2038E26B8287300022591 /* Entity */,
+				C3E2038D26B8286A00022591 /* Datamanager */,
 				C317E00126B67C93004FF5F8 /* EmailLoginViewController.swift */,
 			);
 			path = EmailLogin;
@@ -144,6 +166,7 @@
 		C317E00326B687C4004FF5F8 /* Goods */ = {
 			isa = PBXGroup;
 			children = (
+				C3FF000C26B7EE74000F6988 /* Detail */,
 				C3825FA926B6BEB7009CAD58 /* Today */,
 				C3825FAA26B6BEC9009CAD58 /* Realtime */,
 				C3825FAB26B6BED8009CAD58 /* New */,
@@ -189,6 +212,9 @@
 		C32A80E426B6D2F000E03C6A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C3FF000A26B7EB89000F6988 /* TodaySale */,
+				C3FF000926B7EB6D000F6988 /* TodayHobby */,
+				C3FF000826B7EB55000F6988 /* TodayGoods */,
 				C3FFFFF726B78BCF000F6988 /* Event */,
 				C32A80E526B6D33500E03C6A /* Banner */,
 			);
@@ -283,6 +309,7 @@
 				C33F735626B5450C00A57CFA /* UINavigationBar.swift */,
 				C33F735726B5450C00A57CFA /* UIFont.swift */,
 				C33F735826B5450C00A57CFA /* Color.swift */,
+				C3B0B80C26B81EAD00588D2D /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -370,6 +397,23 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		C3E2038D26B8286A00022591 /* Datamanager */ = {
+			isa = PBXGroup;
+			children = (
+				C3E2039326B828E400022591 /* EmailLoginDataManager.swift */,
+			);
+			path = Datamanager;
+			sourceTree = "<group>";
+		};
+		C3E2038E26B8287300022591 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */,
+				C3E2039126B828B500022591 /* EmailLoginResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		C3FF000026B79490000F6988 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +429,40 @@
 				C3FF000626B79716000F6988 /* RegisterDataManager.swift */,
 			);
 			path = Datamanager;
+			sourceTree = "<group>";
+		};
+		C3FF000826B7EB55000F6988 /* TodayGoods */ = {
+			isa = PBXGroup;
+			children = (
+				C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */,
+				C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */,
+				C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */,
+				C3B0B80926B8006E00588D2D /* TodayGoodsTableViewCell.xib */,
+			);
+			path = TodayGoods;
+			sourceTree = "<group>";
+		};
+		C3FF000926B7EB6D000F6988 /* TodayHobby */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TodayHobby;
+			sourceTree = "<group>";
+		};
+		C3FF000A26B7EB89000F6988 /* TodaySale */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TodaySale;
+			sourceTree = "<group>";
+		};
+		C3FF000C26B7EE74000F6988 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF000E26B7EEB3000F6988 /* DetailStoryboard.storyboard */,
+				C3FF001026B7EECD000F6988 /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		C3FFFFF726B78BCF000F6988 /* Event */ = {
@@ -477,12 +555,15 @@
 				C317E00E26B6903A004FF5F8 /* ClassStoryboard.storyboard in Resources */,
 				C33F690626B66754000B2CA5 /* MainStoryboard.storyboard in Resources */,
 				C33F734026B5444200A57CFA /* LoginStoryboard.storyboard in Resources */,
+				C3B0B80B26B8006E00588D2D /* TodayGoodsTableViewCell.xib in Resources */,
 				C33F736C26B5450C00A57CFA /* NotoSansCJKkr-Medium.otf in Resources */,
 				C317E01626B69464004FF5F8 /* MyInfoStoryboard.storyboard in Resources */,
 				C317E00526B68887004FF5F8 /* GoodsStoryboard.storyboard in Resources */,
 				C3FFFFFF26B78CF2000F6988 /* EventTableViewCell.xib in Resources */,
 				C32A80ED26B6D4DA00E03C6A /* BannerCollectionViewCell.xib in Resources */,
 				C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */,
+				C3B0B80726B8004A00588D2D /* TodayGoodsCollectionViewCell.xib in Resources */,
+				C3FF000F26B7EEB3000F6988 /* DetailStoryboard.storyboard in Resources */,
 				C3FFFFFB26B78C75000F6988 /* EventCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +617,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B0B80D26B81EAD00588D2D /* UIView.swift in Sources */,
+				C3E2039026B8289C00022591 /* EmailLoginRequest.swift in Sources */,
 				C317E00726B688B8004FF5F8 /* GoodsViewController.swift in Sources */,
 				C3FFFFFA26B78C75000F6988 /* EventCollectionViewCell.swift in Sources */,
 				C396857026B5723F004FB9D6 /* LoginViewController.swift in Sources */,
@@ -543,8 +626,10 @@
 				C3825FB626B6C3FA009CAD58 /* RealtimeViewController.swift in Sources */,
 				C33F733926B5444200A57CFA /* AppDelegate.swift in Sources */,
 				C3825FAD26B6BEEE009CAD58 /* TodayViewController.swift in Sources */,
+				C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */,
 				C33F736426B5450C00A57CFA /* Date.swift in Sources */,
 				C3FFFFFE26B78CF2000F6988 /* EventTableViewCell.swift in Sources */,
+				C3FF001126B7EECD000F6988 /* DetailViewController.swift in Sources */,
 				C3FF000526B79586000F6988 /* RegisterResponse.swift in Sources */,
 				C33F733B26B5444200A57CFA /* SceneDelegate.swift in Sources */,
 				C33F736A26B5450C00A57CFA /* Color.swift in Sources */,
@@ -554,6 +639,7 @@
 				C32A80E826B6D4BC00E03C6A /* BannerTableViewCell.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,
 				C33F736326B5450C00A57CFA /* Device.swift in Sources */,
+				C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */,
 				C3FF000726B79716000F6988 /* RegisterDataManager.swift in Sources */,
 				C317E00226B67C93004FF5F8 /* EmailLoginViewController.swift in Sources */,
 				C33F736126B5450C00A57CFA /* Constant.swift in Sources */,
@@ -562,6 +648,8 @@
 				C3FF000326B79573000F6988 /* RegisterRequest.swift in Sources */,
 				C33F736226B5450C00A57CFA /* IndicatorView.swift in Sources */,
 				C317E01026B690AC004FF5F8 /* ClassViewController.swift in Sources */,
+				C3E2039226B828B500022591 /* EmailLoginResponse.swift in Sources */,
+				C3E2039426B828E400022591 /* EmailLoginDataManager.swift in Sources */,
 				C33F736826B5450C00A57CFA /* UINavigationBar.swift in Sources */,
 				C33F736626B5450C00A57CFA /* UIButton.swift in Sources */,
 			);

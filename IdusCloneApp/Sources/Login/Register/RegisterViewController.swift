@@ -10,6 +10,8 @@ import UIKit
 class RegisterViewController: BaseViewController, UITextFieldDelegate{
     
     //MARK: - Outlet
+    @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet weak var agreeView: UIView!
     
     // Datamanager
     lazy var dataManager: RegisterDataManager = RegisterDataManager()
@@ -36,10 +38,23 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate{
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setKeyboardDelegate()
+        setUI()
     }
     
     //MARK: - Helpers
+    
+    //로그인 UI
+    func setUI(){
+        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
+        let outerVisualEffectView = UIVisualEffectView(effect: blurEffect)
+        outerVisualEffectView.frame = self.view.frame
+        //outerVisualEffectView.alpha = 1
+        imageBackground.addSubview(outerVisualEffectView)
+        setKeyboardDelegate()
+        agreeView.layer.borderWidth = 1
+        agreeView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        agreeView.layer.cornerRadius = 7.0
+    }
     
     //뒤로가기 버튼
     @IBAction func btnBack(_ sender: Any) {
@@ -140,11 +155,17 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
+    func btnLoginPage(){
+        let newStoryboard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
+        let newViewController = newStoryboard.instantiateViewController(identifier: "LoginViewController")
+        self.changeRootViewController(newViewController)
+    }
 }
 
 extension RegisterViewController {
     func didSuccessRegister(_ result: RegisterResponse) {
         self.presentAlert(title: "회원 가입에 성공하였습니다", message: result.message)
+        self.btnLoginPage()
     }
     
     func failedToRequest(message: String) {

@@ -1,21 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="EventCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="EventCollectionViewCell" customModule="IdusCloneApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="92" height="99"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="92" height="99"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="이벤트" translatesAutoresizingMaskIntoConstraints="NO" id="iFO-KY-3fz">
+                        <rect key="frame" x="5" y="0.0" width="82" height="83"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구초대쿠폰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qPB-Lp-6dA">
+                        <rect key="frame" x="0.0" y="72" width="92" height="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="iFO-KY-3fz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0iL-Rz-j5R"/>
+                <constraint firstItem="iFO-KY-3fz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="B1o-ro-Xas"/>
+                <constraint firstAttribute="bottom" secondItem="qPB-Lp-6dA" secondAttribute="bottom" constant="8" id="Bfj-Zj-Itu"/>
+                <constraint firstItem="qPB-Lp-6dA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EmG-bX-1u6"/>
+                <constraint firstItem="qPB-Lp-6dA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="72" id="Fil-DK-fbP"/>
+                <constraint firstAttribute="trailing" secondItem="iFO-KY-3fz" secondAttribute="trailing" constant="5" id="iKA-81-dU9"/>
+                <constraint firstAttribute="trailing" secondItem="qPB-Lp-6dA" secondAttribute="trailing" id="mLV-PU-zim"/>
+            </constraints>
+            <size key="customSize" width="92" height="99"/>
+            <connections>
+                <outlet property="imageEvent" destination="iFO-KY-3fz" id="i6u-ho-UTU"/>
+                <outlet property="labelEvent" destination="qPB-Lp-6dA" id="Eui-ox-Xw8"/>
+            </connections>
+            <point key="canvasLocation" x="162.31884057971016" y="119.53125"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="이벤트" width="89" height="83"/>
+    </resources>
 </document>

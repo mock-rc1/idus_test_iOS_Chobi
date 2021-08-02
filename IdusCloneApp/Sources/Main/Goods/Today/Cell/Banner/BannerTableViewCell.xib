@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aSx-YJ-JSt">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aSx-YJ-JSt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>

@@ -95,5 +95,11 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSansCJKkr-Regular.otf</string>
+		<string>NotoSansCJKkr-Medium.otf</string>
+		<string>NotoSansCJKkr-Bold.otf</string>
+	</array>
 </dict>
 </plist>

@@ -9,9 +9,14 @@ import UIKit
 
 class EventCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var imageEvent: UIImageView!
+    @IBOutlet weak var labelEvent: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    func setCell(event: UIImage) {
+        self.imageEvent.image = event
+    }
 }

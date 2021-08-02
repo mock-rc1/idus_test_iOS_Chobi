@@ -18,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R0J-wY-4Ws">
-                        <rect key="frame" x="10" y="10" width="30" height="30"/>
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="R0J-wY-4Ws" secondAttribute="bottom" constant="10" id="E3d-NY-FFE"/>
-                <constraint firstAttribute="trailing" secondItem="R0J-wY-4Ws" secondAttribute="trailing" constant="10" id="TNs-uW-Pmk"/>
-                <constraint firstItem="R0J-wY-4Ws" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="vkk-Dr-cGS"/>
-                <constraint firstItem="R0J-wY-4Ws" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="wlA-C9-Z4d"/>
+                <constraint firstAttribute="bottom" secondItem="R0J-wY-4Ws" secondAttribute="bottom" id="E3d-NY-FFE"/>
+                <constraint firstAttribute="trailing" secondItem="R0J-wY-4Ws" secondAttribute="trailing" id="TNs-uW-Pmk"/>
+                <constraint firstItem="R0J-wY-4Ws" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vkk-Dr-cGS"/>
+                <constraint firstItem="R0J-wY-4Ws" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wlA-C9-Z4d"/>
             </constraints>
             <connections>
                 <outlet property="imageBanner" destination="R0J-wY-4Ws" id="d4Z-NR-Xwf"/>
