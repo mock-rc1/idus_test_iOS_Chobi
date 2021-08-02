@@ -11,6 +11,9 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate{
     
     //MARK: - Outlet
     
+    // Datamanager
+    lazy var dataManager: RegisterDataManager = RegisterDataManager()
+    
     // 체크 버튼 이미지
     
     let imgCheck = UIImage(systemName: "checkmark.square")
@@ -93,6 +96,36 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate{
     
     //회원가입 완료 버튼
     @IBAction func btnRegister(_ sender: Any) {
+        // Email validation
+        guard let email = labelEmail.text?.trim, email.isExists else {
+            self.presentAlert(title: "이메일을 입력해주세요")
+            return
+        }
+        // UserName validation
+        guard let userName = labelName.text?.trim, userName.isExists else {
+            self.presentAlert(title: "이름을 입력해주세요")
+            return
+        }
+        
+        // Password validation
+        guard let password = labelPassword.text, password.isExists else {
+            self.presentAlert(title: "비밀번호를 입력해주세요")
+            return
+        }
+        
+        // PhoneNumber validation
+        guard let phoneNum = labelPhoneNumber.text, phoneNum.isExists else {
+            self.presentAlert(title: "전화번호를 입력해주세요")
+            return
+        }
+        
+        // Requst Sign In
+        self.dismissKeyboard()
+        self.showIndicator()
+        
+        let input = RegisterRequest(email: email, userName: userName, password: password, phoneNum: phoneNum)
+        print(email)
+        dataManager.postRegister(input, delegate: self)
     }
     //return 시 키보드 내리기
     func setKeyboardDelegate()  {
@@ -109,7 +142,15 @@ class RegisterViewController: BaseViewController, UITextFieldDelegate{
     }
 }
 
-
+extension RegisterViewController {
+    func didSuccessRegister(_ result: RegisterResponse) {
+        self.presentAlert(title: "회원 가입에 성공하였습니다", message: result.message)
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
+}
 //git 올리기용- 나중에 사용 예정임
 //import SDWebImage
 //import XLPagerTabStrip

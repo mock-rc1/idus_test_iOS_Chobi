@@ -1,0 +1,17 @@
+//
+//  RegisterResponse.swift
+//  IdusCloneApp
+//
+//  Created by 김수빈 on 2021/08/02.
+//
+
+struct RegisterResponse: Decodable {
+    var isSuccess: Bool?
+    var code: Int?
+    var message: String?
+    var result: UserIdx?
+}
+
+struct UserIdx: Decodable {
+    var userIdx: Int?
+}
