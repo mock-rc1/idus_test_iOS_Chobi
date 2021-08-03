@@ -53,6 +53,14 @@
 		C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */; };
 		C3B0B80B26B8006E00588D2D /* TodayGoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0B80926B8006E00588D2D /* TodayGoodsTableViewCell.xib */; };
 		C3B0B80D26B81EAD00588D2D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80C26B81EAD00588D2D /* UIView.swift */; };
+		C3B7922926B94C6400F87593 /* DetailImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7922726B94C6400F87593 /* DetailImageTableViewCell.swift */; };
+		C3B7922A26B94C6400F87593 /* DetailImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B7922826B94C6400F87593 /* DetailImageTableViewCell.xib */; };
+		C3B7922F26B94F0100F87593 /* DetailSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7922D26B94F0100F87593 /* DetailSummaryTableViewCell.swift */; };
+		C3B7923026B94F0100F87593 /* DetailSummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B7922E26B94F0100F87593 /* DetailSummaryTableViewCell.xib */; };
+		C3B7923526B9621F00F87593 /* DetailShippingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7923326B9621F00F87593 /* DetailShippingTableViewCell.swift */; };
+		C3B7923626B9621F00F87593 /* DetailShippingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B7923426B9621F00F87593 /* DetailShippingTableViewCell.xib */; };
+		C3B7923926B9640300F87593 /* DetailInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7923726B9640300F87593 /* DetailInfoTableViewCell.swift */; };
+		C3B7923A26B9640300F87593 /* DetailInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B7923826B9640300F87593 /* DetailInfoTableViewCell.xib */; };
 		C3E2039026B8289C00022591 /* EmailLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */; };
 		C3E2039226B828B500022591 /* EmailLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039126B828B500022591 /* EmailLoginResponse.swift */; };
 		C3E2039426B828E400022591 /* EmailLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039326B828E400022591 /* EmailLoginDataManager.swift */; };
@@ -117,6 +125,14 @@
 		C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsTableViewCell.swift; sourceTree = "<group>"; };
 		C3B0B80926B8006E00588D2D /* TodayGoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayGoodsTableViewCell.xib; sourceTree = "<group>"; };
 		C3B0B80C26B81EAD00588D2D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C3B7922726B94C6400F87593 /* DetailImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageTableViewCell.swift; sourceTree = "<group>"; };
+		C3B7922826B94C6400F87593 /* DetailImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImageTableViewCell.xib; sourceTree = "<group>"; };
+		C3B7922D26B94F0100F87593 /* DetailSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSummaryTableViewCell.swift; sourceTree = "<group>"; };
+		C3B7922E26B94F0100F87593 /* DetailSummaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSummaryTableViewCell.xib; sourceTree = "<group>"; };
+		C3B7923326B9621F00F87593 /* DetailShippingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShippingTableViewCell.swift; sourceTree = "<group>"; };
+		C3B7923426B9621F00F87593 /* DetailShippingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailShippingTableViewCell.xib; sourceTree = "<group>"; };
+		C3B7923726B9640300F87593 /* DetailInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoTableViewCell.swift; sourceTree = "<group>"; };
+		C3B7923826B9640300F87593 /* DetailInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailInfoTableViewCell.xib; sourceTree = "<group>"; };
 		C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginRequest.swift; sourceTree = "<group>"; };
 		C3E2039126B828B500022591 /* EmailLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginResponse.swift; sourceTree = "<group>"; };
 		C3E2039326B828E400022591 /* EmailLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginDataManager.swift; sourceTree = "<group>"; };
@@ -397,6 +413,53 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		C3B7922626B94BFA00F87593 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C3B7923226B961CB00F87593 /* DetailInfo */,
+				C3B7923126B9617400F87593 /* DetailShipping */,
+				C3B7922C26B94E6100F87593 /* DetailSummary */,
+				C3B7922B26B94C6A00F87593 /* DetailImage */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C3B7922B26B94C6A00F87593 /* DetailImage */ = {
+			isa = PBXGroup;
+			children = (
+				C3B7922826B94C6400F87593 /* DetailImageTableViewCell.xib */,
+				C3B7922726B94C6400F87593 /* DetailImageTableViewCell.swift */,
+			);
+			path = DetailImage;
+			sourceTree = "<group>";
+		};
+		C3B7922C26B94E6100F87593 /* DetailSummary */ = {
+			isa = PBXGroup;
+			children = (
+				C3B7922D26B94F0100F87593 /* DetailSummaryTableViewCell.swift */,
+				C3B7922E26B94F0100F87593 /* DetailSummaryTableViewCell.xib */,
+			);
+			path = DetailSummary;
+			sourceTree = "<group>";
+		};
+		C3B7923126B9617400F87593 /* DetailShipping */ = {
+			isa = PBXGroup;
+			children = (
+				C3B7923326B9621F00F87593 /* DetailShippingTableViewCell.swift */,
+				C3B7923426B9621F00F87593 /* DetailShippingTableViewCell.xib */,
+			);
+			path = DetailShipping;
+			sourceTree = "<group>";
+		};
+		C3B7923226B961CB00F87593 /* DetailInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C3B7923726B9640300F87593 /* DetailInfoTableViewCell.swift */,
+				C3B7923826B9640300F87593 /* DetailInfoTableViewCell.xib */,
+			);
+			path = DetailInfo;
+			sourceTree = "<group>";
+		};
 		C3E2038D26B8286A00022591 /* Datamanager */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +522,7 @@
 		C3FF000C26B7EE74000F6988 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				C3B7922626B94BFA00F87593 /* Cell */,
 				C3FF000E26B7EEB3000F6988 /* DetailStoryboard.storyboard */,
 				C3FF001026B7EECD000F6988 /* DetailViewController.swift */,
 			);
@@ -546,19 +610,23 @@
 				C3825FB826B6C445009CAD58 /* RealtimeStoryboard.storyboard in Resources */,
 				C32A80E926B6D4BC00E03C6A /* BannerTableViewCell.xib in Resources */,
 				C3825FB226B6C31A009CAD58 /* NewStoryboard.storyboard in Resources */,
+				C3B7923026B94F0100F87593 /* DetailSummaryTableViewCell.xib in Resources */,
 				C317E01426B693A6004FF5F8 /* CategoryStoryboard.storyboard in Resources */,
 				C3825FB026B6C207009CAD58 /* TodayStoryboard.storyboard in Resources */,
 				C33F736D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf in Resources */,
 				C317E01226B691E9004FF5F8 /* SearchStoryboard.storyboard in Resources */,
 				C33F734526B5444200A57CFA /* LaunchScreen.storyboard in Resources */,
 				C33F734226B5444200A57CFA /* Assets.xcassets in Resources */,
+				C3B7923A26B9640300F87593 /* DetailInfoTableViewCell.xib in Resources */,
 				C317E00E26B6903A004FF5F8 /* ClassStoryboard.storyboard in Resources */,
 				C33F690626B66754000B2CA5 /* MainStoryboard.storyboard in Resources */,
+				C3B7923626B9621F00F87593 /* DetailShippingTableViewCell.xib in Resources */,
 				C33F734026B5444200A57CFA /* LoginStoryboard.storyboard in Resources */,
 				C3B0B80B26B8006E00588D2D /* TodayGoodsTableViewCell.xib in Resources */,
 				C33F736C26B5450C00A57CFA /* NotoSansCJKkr-Medium.otf in Resources */,
 				C317E01626B69464004FF5F8 /* MyInfoStoryboard.storyboard in Resources */,
 				C317E00526B68887004FF5F8 /* GoodsStoryboard.storyboard in Resources */,
+				C3B7922A26B94C6400F87593 /* DetailImageTableViewCell.xib in Resources */,
 				C3FFFFFF26B78CF2000F6988 /* EventTableViewCell.xib in Resources */,
 				C32A80ED26B6D4DA00E03C6A /* BannerCollectionViewCell.xib in Resources */,
 				C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */,
@@ -639,10 +707,14 @@
 				C32A80E826B6D4BC00E03C6A /* BannerTableViewCell.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,
 				C33F736326B5450C00A57CFA /* Device.swift in Sources */,
+				C3B7923926B9640300F87593 /* DetailInfoTableViewCell.swift in Sources */,
+				C3B7923526B9621F00F87593 /* DetailShippingTableViewCell.swift in Sources */,
 				C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */,
 				C3FF000726B79716000F6988 /* RegisterDataManager.swift in Sources */,
 				C317E00226B67C93004FF5F8 /* EmailLoginViewController.swift in Sources */,
 				C33F736126B5450C00A57CFA /* Constant.swift in Sources */,
+				C3B7922F26B94F0100F87593 /* DetailSummaryTableViewCell.swift in Sources */,
+				C3B7922926B94C6400F87593 /* DetailImageTableViewCell.swift in Sources */,
 				C33F736526B5450C00A57CFA /* String.swift in Sources */,
 				C33F736926B5450C00A57CFA /* UIFont.swift in Sources */,
 				C3FF000326B79573000F6988 /* RegisterRequest.swift in Sources */,

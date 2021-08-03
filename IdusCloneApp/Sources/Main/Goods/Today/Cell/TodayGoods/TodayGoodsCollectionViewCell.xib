@@ -73,6 +73,9 @@
                 <constraint firstItem="atK-Dl-EqO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rcv-ge-48Y"/>
             </constraints>
             <size key="customSize" width="207" height="349"/>
+            <connections>
+                <outlet property="labelTodayGoods" destination="Wbf-cP-kLy" id="a2w-aI-fyT"/>
+            </connections>
             <point key="canvasLocation" x="245.6521739130435" y="193.19196428571428"/>
         </collectionViewCell>
     </objects>

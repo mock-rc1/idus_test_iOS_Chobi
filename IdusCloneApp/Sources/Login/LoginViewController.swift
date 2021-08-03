@@ -150,6 +150,9 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
     
     //MARK: 로그인 안하고 둘러보기
     @IBAction func btnNoLogin(_ sender: Any) {
+        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+        changeRootViewController(mainTabBarController)
+        
     }
     
     func customAlert(){

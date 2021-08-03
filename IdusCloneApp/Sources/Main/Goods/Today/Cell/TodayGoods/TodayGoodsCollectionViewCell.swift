@@ -9,9 +9,15 @@ import UIKit
 
 class TodayGoodsCollectionViewCell: UICollectionViewCell {
 
+    
+    @IBOutlet weak var labelTodayGoods: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    func setCell(todayGoods: String) {
+        self.labelTodayGoods.text = todayGoods
+    }
 }
