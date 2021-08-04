@@ -9,6 +9,9 @@ import UIKit
 
 class DetailSummaryTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelHeart: UILabel!
+    @IBOutlet weak var btnHeart: UIButton!
+    //weak var delegate: AnswerCellViewDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +21,13 @@ class DetailSummaryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    @IBAction func btnHeart(_ sender: Any) {
+        print("찜")
+        //btnHeart.setImage(#imageLiteral(resourceName: "찜_주황"), for: .normal)
+    
+        labelHeart.text = String( Int(labelHeart.text!)! + 1)
+        
     }
     
 }

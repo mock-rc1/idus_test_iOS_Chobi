@@ -100,6 +100,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btnHeart" destination="cyI-lo-lyp" id="MQM-Dc-wry"/>
                         <outlet property="tableView" destination="P5L-h7-Gkq" id="oh8-4e-yox"/>
                     </connections>
                 </viewController>

@@ -1,15 +1,14 @@
 //
-//  DetailInfoTableViewCell.swift
+//  DetailAuthorTableViewCell.swift
 //  IdusCloneApp
 //
-//  Created by 김수빈 on 2021/08/03.
+//  Created by 김수빈 on 2021/08/04.
 //
 
 import UIKit
 
-class DetailInfoTableViewCell: UITableViewCell {
+class DetailAuthorTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var labelDetailInfo: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
