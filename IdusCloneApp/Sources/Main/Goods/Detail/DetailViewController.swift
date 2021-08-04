@@ -5,7 +5,7 @@
 //  Created by 김수빈 on 2021/08/02.
 //
 import UIKit
-class DetailViewController: BaseViewController{
+class DetailViewController: BaseViewController, DetailImageCollectionViewCellDelegate{
     //MARK: - Outlet
     
     //테이블 뷰
@@ -14,7 +14,12 @@ class DetailViewController: BaseViewController{
     //몇 번째 값인지
     var data: String?
     
-    //
+    // MARK: 예시 데이터
+    
+    //상세 이미지
+    let detailImageArray: Array<UIImage> = [#imageLiteral(resourceName: "상세이미지"), #imageLiteral(resourceName: "상세이미지"),#imageLiteral(resourceName: "상세이미지")]
+    
+    // 상세 정보
     let detailInfo = "깨끗하\n\n고 러블리한 무드의 담수진주 목걸이 ‘이미 라뺄르 담수진주 목걸이’Aimez la perle _ 불어로 진주를 사랑하다 라는 의미라고해요 :)이 목걸이를 보자마자 반해버린 지인께서 지어주신 이름이랍니다💕사랑스러운 포인트의 하트모양 잠금장식으로 유니크하면서도 러블리한 포인트를 주었어요 !원통형의 큐빅참을 돌리면 잠금장식을 열 수 있어서착용도 편하게 가능하세요 :)자유로운 형태의 천연 담수진주는내추럴함과 고급스러움을 풍긴답니다.얼스룩에도, 빈티지한 룩에도, 러블리한 룩에도너무나 멋지게 연출하시기 좋은 담수진주 목걸이 추천드려요🖤[material]담수진체인 : 써지컬스틸잠금장식 : 신주,큐[color]화이트진주, 골드체인[size]43.5cm원하시는 사이즈로 주문제작 가능합니다.작가문의로 메세지주세요 :)제품 측정방식에 따라 미세한 오차가 있을 수 있는점미리 양해 부탁드립니다.🌷"
     
     //MARK: - LifeCycle
@@ -30,6 +35,10 @@ class DetailViewController: BaseViewController{
         setupTableView()
         
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     //MARK: - Helpers
     //내비 커스텀
     func configureNavi() {
@@ -66,6 +75,13 @@ class DetailViewController: BaseViewController{
     func changeHeart() {
         btnHeart.setImage(#imageLiteral(resourceName: "찜_주황"), for: .normal)
     }
+    
+    //MARK: 델리게이트
+    // 상세 이미지
+    //배너
+    func collectionView(collectionviewcell: DetailImageCollectionViewCell?, index: Int, didTappedInTableViewCell: DetailImageTableViewCell) {
+        //이미지 누르면~~
+    }
 }
 
 // 테이블뷰 extension
@@ -81,8 +97,8 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
         switch indexPath.row {
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailImageTableViewCell") as? DetailImageTableViewCell {
-                //cell.bannerCellDelegate = self
-                //cell.setCell(row: dataArray)
+                cell.detailImageCellDelegate = self
+                cell.setCell(row: detailImageArray)
                 return cell
             }
         case 1:

@@ -88,6 +88,8 @@
 		C3E2039026B8289C00022591 /* EmailLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */; };
 		C3E2039226B828B500022591 /* EmailLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039126B828B500022591 /* EmailLoginResponse.swift */; };
 		C3E2039426B828E400022591 /* EmailLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039326B828E400022591 /* EmailLoginDataManager.swift */; };
+		C3F46CBA26BAE61D0084316E /* DetailImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F46CB826BAE61D0084316E /* DetailImageCollectionViewCell.swift */; };
+		C3F46CBB26BAE61D0084316E /* DetailImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F46CB926BAE61D0084316E /* DetailImageCollectionViewCell.xib */; };
 		C3FF000326B79573000F6988 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF000226B79573000F6988 /* RegisterRequest.swift */; };
 		C3FF000526B79586000F6988 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF000426B79586000F6988 /* RegisterResponse.swift */; };
 		C3FF000726B79716000F6988 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FF000626B79716000F6988 /* RegisterDataManager.swift */; };
@@ -184,6 +186,8 @@
 		C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginRequest.swift; sourceTree = "<group>"; };
 		C3E2039126B828B500022591 /* EmailLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginResponse.swift; sourceTree = "<group>"; };
 		C3E2039326B828E400022591 /* EmailLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginDataManager.swift; sourceTree = "<group>"; };
+		C3F46CB826BAE61D0084316E /* DetailImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3F46CB926BAE61D0084316E /* DetailImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3FF000226B79573000F6988 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		C3FF000426B79586000F6988 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		C3FF000626B79716000F6988 /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
@@ -531,6 +535,8 @@
 			children = (
 				C3B7922826B94C6400F87593 /* DetailImageTableViewCell.xib */,
 				C3B7922726B94C6400F87593 /* DetailImageTableViewCell.swift */,
+				C3F46CB826BAE61D0084316E /* DetailImageCollectionViewCell.swift */,
+				C3F46CB926BAE61D0084316E /* DetailImageCollectionViewCell.xib */,
 			);
 			path = DetailImage;
 			sourceTree = "<group>";
@@ -733,6 +739,7 @@
 				C307D9F726BAC0E4000F8179 /* DetailAuthorTableViewCell.xib in Resources */,
 				C3825FB226B6C31A009CAD58 /* NewStoryboard.storyboard in Resources */,
 				C307D9EE26BABB27000F8179 /* DetailCommentATableViewCell.xib in Resources */,
+				C3F46CBB26BAE61D0084316E /* DetailImageCollectionViewCell.xib in Resources */,
 				C307D9D026BA44C5000F8179 /* DetailReviewTableViewCell.xib in Resources */,
 				C3B7923026B94F0100F87593 /* DetailSummaryTableViewCell.xib in Resources */,
 				C317E01426B693A6004FF5F8 /* CategoryStoryboard.storyboard in Resources */,
@@ -868,6 +875,7 @@
 				C3E2039426B828E400022591 /* EmailLoginDataManager.swift in Sources */,
 				C33F736826B5450C00A57CFA /* UINavigationBar.swift in Sources */,
 				C33F736626B5450C00A57CFA /* UIButton.swift in Sources */,
+				C3F46CBA26BAE61D0084316E /* DetailImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

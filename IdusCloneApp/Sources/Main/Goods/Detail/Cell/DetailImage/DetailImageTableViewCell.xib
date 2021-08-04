@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,22 +18,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="상세이미지" translatesAutoresizingMaskIntoConstraints="NO" id="DY7-Kk-qrc">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mzs-rU-or5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
-                    </imageView>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="414" id="ld5-du-XHi"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="f3D-hU-e0m">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="DY7-Kk-qrc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KtT-T1-EO4"/>
-                    <constraint firstItem="DY7-Kk-qrc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YU7-hL-uRb"/>
-                    <constraint firstAttribute="bottom" secondItem="DY7-Kk-qrc" secondAttribute="bottom" id="en9-sX-51x"/>
-                    <constraint firstAttribute="trailing" secondItem="DY7-Kk-qrc" secondAttribute="trailing" id="gfw-r7-aZg"/>
+                    <constraint firstAttribute="bottom" secondItem="mzs-rU-or5" secondAttribute="bottom" id="IPT-hJ-0Lb"/>
+                    <constraint firstItem="mzs-rU-or5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MuA-Ib-Aan"/>
+                    <constraint firstItem="mzs-rU-or5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oSE-9s-WWT"/>
+                    <constraint firstAttribute="trailing" secondItem="mzs-rU-or5" secondAttribute="trailing" id="uLw-6t-O7m"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="detailImageCollectionView" destination="mzs-rU-or5" id="pig-HT-Quy"/>
+            </connections>
             <point key="canvasLocation" x="134.78260869565219" y="212.94642857142856"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="상세이미지" width="640" height="637"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
