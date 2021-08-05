@@ -6,10 +6,21 @@
 //
 
 import UIKit
+//MARK: Protocol
+protocol DetailReviewCollectionViewCellDelegate: AnyObject {
+    func collectionView(collectionviewcell: DetailReviewCollectionViewCell?, index: Int, didTappedInTableViewCell: DetailReviewTableViewCell)
+}
 
 class DetailReviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var reviewCollectionView: UICollectionView!
+    
+    // 데이터 배열
+    var reviewArray : Array<DetailReview> = []
+    var reviewProArray: Array<DetailReviewProdRes> = []
+    
+    //프로토콜 변수
+    weak var detailReviewCellDelegate: DetailReviewCollectionViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,38 +49,34 @@ class DetailReviewTableViewCell: UITableViewCell {
 extension DetailReviewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 2
+        return reviewArray.count
         //return movieVO.popular.count
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             // 컬렉션 뷰 한 줄에 2개가 딱 맞게 정사각형으로 들어가게!
         let width = reviewCollectionView.bounds.width
-        let height = reviewCollectionView.bounds.height
-        switch indexPath.row {
-        case 0:
-            return CGSize(width: width, height: 111)
-        case 1:
+        //let height = reviewCollectionView.bounds.height
+        
+        if(reviewArray[indexPath.row].reviewImage != ""){
             return CGSize(width: width, height: 242)
-        default:
-            return CGSize(width: width, height: height)
+        }else{
+            return CGSize(width: width, height: 111)
         }
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        switch indexPath.row {
-        case 0:
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailReviewCollectionViewCell", for: indexPath) as? DetailReviewCollectionViewCell {
-                //cell.setCell(todayGoods: todayGoodsArray[indexPath.row])
-                return cell
-            }
-        case 1:
+        if(reviewArray[indexPath.row].reviewImage != ""){
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailPictureReviewCollectionViewCell", for: indexPath) as? DetailPictureReviewCollectionViewCell {
-                //cell.setCell(todayGoods: todayGoodsArray[indexPath.row])
+                cell.setCell(detailReview: reviewArray[indexPath.row],detailReviewProdRes: reviewProArray)
                 return cell
             }
-        default:
-            return UICollectionViewCell()
-        }
+            }else{
+                if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailReviewCollectionViewCell", for: indexPath) as? DetailReviewCollectionViewCell {
+                    cell.setCell(detailReview: reviewArray[indexPath.row],detailReviewProdRes: reviewProArray)
+                    return cell
+                }
+            }
+                
         return UICollectionViewCell()
     }
     
@@ -81,16 +88,14 @@ extension DetailReviewTableViewCell: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print("콜렉션 뷰 " + String(indexPath.row))
-        /*
-        let cell = collectionView.cellForItem(at: indexPath) as? TodayGoodsCollectionViewCell
-            self.todayGoodsCellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
-         */
+        
     }
     
     //데이터 가져올 함수
-    /*
-    func setCell(row: Array<String>)  {
-        self.todayGoodsArray = row
-        self.todayGoodsCollectionView.reloadData()
-    }*/
+    
+    func setCell(detailReview: Array<DetailReview>, detailReviewProd: Array<DetailReviewProdRes> )  {
+        self.reviewArray = detailReview
+        self.reviewProArray = detailReviewProd
+        self.reviewCollectionView.reloadData()
+    }
 }

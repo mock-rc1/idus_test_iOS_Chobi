@@ -34,9 +34,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 5월 10일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoE-JQ-ppQ">
-                        <rect key="frame" x="50" y="37.5" width="94" height="15"/>
+                        <rect key="frame" x="50" y="37.5" width="124" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="94" id="q9j-CX-YCJ"/>
+                            <constraint firstAttribute="width" constant="124" id="q9j-CX-YCJ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,7 +108,8 @@
                 <outlet property="CommentInfo" destination="aCM-EG-5QL" id="5ny-Ek-e9X"/>
                 <outlet property="imageComment" destination="dxq-P6-GrX" id="mxq-Y7-Kpe"/>
                 <outlet property="imageProfile" destination="Zpp-z4-MMf" id="Txt-sd-8af"/>
-                <outlet property="labelComment" destination="nxt-QE-oso" id="LP7-dM-X6v"/>
+                <outlet property="labelDates" destination="uoE-JQ-ppQ" id="xRw-9z-sQg"/>
+                <outlet property="labelReviewComment" destination="nxt-QE-oso" id="D3R-yq-jgC"/>
                 <outlet property="labelUserName" destination="HWl-N0-Dvp" id="pWC-Rf-D6c"/>
             </connections>
             <point key="canvasLocation" x="155.07246376811597" y="163.39285714285714"/>

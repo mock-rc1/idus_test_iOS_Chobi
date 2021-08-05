@@ -234,8 +234,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnAuthorName" destination="hVT-JI-blv" id="XC9-uj-DeZ"/>
                 <outlet property="btnHeart" destination="L2E-Zx-wAE" id="h6k-47-U6t"/>
+                <outlet property="btnProdReviewNum" destination="7pj-PP-rYT" id="0Og-jb-fsH"/>
+                <outlet property="imageProdRatingAvg" destination="327-MK-NWe" id="pdH-8Z-hTL"/>
                 <outlet property="labelHeart" destination="SeD-a5-tvf" id="8HZ-mw-0eU"/>
+                <outlet property="labelPoint" destination="TzK-pR-sHx" id="gBj-xU-fD7"/>
+                <outlet property="labelProdName" destination="mIV-iB-lZP" id="cal-82-9MX"/>
+                <outlet property="labelProdPrice" destination="dWS-KL-Jk0" id="NFp-o9-nV7"/>
+                <outlet property="labelProdReviewNum" destination="Wlg-xN-tuZ" id="S9f-Ld-sqT"/>
+                <outlet property="labelSaleCost" destination="8eW-WU-q7h" id="CCU-Iy-YG3"/>
+                <outlet property="labelSalePercent" destination="igg-ik-GtG" id="8Ap-Bc-6b5"/>
             </connections>
             <point key="canvasLocation" x="244.92753623188409" y="231.69642857142856"/>
         </tableViewCell>

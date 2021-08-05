@@ -17,4 +17,7 @@ class DetailKeywordCollectionViewCell: UICollectionViewCell {
         labelTag.sizeToFit()
     }
 
+    func setCell(detailKeyword: DetailKeyword) {
+        self.labelTag.text = detailKeyword.keyWord!
+    }
 }

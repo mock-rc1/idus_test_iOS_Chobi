@@ -23,7 +23,7 @@ class DetailImageTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLay
     weak var detailImageCellDelegate: DetailImageCollectionViewCellDelegate?
     
     // 데이터 배열
-    var imageArray : Array<UIImage> = []
+    var imageArray : Array<DetailImage> = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,7 +60,7 @@ extension DetailImageTableViewCell : UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailImageCollectionViewCell", for: indexPath) as? DetailImageCollectionViewCell {
             
-            cell.setCell(detailImage:  imageArray[indexPath.row])
+            cell.setCell(detailImage: imageArray[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -70,10 +70,7 @@ extension DetailImageTableViewCell : UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: detailImageCollectionView.frame.size.width  , height:  detailImageCollectionView.frame.height)
     }
-    /*
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-    }*/
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -85,7 +82,7 @@ extension DetailImageTableViewCell : UICollectionViewDelegate, UICollectionViewD
     }
     
     //데이터 가져올 함수
-    func setCell(row: Array<UIImage>)  {
+    func setCell(row: Array<DetailImage>)  {
         self.imageArray = row
         self.detailImageCollectionView.reloadData()
     }

@@ -69,6 +69,14 @@
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w2-ET-xGZ">
+                        <rect key="frame" x="374" y="20" width="20" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="6g1-wm-aDu"/>
+                            <constraint firstAttribute="width" constant="20" id="EJt-rL-JZU"/>
+                        </constraints>
+                        <state key="normal" image="folder"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="7gF-m0-scc" firstAttribute="centerY" secondItem="mHA-m9-U6E" secondAttribute="centerY" id="4l0-Eg-kZE"/>
@@ -80,7 +88,9 @@
                     <constraint firstItem="mHA-m9-U6E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="UJr-6K-FRd"/>
                     <constraint firstItem="IZd-Zr-yD3" firstAttribute="leading" secondItem="RYD-zj-0Zd" secondAttribute="trailing" constant="50" id="V7f-mX-GQp"/>
                     <constraint firstItem="YkY-9b-O2X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Y69-an-xzw"/>
+                    <constraint firstItem="2w2-ET-xGZ" firstAttribute="centerY" secondItem="RYD-zj-0Zd" secondAttribute="centerY" id="YPd-PU-28w"/>
                     <constraint firstItem="q3F-HC-NSS" firstAttribute="top" secondItem="mHA-m9-U6E" secondAttribute="bottom" constant="20" id="ctp-4l-rEy"/>
+                    <constraint firstItem="2w2-ET-xGZ" firstAttribute="leading" secondItem="IZd-Zr-yD3" secondAttribute="trailing" constant="194" id="ddM-xd-YWt"/>
                     <constraint firstItem="bQ4-fg-hra" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="fek-4Y-fkY"/>
                     <constraint firstItem="7gF-m0-scc" firstAttribute="top" secondItem="bQ4-fg-hra" secondAttribute="bottom" constant="20.5" id="hh5-hc-r5M"/>
                     <constraint firstItem="IZd-Zr-yD3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="kNL-FE-5Af"/>
@@ -93,7 +103,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelDelivertStart" destination="7gF-m0-scc" id="ezd-HA-dhr"/>
+                <outlet property="labelDeliveryCost" destination="IZd-Zr-yD3" id="Zux-pT-bBI"/>
+                <outlet property="labelProNum" destination="bTL-wy-x18" id="eDD-ml-F7p"/>
+            </connections>
             <point key="canvasLocation" x="247.82608695652175" y="160.04464285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="folder" width="20" height="15"/>
+    </resources>
 </document>

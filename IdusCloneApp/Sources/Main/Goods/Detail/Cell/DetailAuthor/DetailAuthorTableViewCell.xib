@@ -125,7 +125,6 @@
                     <constraint firstItem="fU0-VK-Gey" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="5SG-jd-uSg"/>
                     <constraint firstItem="dhI-Xp-5ra" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="29" id="7yF-jP-wct"/>
                     <constraint firstItem="fU0-VK-Gey" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="9QB-dk-9zR"/>
-                    <constraint firstItem="ukh-ao-t71" firstAttribute="leading" secondItem="eAo-JD-pyV" secondAttribute="trailing" constant="44.5" id="ApE-Nq-xUa"/>
                     <constraint firstItem="e7B-RR-Joy" firstAttribute="top" secondItem="ykX-WV-jDX" secondAttribute="bottom" constant="18" id="BCb-in-sYH"/>
                     <constraint firstItem="ZLm-Y2-UTD" firstAttribute="leading" secondItem="IhS-Tf-FxD" secondAttribute="trailing" constant="47.5" id="DyN-wu-5Io"/>
                     <constraint firstItem="dhI-Xp-5ra" firstAttribute="leading" secondItem="fU0-VK-Gey" secondAttribute="trailing" constant="27" id="E2p-nc-gOs"/>
@@ -135,14 +134,15 @@
                     <constraint firstItem="xEL-fb-6cf" firstAttribute="top" secondItem="dhI-Xp-5ra" secondAttribute="bottom" id="Jhj-77-OiN"/>
                     <constraint firstItem="jVq-cb-MEI" firstAttribute="centerY" secondItem="e7B-RR-Joy" secondAttribute="centerY" id="Kax-k3-1DS"/>
                     <constraint firstItem="b5N-fa-B6S" firstAttribute="leading" secondItem="2JA-JF-nTQ" secondAttribute="trailing" constant="5.5" id="QTz-yY-al6"/>
+                    <constraint firstItem="ukh-ao-t71" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="203" id="Sbw-nz-zFe"/>
                     <constraint firstItem="2JA-JF-nTQ" firstAttribute="leading" secondItem="xEL-fb-6cf" secondAttribute="trailing" constant="5" id="VL2-FX-q5O"/>
+                    <constraint firstItem="QiL-fU-vte" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="286.5" id="Zo0-wm-lg3"/>
                     <constraint firstItem="e7B-RR-Joy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="d3D-tA-1ri"/>
                     <constraint firstItem="QiL-fU-vte" firstAttribute="centerY" secondItem="eAo-JD-pyV" secondAttribute="centerY" id="dQm-f4-omg"/>
                     <constraint firstItem="ZLm-Y2-UTD" firstAttribute="centerY" secondItem="zUk-er-AW9" secondAttribute="centerY" id="fN1-cp-3Ii"/>
                     <constraint firstItem="b5N-fa-B6S" firstAttribute="centerY" secondItem="xEL-fb-6cf" secondAttribute="centerY" id="fWT-L0-bSQ"/>
                     <constraint firstItem="IhS-Tf-FxD" firstAttribute="leading" secondItem="zUk-er-AW9" secondAttribute="trailing" constant="42.5" id="i18-lw-hFd"/>
                     <constraint firstItem="ykX-WV-jDX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="oQA-E4-5Tz"/>
-                    <constraint firstItem="QiL-fU-vte" firstAttribute="leading" secondItem="ukh-ao-t71" secondAttribute="trailing" constant="45" id="pEV-AB-mx2"/>
                     <constraint firstItem="ukh-ao-t71" firstAttribute="centerY" secondItem="eAo-JD-pyV" secondAttribute="centerY" id="q9F-sZ-zSw"/>
                     <constraint firstItem="gKK-iP-1WC" firstAttribute="leading" secondItem="ykX-WV-jDX" secondAttribute="trailing" constant="57" id="rIp-3B-0Mh"/>
                     <constraint firstItem="zUk-er-AW9" firstAttribute="leading" secondItem="fU0-VK-Gey" secondAttribute="trailing" constant="27" id="tBj-xv-NY9"/>
@@ -152,6 +152,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageRatingAvg" destination="xEL-fb-6cf" id="Gkb-9f-5dK"/>
+                <outlet property="labelAuthorComment" destination="ykX-WV-jDX" id="aNs-wO-WaQ"/>
+                <outlet property="labelAuthorName" destination="dhI-Xp-5ra" id="KNm-qw-B2N"/>
+                <outlet property="labelProdRatingAvg" destination="2JA-JF-nTQ" id="x7b-G2-QJQ"/>
+                <outlet property="labelProdReviewNum" destination="b5N-fa-B6S" id="YYq-dO-6uv"/>
+                <outlet property="labelTotalFollowNum" destination="ukh-ao-t71" id="Mwh-tq-a3U"/>
+                <outlet property="labelTotalLikeNum" destination="eAo-JD-pyV" id="OrK-iZ-KDl"/>
+                <outlet property="labelTotalSupportNum" destination="QiL-fU-vte" id="6pZ-at-c8g"/>
+            </connections>
             <point key="canvasLocation" x="105.79710144927537" y="147.65625"/>
         </tableViewCell>
     </objects>

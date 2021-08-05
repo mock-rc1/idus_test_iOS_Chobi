@@ -7,11 +7,21 @@
 
 import UIKit
 
+//MARK: Protocol
+protocol DetailKeywordCollectionViewCellDelegate: AnyObject {
+    func collectionView(collectionviewcell: DetailKeywordCollectionViewCell?, index: Int, didTappedInTableViewCell: DetailKeywordTableViewCell)
+}
+
 class DetailKeywordTableViewCell: UITableViewCell {
 
     @IBOutlet weak var keywordCollectionView: UICollectionView!
     
-    let keywordArray : Array<String> = ["진주", "담수진주", "진주목걸이", "얼스룩", "빈티지목걸이","써지컬목걸이", "레이어드목걸이", "진주체인목걸이", "클래습", "하객룩"]
+    //프로토콜 변수
+    weak var detailKeywordCellDelegate: DetailKeywordCollectionViewCellDelegate?
+    
+    // 데이터 배열
+    var keywordArray : Array<DetailKeyword> = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -43,10 +53,11 @@ extension DetailKeywordTableViewCell: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             // 컬렉션 뷰 한 줄에 2개가 딱 맞게 정사각형으로 들어가게!
         let width: Int
-        if(keywordArray[indexPath.row].count < 5 ){
-            width = keywordArray[indexPath.row].count * 20
+    
+        if(keywordArray[indexPath.row].keyWord!.count < 5 ){
+            width = keywordArray[indexPath.row].keyWord!.count * 20
         }else{
-            width = keywordArray[indexPath.row].count * 20 - 10
+            width = keywordArray[indexPath.row].keyWord!.count * 20 - 10
         }
         
         //let height = keywordCollectionView.bounds.height
@@ -58,8 +69,8 @@ extension DetailKeywordTableViewCell: UICollectionViewDelegate, UICollectionView
         
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailKeywordCollectionViewCell", for: indexPath) as? DetailKeywordCollectionViewCell {
-                //cell.setCell(todayGoods: todayGoodsArray[indexPath.row])
-            cell.labelTag.text = "#" + keywordArray[indexPath.row]
+            cell.setCell(detailKeyword: keywordArray[indexPath.row])
+            //cell.labelTag.text = "#" + keywordArray[indexPath.row]
                 return cell
         }
         return UICollectionViewCell()
@@ -80,9 +91,9 @@ extension DetailKeywordTableViewCell: UICollectionViewDelegate, UICollectionView
     }
     
     //데이터 가져올 함수
-    /*
-    func setCell(row: Array<String>)  {
-        self.todayGoodsArray = row
-        self.todayGoodsCollectionView.reloadData()
-    }*/
+    //데이터 가져올 함수
+    func setCell(row: Array<DetailKeyword>)  {
+        self.keywordArray = row
+        self.keywordCollectionView.reloadData()
+    }
 }

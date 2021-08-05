@@ -9,6 +9,10 @@ import UIKit
 
 class DetailShippingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelDeliveryCost: UILabel!
+    @IBOutlet weak var labelDelivertStart: UILabel!
+    @IBOutlet weak var labelProNum: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +23,9 @@ class DetailShippingTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    func setCell(detailSummary: DetailSummary){
+        labelDeliveryCost.text = "\(detailSummary.deliveryCost!)".insertComma + "원"
+        labelDelivertStart.text = "\(detailSummary.deliveryStart!)일 이내"
+        labelProNum.text = "\(detailSummary.prodNum!)"
+    }
 }
