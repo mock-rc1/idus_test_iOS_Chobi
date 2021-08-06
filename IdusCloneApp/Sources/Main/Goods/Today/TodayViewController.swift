@@ -17,6 +17,12 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     // 테이블 뷰
     @IBOutlet weak var tableView: UITableView!
     
+    // Datamanager
+    lazy var dataManager: TodayDataManager = TodayDataManager()
+    
+    //투데이 데이터
+    var todayData: TodayResult?
+    
     // 데이터 배열
     let dataArray: Array<UIImage> = [ #imageLiteral(resourceName: "배너"), #imageLiteral(resourceName: "배너"), #imageLiteral(resourceName: "배너")]
     let eventArray: Array<UIImage> = [ #imageLiteral(resourceName: "이벤트"),  #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트")]
@@ -31,6 +37,9 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
         //tableview
         setupTableView()
         saleTimer()
+        
+        //get data
+        dataManager.getToday(vc: self, userIdx: 3, tab: "today")
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,7 +99,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(String(lists.count) + " 줄")
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -130,6 +139,14 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
                 
                 return cell
             }
+        case 5:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayGoodsTableViewCell") as? TodayGoodsTableViewCell {
+                cell.todayGoodsCellDelegate = self
+                cell.setCell(row: todayGoodsArray)
+                cell.labelTitle.text = "실시간 구매"
+                cell.btnMoreGoods.setTitle("실시간 작품 더보기 >", for: .normal)
+                return cell
+            }
         default:
             return UITableViewCell()
         }
@@ -151,6 +168,8 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
             return 1200
         case 4:
             return 700
+        case 5:
+            return 1200
         default:
             return 100
         }
@@ -183,5 +202,21 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
             self.tableView.register(todaySaleCellNib, forCellReuseIdentifier: "TodaySaleTableViewCell")
         
         
+    }
+}
+
+extension TodayViewController {
+    func didSuccessToday(result: TodayResponse) {
+        todayData = result.result
+        
+        print("DEBUG: 데이터 로딩 성공")
+        print(todayData!)
+        
+        tableView.reloadData()
+        //print(detailData?.getDetailProdImgRes)
+    }
+    
+    func failedToRequest(message: String) {
+        print("DEBUG: 데이터 로딩 실패.")
     }
 }

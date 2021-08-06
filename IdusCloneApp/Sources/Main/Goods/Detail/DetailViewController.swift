@@ -242,7 +242,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
             return tableView.estimatedRowHeight
         case 4:
             if let x = reviewCount{
-                return CGFloat(141 + (242 * reviewPictureCount) + (111 * (x - reviewPictureCount)))
+                return CGFloat(141 + (242 * reviewPictureCount) + (111 * (x - reviewPictureCount)) + 5)
             }else{
                 return CGFloat(141 + (242 * reviewPictureCount) + (111 * (reviewPictureCount)))
             }
@@ -251,16 +251,16 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
             return 140
         case 6: //댓글
             if let x = commentCount{
-                return CGFloat(128 + 20 + (149 * commentAnswerCount) + (62 * (x - commentAnswerCount)))
+                return CGFloat(128 + 20 + (149 * commentAnswerCount) + (62 * (x - commentAnswerCount)) - 62)
             }else{
-                return CGFloat(128 + (149 * commentAnswerCount) + (62 * (commentAnswerCount)))
+                return CGFloat(128 + (149 * commentAnswerCount) + (62 * (commentAnswerCount)) - 62)
             }
         case 7:
             return 285
         case 8:
             return 310
         case 9, 10:
-            return 320
+            return 320 + 200
         default:
             return 100
         }

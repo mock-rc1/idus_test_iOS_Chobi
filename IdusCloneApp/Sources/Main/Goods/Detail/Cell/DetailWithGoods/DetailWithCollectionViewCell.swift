@@ -26,7 +26,7 @@ class DetailWithCollectionViewCell: UICollectionViewCell {
             }
         }else{
             label.text = detailHot.prodName!
-            if let x = detailHot.prodName{
+            if let x = detailHot.prodImage{
                 image.sd_setImage(with: URL(string: x), completed: nil)
             }
             

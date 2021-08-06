@@ -60,6 +60,8 @@
 		C33F736D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C33F735D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf */; };
 		C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C33F735E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf */; };
 		C33F736F26B5450C00A57CFA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F736026B5450C00A57CFA /* BaseViewController.swift */; };
+		C341B1D826BD4A4300B8ADB7 /* TodayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C341B1D726BD4A4300B8ADB7 /* TodayResponse.swift */; };
+		C341B1DA26BD4A5500B8ADB7 /* TodayDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C341B1D926BD4A5500B8ADB7 /* TodayDataManager.swift */; };
 		C34CD15F26BCF59A00216317 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CD15D26BCF59A00216317 /* OptionViewController.swift */; };
 		C34CD16026BCF59A00216317 /* OptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34CD15E26BCF59A00216317 /* OptionViewController.xib */; };
 		C34CD16426BD037E00216317 /* AllSelectedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CD16226BD037E00216317 /* AllSelectedTableViewCell.swift */; };
@@ -182,6 +184,8 @@
 		C33F735D26B5450C00A57CFA /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		C33F735E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
 		C33F736026B5450C00A57CFA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C341B1D726BD4A4300B8ADB7 /* TodayResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayResponse.swift; sourceTree = "<group>"; };
+		C341B1D926BD4A5500B8ADB7 /* TodayDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDataManager.swift; sourceTree = "<group>"; };
 		C34CD15D26BCF59A00216317 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		C34CD15E26BCF59A00216317 /* OptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionViewController.xib; sourceTree = "<group>"; };
 		C34CD16226BD037E00216317 /* AllSelectedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSelectedTableViewCell.swift; sourceTree = "<group>"; };
@@ -528,6 +532,22 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		C341B1D526BD4A1800B8ADB7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C341B1D726BD4A4300B8ADB7 /* TodayResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C341B1D626BD4A2200B8ADB7 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C341B1D926BD4A5500B8ADB7 /* TodayDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		C34CD15C26BCF58900216317 /* Option */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +572,8 @@
 		C3825FA926B6BEB7009CAD58 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				C341B1D626BD4A2200B8ADB7 /* DataManager */,
+				C341B1D526BD4A1800B8ADB7 /* Entity */,
 				C32A80E426B6D2F000E03C6A /* Cell */,
 				C3825FAC26B6BEEE009CAD58 /* TodayViewController.swift */,
 				C3825FAF26B6C207009CAD58 /* TodayStoryboard.storyboard */,
@@ -982,7 +1004,9 @@
 				C381B46F26BC5DB800EF26D9 /* DetailWithCollectionViewCell.swift in Sources */,
 				C307D9D726BA4C57000F8179 /* DetailPictureReviewCollectionViewCell.swift in Sources */,
 				C3CA6C0C26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.swift in Sources */,
+				C341B1DA26BD4A5500B8ADB7 /* TodayDataManager.swift in Sources */,
 				C307D9E526BAB683000F8179 /* DetailCommentTableViewCell.swift in Sources */,
+				C341B1D826BD4A4300B8ADB7 /* TodayResponse.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,
 				C307D9F626BAC0E4000F8179 /* DetailAuthorTableViewCell.swift in Sources */,
 				C307D9E926BAB856000F8179 /* DetailCommentQTableViewCell.swift in Sources */,
