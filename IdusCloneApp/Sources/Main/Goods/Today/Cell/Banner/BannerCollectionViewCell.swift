@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class BannerCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageBanner: UIImageView!
@@ -14,7 +14,8 @@ class BannerCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func setCell(banner: UIImage) {
-        self.imageBanner.image = banner
+    func setCell(banner: TodayBanner) {
+        self.imageBanner.sd_setImage(with: URL(string: banner.bannerImage!), completed: nil)
+        
     }
 }

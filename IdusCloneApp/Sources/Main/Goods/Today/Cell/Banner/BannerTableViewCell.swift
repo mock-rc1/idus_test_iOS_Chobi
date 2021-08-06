@@ -23,7 +23,8 @@ class BannerTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
     var nowPage: Int = 0
 
     // 데이터 배열
-    var dataArray: Array<UIImage> = []
+    //var dataArray: Array<UIImage> = []
+    var bannerArray: Array<TodayBanner> = []
     
     //배너 콜렉션 뷰
     @IBOutlet weak var bannerCollectionView: UICollectionView!
@@ -63,7 +64,7 @@ class BannerTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
         // 배너 움직이는 매서드
         func bannerMove() {
             // 현재페이지가 마지막 페이지일 경우
-            if nowPage == dataArray.count-1 {
+            if nowPage == bannerArray.count-1 {
             // 맨 처음 페이지로 돌아감
                 bannerCollectionView.scrollToItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, at: .right, animated: true)
                 nowPage = 0
@@ -79,7 +80,7 @@ class BannerTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
 extension BannerTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return dataArray.count
+        return bannerArray.count
         //return movieVO.popular.count
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -89,7 +90,7 @@ extension BannerTableViewCell : UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCollectionViewCell", for: indexPath) as? BannerCollectionViewCell {
             
-            cell.setCell(banner: dataArray[indexPath.row])
+            cell.setCell(banner: bannerArray[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -114,8 +115,8 @@ extension BannerTableViewCell : UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     //데이터 가져올 함수
-    func setCell(row: Array<UIImage>)  {
-        self.dataArray = row
+    func setCell(row: Array<TodayBanner>)  {
+        self.bannerArray = row
         self.bannerCollectionView.reloadData()
     }
 }

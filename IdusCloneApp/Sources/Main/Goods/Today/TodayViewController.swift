@@ -24,7 +24,7 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     var todayData: TodayResult?
     
     // 데이터 배열
-    let dataArray: Array<UIImage> = [ #imageLiteral(resourceName: "배너"), #imageLiteral(resourceName: "배너"), #imageLiteral(resourceName: "배너")]
+    //let dataArray: Array<UIImage> = [ #imageLiteral(resourceName: "배너"), #imageLiteral(resourceName: "배너"), #imageLiteral(resourceName: "배너")]
     let eventArray: Array<UIImage> = [ #imageLiteral(resourceName: "이벤트"),  #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트")]
     let todayGoodsArray: Array<String> = ["천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이"]
     
@@ -108,7 +108,9 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "BannerTableViewCell") as? BannerTableViewCell {
                 cell.bannerCellDelegate = self
-                cell.setCell(row: dataArray)
+                if let x = todayData{
+                    cell.setCell(row: x.getBannerRes)
+                }
                 return cell
             }
         case 1:

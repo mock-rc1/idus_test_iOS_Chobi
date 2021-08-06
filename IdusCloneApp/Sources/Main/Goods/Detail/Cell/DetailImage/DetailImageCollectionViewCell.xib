@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Odv-TM-sW6">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Odv-TM-sW6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                     </imageView>
                 </subviews>
