@@ -23,9 +23,10 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     //투데이 데이터
     var todayData: TodayResult?
     
-    // 데이터 배열
-    //let dataArray: Array<UIImage> = [ #imageLiteral(resourceName: "배너"), #imageLiteral(resourceName: "배너"), #imageLiteral(resourceName: "배너")]
-    let eventArray: Array<UIImage> = [ #imageLiteral(resourceName: "이벤트"),  #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트")]
+    // 이벤트 배열
+    //#imageLiteral(resourceName: "BEST선물"),
+    let eventTextArray: Array<String> = ["반값줍줍", "이벤트", "휴가꿀템", "취미클래스", "지금할인중", "써머스타일링" , "제로웨이스트", "비건","남성잇템", "친구초대쿠폰"]
+    let eventArray: Array<UIImage> = [ #imageLiteral(resourceName: "반값줍줍"), #imageLiteral(resourceName: "BEST선물"), #imageLiteral(resourceName: "휴가꿀템"), #imageLiteral(resourceName: "취미클래스"), #imageLiteral(resourceName: "지금할인중"), #imageLiteral(resourceName: "써머스타일링"), #imageLiteral(resourceName: "제로웨이스트"), #imageLiteral(resourceName: "비건"), #imageLiteral(resourceName: "남성잇템"), #imageLiteral(resourceName: "친구초대쿠폰")]
     let todayGoodsArray: Array<String> = ["천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이"]
     
     // 타이머 시간
@@ -116,25 +117,34 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell") as? EventTableViewCell {
                 cell.eventCellDelegate = self
-                cell.setCell(row: eventArray)
+                cell.setCell(event: eventArray, eventText: eventTextArray)
                 return cell
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayRelatedTableViewCell") as? TodayRelatedTableViewCell {
                 //cell.todayGoodsCellDelegate = self
-                //cell.setCell(row: todayGoodsArray)
+                if let x = todayData{
+                    cell.setCell(row: x.getVisitAlikeRes)
+                }
                 return cell
             }
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayGoodsTableViewCell") as? TodayGoodsTableViewCell {
                 cell.todayGoodsCellDelegate = self
-                cell.setCell(row: todayGoodsArray)
+                if let x = todayData{
+                    cell.setCell(goods: x.getTodayProdRes, realtime: x.getRecOrderRes, index: 1)
+                }
+                
+                cell.labelTitle.text = "오늘의 작품"
+                cell.btnMoreGoods.setTitle("오늘의 작품 더보기 >", for: .normal)
                 return cell
             }
         case 4:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodaySaleTableViewCell") as? TodaySaleTableViewCell {
                 //cell.todayGoodsCellDelegate = self
-                //cell.setCell(row: todayGoodsArray)
+                if let x = todayData{
+                    cell.setCell(row: x.getDisProdRes)
+                }
                 if let arr = cell.labelTimer.text?.components(separatedBy: ":"){
                     cell.labelTimer.text = "\(arr[0]):\(arr[1]):\(String(Int(arr[2])! - 1))"
                 }
@@ -144,7 +154,9 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
         case 5:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayGoodsTableViewCell") as? TodayGoodsTableViewCell {
                 cell.todayGoodsCellDelegate = self
-                cell.setCell(row: todayGoodsArray)
+                if let x = todayData{
+                    cell.setCell(goods: x.getTodayProdRes, realtime: x.getRecOrderRes, index: 0)
+                }
                 cell.labelTitle.text = "실시간 구매"
                 cell.btnMoreGoods.setTitle("실시간 작품 더보기 >", for: .normal)
                 return cell

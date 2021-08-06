@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class TodaySaleCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var lableSale: UILabel!
@@ -24,5 +24,18 @@ class TodaySaleCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func setCell(sale: TodaySale)  {
+        if let x = sale.reviewComment {
+            labelReview.text = x
+        }else{
+            labelReview.text = ""
+        }
+        imageGoods.sd_setImage(with: URL(string: sale.prodImage!), completed: nil)
+        labelTitle.text = sale.prodName
+        labelReviewNum.text = "(\(sale.prodReviewNum!))"
+        labelSalePrice.text = "\(sale.saleCost!)".insertComma + "원"
+        labelPrice.text = "\(sale.prodPrice!)".insertComma + "원"
+        
+    }
     
 }

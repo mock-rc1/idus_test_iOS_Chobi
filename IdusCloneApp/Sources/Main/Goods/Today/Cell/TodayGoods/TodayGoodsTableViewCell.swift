@@ -23,8 +23,9 @@ class TodayGoodsTableViewCell: UITableViewCell{
     @IBOutlet weak var todayGoodsCollectionView: UICollectionView!
     
     // 데이터 배열
-    var todayGoodsArray: Array<String> = []
-    
+    var todayGoodsArray: Array<TodayGoods> = []
+    var todayRealtimeArray: Array<TodayRealtime> = []
+    var index = 0
     // 프로토콜 변수
     
     weak var todayGoodsCellDelegate: TodayGoodsCollectionViewCellDelegate?
@@ -65,7 +66,7 @@ extension TodayGoodsTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayGoodsCollectionViewCell", for: indexPath) as? TodayGoodsCollectionViewCell {
             
-            cell.setCell(todayGoods: todayGoodsArray[indexPath.row])
+            cell.setCell( todayGoods: todayGoodsArray[indexPath.row],todayRealtime: todayRealtimeArray[indexPath.row], index: index)
             return cell
         }
         return UICollectionViewCell()
@@ -86,8 +87,10 @@ extension TodayGoodsTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     }
     
     //데이터 가져올 함수
-    func setCell(row: Array<String>)  {
-        self.todayGoodsArray = row
+    func setCell(goods: Array<TodayGoods>, realtime: Array<TodayRealtime>, index: Int)  {
+        self.index = index
+        self.todayGoodsArray = goods
+        self.todayRealtimeArray = realtime
         self.todayGoodsCollectionView.reloadData()
     }
 }

@@ -54,17 +54,25 @@
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="()" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXT-ss-E4Q">
+                        <rect key="frame" x="102" y="291" width="10" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="atK-Dl-EqO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="71D-q8-Jtp"/>
                 <constraint firstAttribute="trailing" secondItem="Wkb-FJ-cAk" secondAttribute="trailing" constant="110" id="7bW-uR-ULq"/>
+                <constraint firstItem="bXT-ss-E4Q" firstAttribute="centerY" secondItem="Wkb-FJ-cAk" secondAttribute="centerY" id="8Uo-HQ-Tbe"/>
                 <constraint firstItem="2sO-C9-vNW" firstAttribute="top" secondItem="Wkb-FJ-cAk" secondAttribute="bottom" id="Gf3-D5-lIu"/>
                 <constraint firstItem="Wbf-cP-kLy" firstAttribute="top" secondItem="atK-Dl-EqO" secondAttribute="bottom" constant="7" id="LH9-OX-YLT"/>
                 <constraint firstItem="Wkb-FJ-cAk" firstAttribute="top" secondItem="atK-Dl-EqO" secondAttribute="bottom" constant="50" id="Mgq-Al-jgU"/>
                 <constraint firstAttribute="trailing" secondItem="atK-Dl-EqO" secondAttribute="trailing" id="PPP-gz-ZxQ"/>
                 <constraint firstItem="Wkb-FJ-cAk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XAk-bn-RbP"/>
+                <constraint firstItem="bXT-ss-E4Q" firstAttribute="leading" secondItem="Wkb-FJ-cAk" secondAttribute="trailing" constant="5" id="ZDK-bR-xv1"/>
                 <constraint firstItem="2sO-C9-vNW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aHr-04-wZ7"/>
                 <constraint firstAttribute="trailing" secondItem="Wbf-cP-kLy" secondAttribute="trailing" id="b27-sd-bhB"/>
                 <constraint firstItem="9u8-af-pwK" firstAttribute="leading" secondItem="2sO-C9-vNW" secondAttribute="trailing" constant="1" id="hIF-t4-7ii"/>
@@ -74,6 +82,10 @@
             </constraints>
             <size key="customSize" width="207" height="349"/>
             <connections>
+                <outlet property="image" destination="atK-Dl-EqO" id="5px-N0-M4k"/>
+                <outlet property="imageStar" destination="Wkb-FJ-cAk" id="a7e-gl-WgG"/>
+                <outlet property="labelReview" destination="9u8-af-pwK" id="rLE-Ka-aJD"/>
+                <outlet property="labelReviewNum" destination="bXT-ss-E4Q" id="eBK-5T-yNN"/>
                 <outlet property="labelTodayGoods" destination="Wbf-cP-kLy" id="a2w-aI-fyT"/>
             </connections>
             <point key="canvasLocation" x="245.6521739130435" y="193.19196428571428"/>

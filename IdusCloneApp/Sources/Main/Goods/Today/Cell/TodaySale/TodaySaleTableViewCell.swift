@@ -16,7 +16,7 @@ class TodaySaleTableViewCell: UITableViewCell , UICollectionViewDelegateFlowLayo
     @IBOutlet weak var todaySaleCollectionView: UICollectionView!
     
     // 데이터 배열
-    var todayArray: Array<UIImage> = []
+    var saleArray: Array<TodaySale> = []
     
     // 스크롤
     let behavior = MSCollectionViewPeekingBehavior()
@@ -48,7 +48,7 @@ class TodaySaleTableViewCell: UITableViewCell , UICollectionViewDelegateFlowLayo
 extension TodaySaleTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return saleArray.count
         //return movieVO.popular.count
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -58,7 +58,7 @@ extension TodaySaleTableViewCell : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodaySaleCollectionViewCell", for: indexPath) as? TodaySaleCollectionViewCell {
             
-            //cell.setCell(event: eventArray[indexPath.row])
+            cell.setCell( sale: saleArray[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -81,10 +81,10 @@ extension TodaySaleTableViewCell : UICollectionViewDelegate, UICollectionViewDat
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         behavior.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
-    /*
+    
     //데이터 가져올 함수
-    func setCell(row: Array<UIImage>)  {
-        self.eventArray = row
-        self.eventCollectionView.reloadData()
-    }*/
+    func setCell(row: Array<TodaySale>)  {
+        self.saleArray = row
+        self.todaySaleCollectionView.reloadData()
+    }
 }

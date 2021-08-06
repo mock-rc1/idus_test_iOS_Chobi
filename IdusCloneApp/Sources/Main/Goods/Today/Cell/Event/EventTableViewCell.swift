@@ -18,7 +18,7 @@ class EventTableViewCell: UITableViewCell, UICollectionViewDelegateFlowLayout {
     
     // 데이터 배열
     var eventArray: Array<UIImage> = []
-    
+    var eventTextArray: Array<String> = []
     // 이벤트 콜렉션 뷰
     @IBOutlet weak var eventCollectionView: UICollectionView!
 
@@ -69,7 +69,7 @@ extension EventTableViewCell : UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as? EventCollectionViewCell {
             
-            cell.setCell(event: eventArray[indexPath.row])
+            cell.setCell(event: eventArray[indexPath.row], eventText: eventTextArray[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -94,8 +94,9 @@ extension EventTableViewCell : UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     //데이터 가져올 함수
-    func setCell(row: Array<UIImage>)  {
-        self.eventArray = row
+    func setCell(event: Array<UIImage>, eventText: Array<String>)  {
+        self.eventArray = event
+        self.eventTextArray = eventText
         self.eventCollectionView.reloadData()
     }
 }

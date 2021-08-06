@@ -87,6 +87,13 @@
                 <constraint firstItem="G9j-mS-76z" firstAttribute="top" secondItem="b0H-70-VQN" secondAttribute="bottom" constant="8" symbolic="YES" id="xWJ-CZ-NkM"/>
             </constraints>
             <size key="customSize" width="200" height="319"/>
+            <connections>
+                <outlet property="image" destination="b0H-70-VQN" id="m2R-Hr-oFs"/>
+                <outlet property="imageStar" destination="Dkw-Gg-0zN" id="lK9-kL-frL"/>
+                <outlet property="labelReview" destination="4fd-i5-odG" id="m8g-pa-R2b"/>
+                <outlet property="labelReviewNum" destination="XKo-mI-qnQ" id="QvL-lF-C8g"/>
+                <outlet property="labelTitle" destination="G9j-mS-76z" id="gm5-CE-qpM"/>
+            </connections>
             <point key="canvasLocation" x="136.23188405797103" y="197.87946428571428"/>
         </collectionViewCell>
     </objects>

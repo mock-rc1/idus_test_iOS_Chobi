@@ -16,7 +16,8 @@ class EventCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func setCell(event: UIImage) {
+    func setCell(event: UIImage, eventText: String) {
         self.imageEvent.image = event
+        self.labelEvent.text = eventText
     }
 }

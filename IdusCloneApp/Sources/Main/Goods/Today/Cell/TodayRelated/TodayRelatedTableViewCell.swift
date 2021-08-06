@@ -14,6 +14,8 @@ class TodayRelatedTableViewCell: UITableViewCell {
     // 스크롤
     let behavior = MSCollectionViewPeekingBehavior()
     
+    var relatedArray: Array<TodayRelated> = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -42,7 +44,7 @@ class TodayRelatedTableViewCell: UITableViewCell {
 extension TodayRelatedTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
+        return relatedArray.count
         //return movieVO.popular.count
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -52,7 +54,7 @@ extension TodayRelatedTableViewCell : UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayRelatedCollectionViewCell", for: indexPath) as? TodayRelatedCollectionViewCell {
             
-            //cell.setCell(event: eventArray[indexPath.row])
+            cell.setCell(todayRelated: relatedArray[indexPath.row])
             return cell
         }
         return UICollectionViewCell()
@@ -75,10 +77,10 @@ extension TodayRelatedTableViewCell : UICollectionViewDelegate, UICollectionView
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         behavior.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
-    /*
+    
     //데이터 가져올 함수
-    func setCell(row: Array<UIImage>)  {
-        self.eventArray = row
-        self.eventCollectionView.reloadData()
-    }*/
+    func setCell(row: Array<TodayRelated>)  {
+        self.relatedArray = row
+        self.todayRelatedCollectionView.reloadData()
+    }
 }
