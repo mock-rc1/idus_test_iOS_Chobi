@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vi7-N9-axK">
-                        <rect key="frame" x="20" y="63" width="374" height="165"/>
+                        <rect key="frame" x="0.0" y="63" width="414" height="165"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eLt-sK-wQL">
                             <size key="itemSize" width="128" height="128"/>
@@ -58,13 +58,16 @@
                     <constraint firstItem="Fmd-ZD-8U0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="FJ9-sU-5eW"/>
                     <constraint firstItem="wlQ-S9-lK4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="OlN-9j-9Np"/>
                     <constraint firstItem="vi7-N9-axK" firstAttribute="top" secondItem="Fmd-ZD-8U0" secondAttribute="bottom" constant="17" id="aaj-e8-RUL"/>
-                    <constraint firstItem="vi7-N9-axK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cZx-u4-3X1"/>
+                    <constraint firstItem="vi7-N9-axK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="20" id="cZx-u4-3X1"/>
                     <constraint firstItem="Fmd-ZD-8U0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="faE-41-pPq"/>
-                    <constraint firstItem="vi7-N9-axK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ote-yJ-QnA"/>
+                    <constraint firstItem="vi7-N9-axK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-20" id="ote-yJ-QnA"/>
                     <constraint firstItem="wlQ-S9-lK4" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="wxy-ep-13C"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="otherCollectionView" destination="vi7-N9-axK" id="ufA-FV-MJG"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="154.35267857142856"/>
         </tableViewCell>
     </objects>

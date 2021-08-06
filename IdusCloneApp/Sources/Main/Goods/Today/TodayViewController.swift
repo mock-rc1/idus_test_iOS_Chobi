@@ -22,11 +22,15 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     let eventArray: Array<UIImage> = [ #imageLiteral(resourceName: "이벤트"),  #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트"), #imageLiteral(resourceName: "이벤트")]
     let todayGoodsArray: Array<String> = ["천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이"]
     
+    // 타이머 시간
+    var timer = 0
+    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         //tableview
         setupTableView()
+        saleTimer()
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,6 +71,18 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     func collectionView(collectionviewcell: TodayGoodsCollectionViewCell?, index: Int, didTappedInTableViewCell: TodayGoodsTableViewCell) {
         goDetailPage(index: index)
     }
+    
+    //할인 타이머
+    func saleTimer() {
+           let _: Timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (Timer) in
+            self.addTime()
+            
+        }
+    }
+    func addTime() {
+        timer += 1
+        tableView.reloadData()
+    }
 }
 
 // 테이블뷰 extension
@@ -74,7 +90,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(String(lists.count) + " 줄")
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,9 +109,25 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
                 return cell
             }
         case 2:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayRelatedTableViewCell") as? TodayRelatedTableViewCell {
+                //cell.todayGoodsCellDelegate = self
+                //cell.setCell(row: todayGoodsArray)
+                return cell
+            }
+        case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayGoodsTableViewCell") as? TodayGoodsTableViewCell {
                 cell.todayGoodsCellDelegate = self
                 cell.setCell(row: todayGoodsArray)
+                return cell
+            }
+        case 4:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "TodaySaleTableViewCell") as? TodaySaleTableViewCell {
+                //cell.todayGoodsCellDelegate = self
+                //cell.setCell(row: todayGoodsArray)
+                if let arr = cell.labelTimer.text?.components(separatedBy: ":"){
+                    cell.labelTimer.text = "\(arr[0]):\(arr[1]):\(String(Int(arr[2])! - 1))"
+                }
+                
                 return cell
             }
         default:
@@ -114,7 +146,11 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
         case 1:
             return 100
         case 2:
+            return 380
+        case 3:
             return 1200
+        case 4:
+            return 700
         default:
             return 100
         }
@@ -125,16 +161,27 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
             // Register the xib for tableview cell
             tableView.delegate = self
             tableView.dataSource = self
-        
+            
+        //배너
             let curatingCellNib = UINib(nibName: "BannerTableViewCell", bundle: nil)
             self.tableView.register(curatingCellNib, forCellReuseIdentifier: "BannerTableViewCell")
         
+        //이벤트
             let eventCellNib = UINib(nibName: "EventTableViewCell", bundle: nil)
             self.tableView.register(eventCellNib, forCellReuseIdentifier: "EventTableViewCell")
         
+        //연관 작품
+        let todayRelatedCellNib = UINib(nibName: "TodayRelatedTableViewCell", bundle: nil)
+        self.tableView.register(todayRelatedCellNib, forCellReuseIdentifier: "TodayRelatedTableViewCell")
+        
+        //오늘의 작품
             let todayGoodsCellNib = UINib(nibName: "TodayGoodsTableViewCell", bundle: nil)
             self.tableView.register(todayGoodsCellNib, forCellReuseIdentifier: "TodayGoodsTableViewCell")
         
-            
+            //할인
+            let todaySaleCellNib = UINib(nibName: "TodaySaleTableViewCell", bundle: nil)
+            self.tableView.register(todaySaleCellNib, forCellReuseIdentifier: "TodaySaleTableViewCell")
+        
+        
     }
 }

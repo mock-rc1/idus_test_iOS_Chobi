@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+protocol MyProtocol: AnyObject {
+    func didSelectBtnHeart()
+}
 class DetailSummaryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelHeart: UILabel!
@@ -21,7 +23,7 @@ class DetailSummaryTableViewCell: UITableViewCell {
     @IBOutlet weak var btnProdReviewNum: UIButton!
     @IBOutlet weak var labelProdReviewNum: UILabel!
     
-    
+    var delegate: MyProtocol?
     //weak var delegate: AnswerCellViewDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,7 +37,7 @@ class DetailSummaryTableViewCell: UITableViewCell {
     }
     @IBAction func btnHeart(_ sender: Any) {
         print("찜")
-        if btnHeart.isSelected{
+        if btnHeart.isSelected == false{
             btnHeart.setImage(#imageLiteral(resourceName: "찜주황"), for: .normal)
             labelHeart.text = String( Int(labelHeart.text!)! + 1)
         }
@@ -44,7 +46,7 @@ class DetailSummaryTableViewCell: UITableViewCell {
             labelHeart.text = String( Int(labelHeart.text!)! - 1)
         }
         btnHeart.isSelected.toggle()
-        
+        self.delegate?.didSelectBtnHeart()
     }
     func setCell(detailSummary: DetailSummary) {
         

@@ -12,7 +12,7 @@ struct DetailResponse: Decodable {
     var result : DetailResult
 }
 
-//상세 페이지 셀들~~~
+//상세 페이지 셀들
 struct DetailResult: Decodable {
     var getDetailProdImgRes: [DetailImage]
     var getDetailRes: DetailSummary

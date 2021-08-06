@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TodayRelatedCollectionViewCell" customModule="IdusCloneApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="319"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="319"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의 작품" translatesAutoresizingMaskIntoConstraints="NO" id="b0H-70-VQN">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="J11-Ia-ptF"/>
+                            <constraint firstAttribute="width" constant="200" id="qnm-UO-Ww2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="천연 수정 크리스탈 원석 은목걸이" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9j-mS-76z">
+                        <rect key="frame" x="0.0" y="208" width="200" height="39"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="39" id="san-eV-Hh6"/>
+                            <constraint firstAttribute="width" constant="200" id="vMJ-nh-cut"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="별점" translatesAutoresizingMaskIntoConstraints="NO" id="Dkw-Gg-0zN">
+                        <rect key="frame" x="0.0" y="251" width="97" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="97" id="0B6-NQ-tM0"/>
+                            <constraint firstAttribute="height" constant="24" id="S5j-rO-3v2"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="후기" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-dK-0xa">
+                        <rect key="frame" x="0.0" y="288" width="45" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="7Wp-79-3To"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="N3G-qG-iJS"/>
+                            <constraint firstAttribute="height" constant="22" id="Ycm-CY-1hl"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="hoI-uW-eUy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일단 작가님이 엄청" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fd-i5-odG">
+                        <rect key="frame" x="46" y="289" width="154" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="iU9-Vp-0jz"/>
+                            <constraint firstAttribute="width" constant="154" id="zzO-gV-hoB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(111)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKo-mI-qnQ">
+                        <rect key="frame" x="105" y="255" width="28" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dg5-dK-0xa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0Da-ZG-ekM"/>
+                <constraint firstAttribute="trailing" secondItem="G9j-mS-76z" secondAttribute="trailing" id="12u-sq-aCP"/>
+                <constraint firstItem="b0H-70-VQN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4PX-ZE-nyW"/>
+                <constraint firstItem="G9j-mS-76z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7d4-mI-OM7"/>
+                <constraint firstItem="Dkw-Gg-0zN" firstAttribute="top" secondItem="b0H-70-VQN" secondAttribute="bottom" constant="51" id="9Ag-p6-aRT"/>
+                <constraint firstItem="4fd-i5-odG" firstAttribute="leading" secondItem="dg5-dK-0xa" secondAttribute="trailing" constant="1" id="AQA-T8-kA8"/>
+                <constraint firstItem="4fd-i5-odG" firstAttribute="leading" secondItem="dg5-dK-0xa" secondAttribute="trailing" constant="1" id="Brf-ye-HLe"/>
+                <constraint firstItem="Dkw-Gg-0zN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Di4-KY-G3Y"/>
+                <constraint firstItem="XKo-mI-qnQ" firstAttribute="centerY" secondItem="Dkw-Gg-0zN" secondAttribute="centerY" id="GJy-hq-cQc"/>
+                <constraint firstItem="b0H-70-VQN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OSC-dd-7qN"/>
+                <constraint firstItem="XKo-mI-qnQ" firstAttribute="leading" secondItem="Dkw-Gg-0zN" secondAttribute="trailing" constant="8" symbolic="YES" id="eBv-Sh-p2O"/>
+                <constraint firstItem="4fd-i5-odG" firstAttribute="bottom" secondItem="dg5-dK-0xa" secondAttribute="bottom" id="lGc-1M-Z1C"/>
+                <constraint firstAttribute="trailing" secondItem="b0H-70-VQN" secondAttribute="trailing" id="ntb-fj-T5y"/>
+                <constraint firstItem="dg5-dK-0xa" firstAttribute="top" secondItem="Dkw-Gg-0zN" secondAttribute="bottom" constant="13" id="pBV-a3-jb5"/>
+                <constraint firstItem="G9j-mS-76z" firstAttribute="top" secondItem="b0H-70-VQN" secondAttribute="bottom" constant="8" symbolic="YES" id="xWJ-CZ-NkM"/>
+            </constraints>
+            <size key="customSize" width="200" height="319"/>
+            <point key="canvasLocation" x="136.23188405797103" y="197.87946428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="별점" width="154" height="40"/>
+        <image name="오늘의 작품" width="285" height="338"/>
+        <image name="후기" width="75" height="56"/>
+    </resources>
+</document>

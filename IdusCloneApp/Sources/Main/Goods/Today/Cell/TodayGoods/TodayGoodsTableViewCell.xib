@@ -19,20 +19,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 작품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xra-Gt-whO">
-                        <rect key="frame" x="10" y="0.0" width="113.5" height="30"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <rect key="frame" x="10" y="0.0" width="109" height="29"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMe-yJ-Gx7">
-                        <rect key="frame" x="347" y="0.0" width="53" height="30"/>
+                        <rect key="frame" x="347" y="-0.5" width="53" height="30"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <state key="normal" title="더보기 &gt;">
                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5M0-Qb-FjH">
-                        <rect key="frame" x="0.0" y="47.5" width="414" height="252.5"/>
+                        <rect key="frame" x="0.0" y="47" width="414" height="253"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="K5A-Xf-NRT">
                             <size key="itemSize" width="128" height="128"/>

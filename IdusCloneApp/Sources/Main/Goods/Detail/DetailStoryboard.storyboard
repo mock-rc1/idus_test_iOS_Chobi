@@ -71,7 +71,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="btnBuy:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4H4-Lx-qHb"/>
+                                            <action selector="btnBuy:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6g2-l4-krL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-AA-qoZ">
@@ -101,6 +101,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnHeart" destination="cyI-lo-lyp" id="MQM-Dc-wry"/>
+                        <outlet property="labelHeart" destination="5zY-98-RzG" id="BZ5-EI-fKp"/>
                         <outlet property="tableView" destination="P5L-h7-Gkq" id="oh8-4e-yox"/>
                     </connections>
                 </viewController>

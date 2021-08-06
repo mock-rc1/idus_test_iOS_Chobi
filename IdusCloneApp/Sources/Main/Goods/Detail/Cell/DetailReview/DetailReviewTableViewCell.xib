@@ -93,7 +93,7 @@
             <connections>
                 <outlet property="reviewCollectionView" destination="dQb-mH-NME" id="vz6-oC-O6f"/>
             </connections>
-            <point key="canvasLocation" x="92.753623188405811" y="104.79910714285714"/>
+            <point key="canvasLocation" x="-23" y="105"/>
         </tableViewCell>
     </objects>
     <resources>

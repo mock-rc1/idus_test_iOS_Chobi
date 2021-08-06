@@ -5,7 +5,12 @@
 //  Created by 김수빈 on 2021/08/02.
 //
 import UIKit
-class DetailViewController: BaseViewController, DetailImageCollectionViewCellDelegate, DetailKeywordCollectionViewCellDelegate{
+class DetailViewController: BaseViewController, DetailImageCollectionViewCellDelegate, DetailKeywordCollectionViewCellDelegate, MyProtocol{
+    func didSelectBtnHeart() {
+        self.btnHeart.setImage(#imageLiteral(resourceName: "찜주황"), for: .normal)
+        self.labelHeart.text = String( Int(labelHeart.text!)! + 1)
+    }
+    
     //MARK: - Outlet
     
     //테이블 뷰
@@ -24,11 +29,13 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
     var reviewCount: Int?
     var reviewPictureCount = 0
     
-    // 댓글과 답글
-    
+    // 댓글 개수
+    var commentCount: Int?
+    var commentAnswerCount = 0
     
     //MARK: - LifeCycle
     @IBOutlet weak var btnHeart: UIButton!
+    @IBOutlet weak var labelHeart: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,8 +86,15 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
     }
     
     // 탭바 버튼
+    //MARK: 구매
     @IBAction func btnBuy(_ sender: Any) {
+        let nextVC = OptionViewController()
+        nextVC.modalPresentationStyle = .custom
+        
+        self.present(nextVC, animated: true, completion: nil)
     }
+    
+    
     func changeHeart() {
         btnHeart.setImage(#imageLiteral(resourceName: "찜_주황"), for: .normal)
     }
@@ -96,6 +110,9 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
     func collectionView(collectionviewcell: DetailKeywordCollectionViewCell?, index: Int, didTappedInTableViewCell: DetailKeywordTableViewCell) {
         
     }
+    
+    
+    
 }
 
 // 테이블뷰 extension
@@ -103,7 +120,9 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(String(lists.count) + " 줄")
-        return 14
+        
+        return 11
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -119,7 +138,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
             }
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailSummaryTableViewCell") as? DetailSummaryTableViewCell {
-                //cell.eventCellDelegate = self
+                cell.delegate = self
                 //cell.setCell(row: eventArray)
                 if let x = detailData {
                     cell.setCell(detailSummary: x.getDetailRes)
@@ -164,49 +183,42 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCommentTableViewCell") as? DetailCommentTableViewCell {
                 //cell.todayGoodsCellDelegate = self
                 //cell.setCell(row: todayGoodsArray)
+                if let x = detailData {
+                    cell.setCell(detailComment: x.getDetailCommentRes)
+                }
                 return cell
             }
+        //댓글 Q&A
+        
         case 7:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCommentQTableViewCell") as? DetailCommentQTableViewCell {
-                //cell.todayGoodsCellDelegate = self
-                //cell.setCell(row: todayGoodsArray)
-                return cell
-            }
-        case 8:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCommentATableViewCell") as? DetailCommentATableViewCell {
-                //cell.todayGoodsCellDelegate = self
-                //cell.setCell(row: todayGoodsArray)
-                return cell
-            }
-        case 9:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCommentWTableViewCell") as? DetailCommentWTableViewCell {
-                //cell.todayGoodsCellDelegate = self
-                //cell.setCell(row: todayGoodsArray)
-                return cell
-            }
-        case 10:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailAuthorTableViewCell") as? DetailAuthorTableViewCell {
                 if let x = detailData {
                     cell.setCell(detailSummary: x.getDetailRes)
                 }
                 return cell
             }
-        case 11:
+        case 8:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailOtherGoodsTableViewCell") as? DetailOtherGoodsTableViewCell {
                 //cell.todayGoodsCellDelegate = self
-                //cell.setCell(row: todayGoodsArray)
+                if let x = detailData {
+                    cell.setCell(row: x.getDetailAuthorProdRes)
+                }
                 return cell
             }
-        case 12:
+        case 9:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailWithGoodsTableViewCell") as? DetailWithGoodsTableViewCell {
                 //cell.todayGoodsCellDelegate = self
-                //cell.setCell(row: todayGoodsArray)
+                if let x = detailData {
+                    cell.setCell(with: x.getDetailCateProdRes, hot: x.getDetailHotRes,i: 1)
+                }
                 return cell
             }
-        case 13:
+        case 10:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailWithGoodsTableViewCell") as? DetailWithGoodsTableViewCell {
                 //cell.todayGoodsCellDelegate = self
-                //cell.setCell(row: todayGoodsArray)
+                if let x = detailData {
+                    cell.setCell(with: x.getDetailCateProdRes, hot: x.getDetailHotRes,i: 0)
+                }
                 return cell
             }
         default:
@@ -237,12 +249,18 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
             // 이미지 있는 것 없는 것 개수
         case 5: //키워드
             return 140
-        case 6, 7, 8, 9:
-            return tableView.estimatedRowHeight
-        case 10:
+        case 6: //댓글
+            if let x = commentCount{
+                return CGFloat(128 + 20 + (149 * commentAnswerCount) + (62 * (x - commentAnswerCount)))
+            }else{
+                return CGFloat(128 + (149 * commentAnswerCount) + (62 * (commentAnswerCount)))
+            }
+        case 7:
             return 285
-        case 11, 12 ,13:
-            return tableView.estimatedRowHeight
+        case 8:
+            return 310
+        case 9, 10:
+            return 320
         default:
             return 100
         }
@@ -280,16 +298,9 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
         //댓글
         let detailCommentCellNib = UINib(nibName: "DetailCommentTableViewCell", bundle: nil)
         self.tableView.register(detailCommentCellNib, forCellReuseIdentifier: "DetailCommentTableViewCell")
-        //댓글 - 질문
-        let detailCommentQCellNib = UINib(nibName: "DetailCommentQTableViewCell", bundle: nil)
-        self.tableView.register(detailCommentQCellNib, forCellReuseIdentifier: "DetailCommentQTableViewCell")
-        //댓글 - 답
-        let detailCommentACellNib = UINib(nibName: "DetailCommentATableViewCell", bundle: nil)
-        self.tableView.register(detailCommentACellNib, forCellReuseIdentifier: "DetailCommentATableViewCell")
-        //댓글 - 쓰기
-        let detailCommentWCellNib = UINib(nibName: "DetailCommentWTableViewCell", bundle: nil)
-        self.tableView.register(detailCommentWCellNib, forCellReuseIdentifier: "DetailCommentWTableViewCell")
+        /*
         
+        */
         //작가 정보
         let detailAuthorCellNib = UINib(nibName: "DetailAuthorTableViewCell", bundle: nil)
         self.tableView.register(detailAuthorCellNib, forCellReuseIdentifier: "DetailAuthorTableViewCell")
@@ -311,12 +322,24 @@ extension DetailViewController {
         
         print("DEBUG: 데이터 로딩 성공")
         print(detailData!.getDetailProdImgRes)
+        //리뷰
         reviewCount = detailData!.getDetailReviewRes.count
         for i in detailData!.getDetailReviewRes{
             if i.reviewImage != ""{
                 reviewPictureCount += 1
             }
         }
+        //찜
+        labelHeart.text = "\( detailData!.getDetailRes.totalLike!)"
+        
+        //댓글 개수
+        commentCount = detailData!.getDetailCommentRes.count
+        for i in detailData!.getDetailCommentRes{
+            if i.productReply != ""{
+                commentAnswerCount += 1
+            }
+        }
+        
         tableView.reloadData()
         //print(detailData?.getDetailProdImgRes)
     }

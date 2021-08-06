@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="KGk-i7-Jjw" customClass="DetailCommentATableViewCell" customModule="IdusCloneApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="149" id="KGk-i7-Jjw" customClass="DetailCommentATableViewCell" customModule="IdusCloneApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCH-Dc-tOh">
-                        <rect key="frame" x="47" y="0.0" width="347" height="79"/>
+                        <rect key="frame" x="47" y="70" width="347" height="79"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도비케이스" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSy-6O-cv8">
                                 <rect key="frame" x="48" y="16.5" width="100" height="17"/>
@@ -56,12 +56,41 @@
                             <constraint firstItem="vWG-yl-6gk" firstAttribute="top" secondItem="fCH-Dc-tOh" secondAttribute="top" constant="10" id="xvx-tA-Q6c"/>
                         </constraints>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="후기_프로필사진" translatesAutoresizingMaskIntoConstraints="NO" id="gQZ-Vv-HUk">
+                        <rect key="frame" x="20" y="20" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="16X-zv-v7i"/>
+                            <constraint firstAttribute="height" constant="30" id="Tn6-uO-1R7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박서준" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCq-LX-xOx">
+                        <rect key="frame" x="58" y="17" width="36.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="크기 조정가능한가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nk-aw-uLX">
+                        <rect key="frame" x="58" y="36" width="336" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="336" id="2Is-8H-E0g"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="1nk-aw-uLX" firstAttribute="leading" secondItem="gQZ-Vv-HUk" secondAttribute="trailing" constant="8" symbolic="YES" id="5Ex-om-Z08"/>
                     <constraint firstAttribute="trailing" secondItem="fCH-Dc-tOh" secondAttribute="trailing" constant="20" symbolic="YES" id="CH1-RO-NJa"/>
-                    <constraint firstItem="fCH-Dc-tOh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="I3j-bX-rBI"/>
+                    <constraint firstItem="HCq-LX-xOx" firstAttribute="leading" secondItem="gQZ-Vv-HUk" secondAttribute="trailing" constant="8" symbolic="YES" id="E1m-cp-DEG"/>
+                    <constraint firstAttribute="trailing" secondItem="HCq-LX-xOx" secondAttribute="trailing" constant="319.5" id="P4h-fB-7ko"/>
+                    <constraint firstItem="1nk-aw-uLX" firstAttribute="top" secondItem="HCq-LX-xOx" secondAttribute="bottom" constant="2" id="PuJ-60-169"/>
+                    <constraint firstItem="gQZ-Vv-HUk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="QRI-bx-nJD"/>
                     <constraint firstAttribute="bottom" secondItem="fCH-Dc-tOh" secondAttribute="bottom" id="Rel-5E-CDX"/>
+                    <constraint firstItem="HCq-LX-xOx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="Vyw-Z2-oUE"/>
                     <constraint firstItem="fCH-Dc-tOh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="47" id="kvg-yU-0eE"/>
+                    <constraint firstItem="fCH-Dc-tOh" firstAttribute="top" secondItem="1nk-aw-uLX" secondAttribute="bottom" constant="17" id="t9X-iC-qHi"/>
+                    <constraint firstItem="gQZ-Vv-HUk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="xN9-Gh-LHH"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

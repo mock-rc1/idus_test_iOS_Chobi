@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hC4-nT-xjY">
-                        <rect key="frame" x="20" y="63" width="374" height="167"/>
+                        <rect key="frame" x="5" y="63" width="404" height="167"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FbC-pv-AeY">
                             <size key="itemSize" width="128" height="128"/>
@@ -40,7 +40,7 @@
                             <constraint firstAttribute="height" constant="44" id="7hi-HN-rC6"/>
                             <constraint firstAttribute="width" constant="374" id="GqM-GE-tDu"/>
                         </constraints>
-                        <state key="normal" title="이 작품과 함께 본 작품">
+                        <state key="normal" title="이 작품과 함께 본 작품 더보기">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <userDefinedRuntimeAttributes>
@@ -55,8 +55,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="eCi-aV-ls7" secondAttribute="bottom" constant="9" id="9rQ-4f-UnF"/>
-                    <constraint firstItem="hC4-nT-xjY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="RuZ-oy-wHI"/>
-                    <constraint firstItem="hC4-nT-xjY" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="XVN-dA-qQy"/>
+                    <constraint firstItem="hC4-nT-xjY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-15" id="RuZ-oy-wHI"/>
+                    <constraint firstItem="hC4-nT-xjY" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="15" id="XVN-dA-qQy"/>
                     <constraint firstItem="eCi-aV-ls7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="XxH-Rz-OM2"/>
                     <constraint firstItem="hC4-nT-xjY" firstAttribute="top" secondItem="sR4-xT-oqe" secondAttribute="bottom" constant="17" id="eGN-qg-Qeh"/>
                     <constraint firstItem="sR4-xT-oqe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="hAA-3k-44i"/>
@@ -65,7 +65,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="133.33333333333334" y="160.04464285714286"/>
+            <connections>
+                <outlet property="btnMore" destination="eCi-aV-ls7" id="upf-7c-4Tx"/>
+                <outlet property="labelTitle" destination="sR4-xT-oqe" id="dvc-b1-ny3"/>
+                <outlet property="withCollectionView" destination="hC4-nT-xjY" id="Sc9-U7-c27"/>
+            </connections>
+            <point key="canvasLocation" x="133.33333333333334" y="159.70982142857142"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -67,7 +67,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="W52-Ku-CYW">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" image="상단_장바구니" id="Dai-8i-E5M"/>
+                        <barButtonItem key="rightBarButtonItem" image="상단_장바구니" id="Dai-8i-E5M">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="buttonBarView" destination="geP-A4-6Md" id="bB2-xe-vFT"/>
