@@ -28,13 +28,16 @@ class DetailPictureReviewCollectionViewCell: UICollectionViewCell {
         labelDates.text = "\(detailReview.dates!)"
         labelReviewComment.sizeToFit() //왼쪽, 위에서 부터 글 나열하기
         labelReviewComment.text = "\(detailReview.reviewComment!)"
-        imageComment.sd_setImage(with: URL(string: detailReview.reviewImage!), completed: nil)
-        var buything = ""
-        for i in detailReviewProdRes{
-            if(i.prodReviewIdx == detailReview.prodReviewIdx){
-                buything += "\(i.prodSideCate!): \(i.prodSide!) / "
+        if(detailReview.reviewImage != nil){
+            imageComment.sd_setImage(with: URL(string: detailReview.reviewImage!), completed: nil)
+            var buything = ""
+            for i in detailReviewProdRes{
+                if(i.prodReviewIdx == detailReview.prodReviewIdx){
+                    buything += "\(i.prodSideCate!): \(i.prodSide!) / "
+                }
             }
+            CommentInfo.text = buything
         }
-        CommentInfo.text = buything
+        
     }
 }
