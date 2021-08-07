@@ -182,3 +182,28 @@
 + 인기 작품 - 100%
 
 #### 4. 작품 -> 옵션 선택 UI - 50%
+
+## 2021-08-07 진행 상황
+
+### 📌 성취도
+
+![스크린샷 2021-08-07 오후 11 25 35](https://user-images.githubusercontent.com/77331348/128603470-79121ef9-1f11-4b53-b62b-1e65f0a7f3d6.png)
+![스크린샷 2021-08-07 오후 11 25 48](https://user-images.githubusercontent.com/77331348/128603474-3c5798e5-730f-4a8f-ae9f-98b14db1869d.png)
+
+![스크린샷 2021-08-07 오후 11 26 00](https://user-images.githubusercontent.com/77331348/128603477-6b186b9e-af45-4e29-a263-8aed39c8b939.png)
+![스크린샷 2021-08-07 오후 11 25 17](https://user-images.githubusercontent.com/77331348/128603480-ed20a319-f6d0-45f9-9c53-2397f01c8d95.png)
+
+#### 1. 작품 -> 옵션 선택 UI - 100%
+
+#### 2. 작품 -> 옵션 선택 GET API - 100%
+
+#### 3. 작품 -> 단일 구매 장바구니 UI - 100%
+
+![스크린샷 2021-08-07 오후 11 26 20](https://user-images.githubusercontent.com/77331348/128603493-c5d82f31-fd5f-47fd-89f1-20fb1e81d53d.png)
+![스크린샷 2021-08-07 오후 11 26 31](https://user-images.githubusercontent.com/77331348/128603495-c3faef4a-af32-4010-a1f3-f009bf56df99.png)
+
+#### 4. 작품 -> 실시간, NEW 페이지 UI - 100%
+
++ 별점별 해당 별점 이미지 출력 - 100%
+
+#### 5. 작품 -> 실시간, NEW 페이지 GET API - 100%
