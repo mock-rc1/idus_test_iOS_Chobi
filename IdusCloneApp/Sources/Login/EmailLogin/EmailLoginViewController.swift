@@ -66,6 +66,12 @@ class EmailLoginViewController: BaseViewController {
 extension EmailLoginViewController {
     func didSuccessEmailLogin(_ result: EmailLoginResponse) {
         self.presentAlert(title: "로그인에 성공하였습니다", message: result.message)
+        
+        if let x = result.result{
+            Constant.userIdx = x.userIdx!
+            print("박서준 인텍스\(Constant.userIdx)")
+        }
+        //print(Constant.userIdx)
         self.goMainPage()
     }
     

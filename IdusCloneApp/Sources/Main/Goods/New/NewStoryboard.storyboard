@@ -17,20 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QA-qa-c8D">
-                                <rect key="frame" x="188" y="437.5" width="38" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lc8-jw-MWb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6QA-qa-c8D" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bBI-7j-tUg"/>
-                            <constraint firstItem="6QA-qa-c8D" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="eSK-O8-DGt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lc8-jw-MWb" secondAttribute="trailing" id="eNA-Lh-DTj"/>
+                            <constraint firstItem="Lc8-jw-MWb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="eSa-vF-v8Y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Lc8-jw-MWb" secondAttribute="bottom" id="gIe-SM-AyB"/>
+                            <constraint firstItem="Lc8-jw-MWb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tuf-KT-dpG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Lc8-jw-MWb" id="ihX-0l-QCx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

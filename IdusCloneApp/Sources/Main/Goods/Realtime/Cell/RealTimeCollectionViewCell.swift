@@ -1,43 +1,41 @@
 //
-//  TodaySaleCollectionViewCell.swift
+//  RealTimeCollectionViewCell.swift
 //  IdusCloneApp
 //
-//  Created by 김수빈 on 2021/08/06.
+//  Created by 김수빈 on 2021/08/07.
 //
 
 import UIKit
 import SDWebImage
-class TodaySaleCollectionViewCell: UICollectionViewCell {
+class RealTimeCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var lableSale: UILabel!
-    @IBOutlet weak var imageGoods: UIImageView!
-    @IBOutlet weak var labelTitle: UILabel!
-    @IBOutlet weak var labelSalePrice: UILabel!
-    @IBOutlet weak var labelPrice: UILabel!
+    
+    @IBOutlet weak var imageRealtime: UIImageView!
+    @IBOutlet weak var labelAuthor: UILabel!
+    @IBOutlet weak var labelInfo: UILabel!
     @IBOutlet weak var imageStar: UIImageView!
     @IBOutlet weak var labelReviewNum: UILabel!
     @IBOutlet weak var labelReview: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func setCell(sale: TodaySale)  {
-        if let x = sale.reviewComment {
+    func setCell(realtime: RealTime){
+        imageRealtime.sd_setImage(with: URL(string: realtime.prodImage!), completed: nil)
+        labelAuthor.text = realtime.authorName!
+        labelInfo.text = realtime.prodName!
+        if let x = realtime.reviewComment{
             labelReview.text = x
         }else{
             labelReview.text = ""
         }
-        imageGoods.sd_setImage(with: URL(string: sale.prodImage!), completed: nil)
-        labelTitle.text = sale.prodName
-        labelReviewNum.text = "(\(sale.prodReviewNum!))"
-        labelSalePrice.text = "\(sale.saleCost!)".insertComma + "원"
-        labelPrice.text = "\(sale.prodPrice!)".insertComma + "원"
-        imageStar.image = rateStar(rate: sale.prodRatingAvg!)
+        imageStar.image = rateStar(rate: realtime.prodRatingAvg!)
+        labelReviewNum.text = "(\(realtime.prodReviewNum!))"
         
     }
+    
     func rateStar(rate: Float) -> UIImage{
         if(rate >= 4.5){
             return #imageLiteral(resourceName: "별5개")

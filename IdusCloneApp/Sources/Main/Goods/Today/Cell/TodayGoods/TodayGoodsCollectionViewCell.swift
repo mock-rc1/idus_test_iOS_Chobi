@@ -30,6 +30,7 @@ class TodayGoodsCollectionViewCell: UICollectionViewCell {
             }else{
                 labelReview.text = ""
             }
+            imageStar.image = rateStar(rate: todayGoods.prodRatingAvg!)
             labelReviewNum.text = "(\(todayGoods.prodReviewNum!))"
         }else{
             self.labelTodayGoods.text = todayRealtime.prodName!
@@ -39,8 +40,24 @@ class TodayGoodsCollectionViewCell: UICollectionViewCell {
             }else{
                 labelReview.text = ""
             }
+            imageStar.image = rateStar(rate: todayRealtime.prodRatingAvg!)
             labelReviewNum.text = "(\(todayRealtime.prodReviewNum!))"
         }
     }
-    
+    func rateStar(rate: Float) -> UIImage{
+        if(rate >= 4.5){
+            return #imageLiteral(resourceName: "별5개")
+        }else if(rate >= 4.0){
+            return #imageLiteral(resourceName: "별4개")
+        }else if(rate >= 3.0){
+            return #imageLiteral(resourceName: "별3개")
+        }else if(rate >= 2.0){
+            return #imageLiteral(resourceName: "별2개")
+        }else if(rate >= 1.0){
+            return #imageLiteral(resourceName: "별1개")
+        }else{
+            return #imageLiteral(resourceName: "별0개")
+        }
+    }
 }
+
