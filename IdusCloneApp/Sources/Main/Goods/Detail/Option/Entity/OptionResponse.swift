@@ -6,3 +6,16 @@
 //
 
 import Foundation
+struct OptionResponse: Decodable {
+    var isSuccess: Bool?
+    var code : Int?
+    var message: String?
+    var result: [OptionResult]
+}
+struct OptionResult: Decodable {
+    var prodSideIdx : Int?
+    var sideCateNum : Int?
+    var prodSideCate: String?
+    var prodSide: String?
+    var prodSidePrice : Int?
+}

@@ -18,35 +18,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 향기 선택1🤍" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpO-2c-Y38">
-                        <rect key="frame" x="20" y="12" width="344" height="20"/>
+                        <rect key="frame" x="20" y="12" width="110" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3B-1I-W8K">
-                        <rect key="frame" x="374" y="11" width="20" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="20" id="BaS-mQ-ZTK"/>
-                            <constraint firstAttribute="height" constant="22" id="Ful-XH-yMa"/>
-                        </constraints>
-                        <state key="normal" image="folder"/>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="dpO-2c-Y38" secondAttribute="bottom" constant="12" id="1d5-Gs-WYj"/>
-                    <constraint firstAttribute="bottom" secondItem="P3B-1I-W8K" secondAttribute="bottom" constant="11" id="Eee-Nc-2wn"/>
                     <constraint firstItem="dpO-2c-Y38" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="PVH-3b-N1j"/>
-                    <constraint firstItem="P3B-1I-W8K" firstAttribute="leading" secondItem="dpO-2c-Y38" secondAttribute="trailing" constant="10" id="jqg-MC-Q6U"/>
                     <constraint firstItem="dpO-2c-Y38" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="oQ8-zJ-v4D"/>
-                    <constraint firstAttribute="trailing" secondItem="P3B-1I-W8K" secondAttribute="trailing" constant="20" id="osx-LQ-CmJ"/>
-                    <constraint firstItem="P3B-1I-W8K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="y0g-1v-u5j"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="dpO-2c-Y38" id="huv-mE-o0b"/>
+            </connections>
             <point key="canvasLocation" x="134.78260869565219" y="107.8125"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="folder" width="20" height="15"/>
-    </resources>
 </document>

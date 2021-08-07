@@ -9,6 +9,9 @@ import UIKit
 
 class AllSelectedTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var finalSelection: UILabel!
+    @IBOutlet weak var totalMoney: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

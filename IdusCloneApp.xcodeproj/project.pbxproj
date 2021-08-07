@@ -36,6 +36,9 @@
 		C317E01226B691E9004FF5F8 /* SearchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E01126B691E9004FF5F8 /* SearchStoryboard.storyboard */; };
 		C317E01426B693A6004FF5F8 /* CategoryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E01326B693A6004FF5F8 /* CategoryStoryboard.storyboard */; };
 		C317E01626B69464004FF5F8 /* MyInfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C317E01526B69464004FF5F8 /* MyInfoStoryboard.storyboard */; };
+		C31909AE26BE719E00CECBB5 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31909AC26BE719E00CECBB5 /* CartTableViewCell.swift */; };
+		C31909AF26BE719E00CECBB5 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31909AD26BE719E00CECBB5 /* CartTableViewCell.xib */; };
+		C31909B126BE81B000CECBB5 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31909B026BE81B000CECBB5 /* CartViewController.swift */; };
 		C32A80E826B6D4BC00E03C6A /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A80E626B6D4BC00E03C6A /* BannerTableViewCell.swift */; };
 		C32A80E926B6D4BC00E03C6A /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32A80E726B6D4BC00E03C6A /* BannerTableViewCell.xib */; };
 		C32A80EC26B6D4DA00E03C6A /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A80EA26B6D4DA00E03C6A /* BannerCollectionViewCell.swift */; };
@@ -94,6 +97,8 @@
 		C38E587926BD2018002A9A0F /* TodayRelatedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38E587726BD2018002A9A0F /* TodayRelatedCollectionViewCell.xib */; };
 		C396857026B5723F004FB9D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396856F26B5723F004FB9D6 /* LoginViewController.swift */; };
 		C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C396857126B5753C004FB9D6 /* RegisterViewController.swift */; };
+		C3A4522026BDC3AB006258EF /* OptionNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A4521E26BDC3AB006258EF /* OptionNextViewController.swift */; };
+		C3A4522126BDC3AB006258EF /* OptionNextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A4521F26BDC3AB006258EF /* OptionNextViewController.xib */; };
 		C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */; };
 		C3B0B80726B8004A00588D2D /* TodayGoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */; };
 		C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */; };
@@ -160,6 +165,9 @@
 		C317E01126B691E9004FF5F8 /* SearchStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchStoryboard.storyboard; sourceTree = "<group>"; };
 		C317E01326B693A6004FF5F8 /* CategoryStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryStoryboard.storyboard; sourceTree = "<group>"; };
 		C317E01526B69464004FF5F8 /* MyInfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyInfoStoryboard.storyboard; sourceTree = "<group>"; };
+		C31909AC26BE719E00CECBB5 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		C31909AD26BE719E00CECBB5 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
+		C31909B026BE81B000CECBB5 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		C32A80E626B6D4BC00E03C6A /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
 		C32A80E726B6D4BC00E03C6A /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
 		C32A80EA26B6D4DA00E03C6A /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +228,8 @@
 		C38E587726BD2018002A9A0F /* TodayRelatedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayRelatedCollectionViewCell.xib; sourceTree = "<group>"; };
 		C396856F26B5723F004FB9D6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C396857126B5753C004FB9D6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C3A4521E26BDC3AB006258EF /* OptionNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionNextViewController.swift; sourceTree = "<group>"; };
+		C3A4521F26BDC3AB006258EF /* OptionNextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionNextViewController.xib; sourceTree = "<group>"; };
 		C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayGoodsCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsTableViewCell.swift; sourceTree = "<group>"; };
@@ -383,6 +393,24 @@
 				C317E01526B69464004FF5F8 /* MyInfoStoryboard.storyboard */,
 			);
 			path = MyInfo;
+			sourceTree = "<group>";
+		};
+		C31909AA26BE710900CECBB5 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				C31909AB26BE717E00CECBB5 /* Cell */,
+				C31909B026BE81B000CECBB5 /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		C31909AB26BE717E00CECBB5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C31909AC26BE719E00CECBB5 /* CartTableViewCell.swift */,
+				C31909AD26BE719E00CECBB5 /* CartTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C32A80E426B6D2F000E03C6A /* Cell */ = {
@@ -576,6 +604,8 @@
 				C34CD16126BD019E00216317 /* Cell */,
 				C34CD15D26BCF59A00216317 /* OptionViewController.swift */,
 				C34CD15E26BCF59A00216317 /* OptionViewController.xib */,
+				C3A4521E26BDC3AB006258EF /* OptionNextViewController.swift */,
+				C3A4521F26BDC3AB006258EF /* OptionNextViewController.xib */,
 			);
 			path = Option;
 			sourceTree = "<group>";
@@ -801,6 +831,7 @@
 		C3FF000C26B7EE74000F6988 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				C31909AA26BE710900CECBB5 /* Cart */,
 				C34CD15C26BCF58900216317 /* Option */,
 				C3C8A95C26BB855700256F2E /* DataManager */,
 				C3C8A95B26BB854B00256F2E /* Entity */,
@@ -926,6 +957,7 @@
 				C38E587926BD2018002A9A0F /* TodayRelatedCollectionViewCell.xib in Resources */,
 				C33F736C26B5450C00A57CFA /* NotoSansCJKkr-Medium.otf in Resources */,
 				C38E587526BD1F1F002A9A0F /* TodayRelatedTableViewCell.xib in Resources */,
+				C3A4522126BDC3AB006258EF /* OptionNextViewController.xib in Resources */,
 				C381B46C26BC5B7F00EF26D9 /* DetailOtherGoodsCollectionViewCell.xib in Resources */,
 				C34CD16D26BD0B7800216317 /* TodaySaleTableViewCell.xib in Resources */,
 				C317E01626B69464004FF5F8 /* MyInfoStoryboard.storyboard in Resources */,
@@ -935,6 +967,7 @@
 				C3B7922A26B94C6400F87593 /* DetailImageTableViewCell.xib in Resources */,
 				C3FFFFFF26B78CF2000F6988 /* EventTableViewCell.xib in Resources */,
 				C32A80ED26B6D4DA00E03C6A /* BannerCollectionViewCell.xib in Resources */,
+				C31909AF26BE719E00CECBB5 /* CartTableViewCell.xib in Resources */,
 				C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */,
 				C3B0B80726B8004A00588D2D /* TodayGoodsCollectionViewCell.xib in Resources */,
 				C3FF000F26B7EEB3000F6988 /* DetailStoryboard.storyboard in Resources */,
@@ -1026,11 +1059,13 @@
 				C381B46F26BC5DB800EF26D9 /* DetailWithCollectionViewCell.swift in Sources */,
 				C307D9D726BA4C57000F8179 /* DetailPictureReviewCollectionViewCell.swift in Sources */,
 				C3CA6C0C26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.swift in Sources */,
+				C31909AE26BE719E00CECBB5 /* CartTableViewCell.swift in Sources */,
 				C341B1DA26BD4A5500B8ADB7 /* TodayDataManager.swift in Sources */,
 				C307D9E526BAB683000F8179 /* DetailCommentTableViewCell.swift in Sources */,
 				C341B1D826BD4A4300B8ADB7 /* TodayResponse.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,
 				C307D9F626BAC0E4000F8179 /* DetailAuthorTableViewCell.swift in Sources */,
+				C3A4522026BDC3AB006258EF /* OptionNextViewController.swift in Sources */,
 				C307D9E926BAB856000F8179 /* DetailCommentQTableViewCell.swift in Sources */,
 				C34CD15F26BCF59A00216317 /* OptionViewController.swift in Sources */,
 				C33F736326B5450C00A57CFA /* Device.swift in Sources */,
@@ -1041,6 +1076,7 @@
 				C3FF000726B79716000F6988 /* RegisterDataManager.swift in Sources */,
 				C317E00226B67C93004FF5F8 /* EmailLoginViewController.swift in Sources */,
 				C33F736126B5450C00A57CFA /* Constant.swift in Sources */,
+				C31909B126BE81B000CECBB5 /* CartViewController.swift in Sources */,
 				C3B7922F26B94F0100F87593 /* DetailSummaryTableViewCell.swift in Sources */,
 				C3B7922926B94C6400F87593 /* DetailImageTableViewCell.swift in Sources */,
 				C307D9F126BABEA0000F8179 /* DetailCommentWTableViewCell.swift in Sources */,

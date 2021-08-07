@@ -90,7 +90,9 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
     @IBAction func btnBuy(_ sender: Any) {
         let nextVC = OptionViewController()
         nextVC.modalPresentationStyle = .custom
-        
+        nextVC.price = detailData?.getDetailRes.saleCost!
+        nextVC.shipping = detailData?.getDetailRes.deliveryCost!
+        nextVC.detailData = detailData
         self.present(nextVC, animated: true, completion: nil)
     }
     

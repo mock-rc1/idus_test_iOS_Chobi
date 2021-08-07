@@ -48,15 +48,20 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoN-Fn-5ct" userLabel="장바구니">
                                     <rect key="frame" x="0.0" y="0.0" width="180" height="45"/>
+                                    <color key="backgroundColor" red="0.95686274770000002" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <state key="normal" title="장바구니">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.6549019814" green="0.6549019814" blue="0.6549019814" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="0.0"/>
+                                            <real key="value" value="1"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
@@ -65,18 +70,24 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBL-yd-xA2">
                                     <rect key="frame" x="196" y="0.0" width="180" height="45"/>
-                                    <color key="backgroundColor" red="0.93333339689999995" green="0.50980395079999996" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.95686274770000002" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="180" id="bGc-2S-l9N"/>
                                         <constraint firstAttribute="height" constant="45" id="tzl-3k-joL"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <state key="normal" title="구매하기">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" red="0.65882354970000001" green="0.65882354970000001" blue="0.65882354970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
@@ -92,7 +103,7 @@
                                 <constraint firstAttribute="height" constant="1" id="mCl-f6-yn1"/>
                             </constraints>
                         </imageView>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIc-eq-zB0">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIc-eq-zB0">
                             <rect key="frame" x="19" y="16" width="376" height="294"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
@@ -136,18 +147,33 @@
                         <constraint firstItem="xcc-n7-dlf" firstAttribute="top" secondItem="Jio-yx-fLU" secondAttribute="bottom" constant="11.5" id="wbI-cL-S9d"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQY-AH-c4Y">
+                    <rect key="frame" x="135" y="400" width="143" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Kn7-Hm-RV9"/>
+                        <constraint firstAttribute="width" constant="143" id="zyt-qb-4LW"/>
+                    </constraints>
+                    <state key="normal" image="손잡이"/>
+                    <connections>
+                        <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="G7k-Un-b5G"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <constraints>
+                <constraint firstItem="WQY-AH-c4Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="135" id="FM2-ub-s1Y"/>
                 <constraint firstAttribute="bottom" secondItem="XMF-HH-vkN" secondAttribute="bottom" id="Nfh-oW-AP2"/>
                 <constraint firstItem="XMF-HH-vkN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Oj4-p5-9cC"/>
                 <constraint firstItem="XMF-HH-vkN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="384" id="eOm-Bh-Cm5"/>
                 <constraint firstItem="XMF-HH-vkN" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hoT-AZ-rk1"/>
+                <constraint firstItem="WQY-AH-c4Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="356" id="lhQ-VE-REC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WQY-AH-c4Y" secondAttribute="trailing" constant="136" id="mcF-PP-VA8"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="107.8125"/>
         </view>
     </objects>
     <resources>
+        <image name="손잡이" width="200" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

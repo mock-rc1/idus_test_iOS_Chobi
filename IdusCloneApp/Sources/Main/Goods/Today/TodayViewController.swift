@@ -100,7 +100,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(String(lists.count) + " 줄")
-        return 6
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -120,7 +120,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
                 cell.setCell(event: eventArray, eventText: eventTextArray)
                 return cell
             }
-        case 2:
+        case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayRelatedTableViewCell") as? TodayRelatedTableViewCell {
                 //cell.todayGoodsCellDelegate = self
                 if let x = todayData{
@@ -128,7 +128,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
                 }
                 return cell
             }
-        case 3:
+        case 5:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayGoodsTableViewCell") as? TodayGoodsTableViewCell {
                 cell.todayGoodsCellDelegate = self
                 if let x = todayData{
@@ -139,7 +139,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
                 cell.btnMoreGoods.setTitle("오늘의 작품 더보기 >", for: .normal)
                 return cell
             }
-        case 4:
+        case 7:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodaySaleTableViewCell") as? TodaySaleTableViewCell {
                 //cell.todayGoodsCellDelegate = self
                 if let x = todayData{
@@ -151,7 +151,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
                 
                 return cell
             }
-        case 5:
+        case 9:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayGoodsTableViewCell") as? TodayGoodsTableViewCell {
                 cell.todayGoodsCellDelegate = self
                 if let x = todayData{
@@ -176,13 +176,18 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
             return 200
         case 1:
             return 100
-        case 2:
-            return 380
+        case 2,4,6,8:
+            return 40
         case 3:
-            return 1200
-        case 4:
-            return 700
+            return 380
+            //
         case 5:
+            return 1200
+            //
+        case 7:
+            return 700
+            //
+        case 9:
             return 1200
         default:
             return 100
