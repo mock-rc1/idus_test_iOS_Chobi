@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-699" y="92"/>
         </scene>
-        <!--View Controller-->
+        <!--My Info View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyInfoViewController" id="Y6W-OH-hqX" customClass="MyInfoViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8UY-3B-GcT"/>
+                    <connections>
+                        <outlet property="tableView" destination="UAM-UZ-skb" id="Inl-52-x6l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

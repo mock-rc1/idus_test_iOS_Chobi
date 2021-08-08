@@ -131,6 +131,19 @@
 		C39FABBF26C003E0003DDFE9 /* BuyPaymentInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FABBD26C003E0003DDFE9 /* BuyPaymentInfoTableViewCell.xib */; };
 		C39FABC226C00515003DDFE9 /* BuyAgreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FABC026C00515003DDFE9 /* BuyAgreeTableViewCell.swift */; };
 		C39FABC326C00515003DDFE9 /* BuyAgreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FABC126C00515003DDFE9 /* BuyAgreeTableViewCell.xib */; };
+		C39FABC526C01366003DDFE9 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FABC426C01366003DDFE9 /* MyInfoViewController.swift */; };
+		C39FABC926C01684003DDFE9 /* MyInfoProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FABC726C01684003DDFE9 /* MyInfoProfileTableViewCell.swift */; };
+		C39FABCA26C01684003DDFE9 /* MyInfoProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FABC826C01684003DDFE9 /* MyInfoProfileTableViewCell.xib */; };
+		C39FABCD26C01E45003DDFE9 /* MyInfoExtraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FABCB26C01E45003DDFE9 /* MyInfoExtraTableViewCell.swift */; };
+		C39FABCE26C01E45003DDFE9 /* MyInfoExtraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FABCC26C01E45003DDFE9 /* MyInfoExtraTableViewCell.xib */; };
+		C39FABD126C021F7003DDFE9 /* MyInfoBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FABCF26C021F7003DDFE9 /* MyInfoBannerTableViewCell.swift */; };
+		C39FABD226C021F7003DDFE9 /* MyInfoBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FABD026C021F7003DDFE9 /* MyInfoBannerTableViewCell.xib */; };
+		C39FABD526C02269003DDFE9 /* MyInfoRecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FABD326C02269003DDFE9 /* MyInfoRecentTableViewCell.swift */; };
+		C39FABD626C02269003DDFE9 /* MyInfoRecentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FABD426C02269003DDFE9 /* MyInfoRecentTableViewCell.xib */; };
+		C39FABD926C022E9003DDFE9 /* MyInfoNoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FABD726C022E9003DDFE9 /* MyInfoNoticeTableViewCell.swift */; };
+		C39FABDA26C022E9003DDFE9 /* MyInfoNoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FABD826C022E9003DDFE9 /* MyInfoNoticeTableViewCell.xib */; };
+		C39FABDD26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39FABDB26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.swift */; };
+		C39FABDE26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FABDC26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.xib */; };
 		C3A4522026BDC3AB006258EF /* OptionNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A4521E26BDC3AB006258EF /* OptionNextViewController.swift */; };
 		C3A4522126BDC3AB006258EF /* OptionNextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A4521F26BDC3AB006258EF /* OptionNextViewController.xib */; };
 		C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */; };
@@ -296,6 +309,19 @@
 		C39FABBD26C003E0003DDFE9 /* BuyPaymentInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyPaymentInfoTableViewCell.xib; sourceTree = "<group>"; };
 		C39FABC026C00515003DDFE9 /* BuyAgreeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAgreeTableViewCell.swift; sourceTree = "<group>"; };
 		C39FABC126C00515003DDFE9 /* BuyAgreeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyAgreeTableViewCell.xib; sourceTree = "<group>"; };
+		C39FABC426C01366003DDFE9 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
+		C39FABC726C01684003DDFE9 /* MyInfoProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoProfileTableViewCell.swift; sourceTree = "<group>"; };
+		C39FABC826C01684003DDFE9 /* MyInfoProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoProfileTableViewCell.xib; sourceTree = "<group>"; };
+		C39FABCB26C01E45003DDFE9 /* MyInfoExtraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoExtraTableViewCell.swift; sourceTree = "<group>"; };
+		C39FABCC26C01E45003DDFE9 /* MyInfoExtraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoExtraTableViewCell.xib; sourceTree = "<group>"; };
+		C39FABCF26C021F7003DDFE9 /* MyInfoBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoBannerTableViewCell.swift; sourceTree = "<group>"; };
+		C39FABD026C021F7003DDFE9 /* MyInfoBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoBannerTableViewCell.xib; sourceTree = "<group>"; };
+		C39FABD326C02269003DDFE9 /* MyInfoRecentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoRecentTableViewCell.swift; sourceTree = "<group>"; };
+		C39FABD426C02269003DDFE9 /* MyInfoRecentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoRecentTableViewCell.xib; sourceTree = "<group>"; };
+		C39FABD726C022E9003DDFE9 /* MyInfoNoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoNoticeTableViewCell.swift; sourceTree = "<group>"; };
+		C39FABD826C022E9003DDFE9 /* MyInfoNoticeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoNoticeTableViewCell.xib; sourceTree = "<group>"; };
+		C39FABDB26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoAboutIdusTableViewCell.swift; sourceTree = "<group>"; };
+		C39FABDC26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoAboutIdusTableViewCell.xib; sourceTree = "<group>"; };
 		C3A4521E26BDC3AB006258EF /* OptionNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionNextViewController.swift; sourceTree = "<group>"; };
 		C3A4521F26BDC3AB006258EF /* OptionNextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionNextViewController.xib; sourceTree = "<group>"; };
 		C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -458,7 +484,9 @@
 		C317E00B26B68F8F004FF5F8 /* MyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				C39FABC626C0165B003DDFE9 /* Cell */,
 				C317E01526B69464004FF5F8 /* MyInfoStoryboard.storyboard */,
+				C39FABC426C01366003DDFE9 /* MyInfoViewController.swift */,
 			);
 			path = MyInfo;
 			sourceTree = "<group>";
@@ -837,6 +865,25 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C39FABC626C0165B003DDFE9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C39FABC726C01684003DDFE9 /* MyInfoProfileTableViewCell.swift */,
+				C39FABC826C01684003DDFE9 /* MyInfoProfileTableViewCell.xib */,
+				C39FABCB26C01E45003DDFE9 /* MyInfoExtraTableViewCell.swift */,
+				C39FABCC26C01E45003DDFE9 /* MyInfoExtraTableViewCell.xib */,
+				C39FABCF26C021F7003DDFE9 /* MyInfoBannerTableViewCell.swift */,
+				C39FABD026C021F7003DDFE9 /* MyInfoBannerTableViewCell.xib */,
+				C39FABD326C02269003DDFE9 /* MyInfoRecentTableViewCell.swift */,
+				C39FABD426C02269003DDFE9 /* MyInfoRecentTableViewCell.xib */,
+				C39FABD726C022E9003DDFE9 /* MyInfoNoticeTableViewCell.swift */,
+				C39FABD826C022E9003DDFE9 /* MyInfoNoticeTableViewCell.xib */,
+				C39FABDB26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.swift */,
+				C39FABDC26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C3B7922626B94BFA00F87593 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1089,6 +1136,7 @@
 				C39FABAB26BFE862003DDFE9 /* BuyUserTableViewCell.xib in Resources */,
 				C39FABC326C00515003DDFE9 /* BuyAgreeTableViewCell.xib in Resources */,
 				C39FABBB26BFFFAB003DDFE9 /* BuyInfoTableViewCell.xib in Resources */,
+				C39FABDA26C022E9003DDFE9 /* MyInfoNoticeTableViewCell.xib in Resources */,
 				C307D9E126BA7CB2000F8179 /* DetailKeywordTableViewCell.xib in Resources */,
 				C3825FB826B6C445009CAD58 /* RealtimeStoryboard.storyboard in Resources */,
 				C32A80E926B6D4BC00E03C6A /* BannerTableViewCell.xib in Resources */,
@@ -1127,6 +1175,7 @@
 				C3B0B80B26B8006E00588D2D /* TodayGoodsTableViewCell.xib in Resources */,
 				C31909CA26BEB7F800CECBB5 /* NewTableViewCell.xib in Resources */,
 				C31909BE26BEA46300CECBB5 /* RealTimeCollectionViewCell.xib in Resources */,
+				C39FABD626C02269003DDFE9 /* MyInfoRecentTableViewCell.xib in Resources */,
 				C31909D226BEBC6000CECBB5 /* NewCollectionViewCell.xib in Resources */,
 				C307D9D426BA4758000F8179 /* DetailReviewCollectionViewCell.xib in Resources */,
 				C38E587926BD2018002A9A0F /* TodayRelatedCollectionViewCell.xib in Resources */,
@@ -1135,12 +1184,16 @@
 				C39FABBF26C003E0003DDFE9 /* BuyPaymentInfoTableViewCell.xib in Resources */,
 				C3A4522126BDC3AB006258EF /* OptionNextViewController.xib in Resources */,
 				C381B46C26BC5B7F00EF26D9 /* DetailOtherGoodsCollectionViewCell.xib in Resources */,
+				C39FABD226C021F7003DDFE9 /* MyInfoBannerTableViewCell.xib in Resources */,
+				C39FABCA26C01684003DDFE9 /* MyInfoProfileTableViewCell.xib in Resources */,
 				C34CD16D26BD0B7800216317 /* TodaySaleTableViewCell.xib in Resources */,
 				C39FABB726BFF5A6003DDFE9 /* BuyPaymentTableViewCell.xib in Resources */,
 				C317E01626B69464004FF5F8 /* MyInfoStoryboard.storyboard in Resources */,
+				C39FABDE26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.xib in Resources */,
 				C34CD16526BD037E00216317 /* AllSelectedTableViewCell.xib in Resources */,
 				C317E00526B68887004FF5F8 /* GoodsStoryboard.storyboard in Resources */,
 				C307D9E626BAB683000F8179 /* DetailCommentTableViewCell.xib in Resources */,
+				C39FABCE26C01E45003DDFE9 /* MyInfoExtraTableViewCell.xib in Resources */,
 				C3B7922A26B94C6400F87593 /* DetailImageTableViewCell.xib in Resources */,
 				C3FFFFFF26B78CF2000F6988 /* EventTableViewCell.xib in Resources */,
 				C32A80ED26B6D4DA00E03C6A /* BannerCollectionViewCell.xib in Resources */,
@@ -1233,8 +1286,10 @@
 				C3825FB426B6C33B009CAD58 /* NewViewController.swift in Sources */,
 				C33F736F26B5450C00A57CFA /* BaseViewController.swift in Sources */,
 				C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */,
+				C39FABDD26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.swift in Sources */,
 				C39FABB226BFF3B0003DDFE9 /* LineTableViewCell.swift in Sources */,
 				C381B46726BC4D6B00EF26D9 /* DetailCommentACollectionViewCell.swift in Sources */,
+				C39FABC526C01366003DDFE9 /* MyInfoViewController.swift in Sources */,
 				C307D9ED26BABB27000F8179 /* DetailCommentATableViewCell.swift in Sources */,
 				C32A80E826B6D4BC00E03C6A /* BannerTableViewCell.swift in Sources */,
 				C34CD17026BD0E8800216317 /* TodaySaleCollectionViewCell.swift in Sources */,
@@ -1275,6 +1330,7 @@
 				C33F736526B5450C00A57CFA /* String.swift in Sources */,
 				C33F736926B5450C00A57CFA /* UIFont.swift in Sources */,
 				C341B1E026BD723400B8ADB7 /* OptionResponse.swift in Sources */,
+				C39FABD126C021F7003DDFE9 /* MyInfoBannerTableViewCell.swift in Sources */,
 				C307D9CF26BA44C5000F8179 /* DetailReviewTableViewCell.swift in Sources */,
 				C3FF000326B79573000F6988 /* RegisterRequest.swift in Sources */,
 				C33F736226B5450C00A57CFA /* IndicatorView.swift in Sources */,
@@ -1282,8 +1338,10 @@
 				C307D9D326BA4758000F8179 /* DetailReviewCollectionViewCell.swift in Sources */,
 				C31909B526BEA29A00CECBB5 /* RealTimeTopTableViewCell.swift in Sources */,
 				C39FAB9F26BFBCFD003DDFE9 /* OptionNextDataManager.swift in Sources */,
+				C39FABD926C022E9003DDFE9 /* MyInfoNoticeTableViewCell.swift in Sources */,
 				C31909C226BEAE8D00CECBB5 /* RealtimeDatamanager.swift in Sources */,
 				C31909B926BEA42300CECBB5 /* RealTimeTableViewCell.swift in Sources */,
+				C39FABCD26C01E45003DDFE9 /* MyInfoExtraTableViewCell.swift in Sources */,
 				C3C8A96026BB85B100256F2E /* DetailResponse.swift in Sources */,
 				C341B1DE26BD721400B8ADB7 /* OptionDataManager.swift in Sources */,
 				C31909BD26BEA46300CECBB5 /* RealTimeCollectionViewCell.swift in Sources */,
@@ -1292,10 +1350,12 @@
 				C31909C926BEB7F800CECBB5 /* NewTableViewCell.swift in Sources */,
 				C3E2039426B828E400022591 /* EmailLoginDataManager.swift in Sources */,
 				C31909D826BEC0A000CECBB5 /* NewResponse.swift in Sources */,
+				C39FABD526C02269003DDFE9 /* MyInfoRecentTableViewCell.swift in Sources */,
 				C33F736826B5450C00A57CFA /* UINavigationBar.swift in Sources */,
 				C33F736626B5450C00A57CFA /* UIButton.swift in Sources */,
 				C3F46CBA26BAE61D0084316E /* DetailImageCollectionViewCell.swift in Sources */,
 				C38E587426BD1F1F002A9A0F /* TodayRelatedTableViewCell.swift in Sources */,
+				C39FABC926C01684003DDFE9 /* MyInfoProfileTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
