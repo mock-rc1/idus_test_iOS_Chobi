@@ -136,6 +136,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBuy:" destination="VeJ-De-7P0" eventType="touchUpInside" id="Sqb-Ra-stu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEt-He-kA9" userLabel="장바구니">
                                         <rect key="frame" x="236" y="0.0" width="139" height="45"/>
@@ -229,6 +232,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBn-zz-ZGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1469.5652173913045" y="233.70535714285714"/>
+        </scene>
+        <!--Buy View Controller-->
+        <scene sceneID="FbB-yV-YTL">
+            <objects>
+                <viewController storyboardIdentifier="BuyViewController" id="UW7-ff-dGf" customClass="BuyViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D82-LI-yx1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="peM-7n-9JP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="abZ-KE-55c">
+                                <rect key="frame" x="20" y="772" width="374" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93333339689999995" green="0.50980395079999996" blue="0.26666668059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnBuy:" destination="UW7-ff-dGf" eventType="touchUpInside" id="UCo-FV-8Bu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,800원 간편하게 카트 결제" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5T-NF-j9I">
+                                <rect key="frame" x="57" y="785" width="300" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="dLE-Eg-AAx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="예상 적립금 : 18p" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXp-e8-RVS">
+                                <rect key="frame" x="139" y="818" width="136" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="aCh-od-n5e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fZz-yW-73Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="peM-7n-9JP" firstAttribute="top" secondItem="fZz-yW-73Y" secondAttribute="top" id="4I5-yu-YNp"/>
+                            <constraint firstItem="fZz-yW-73Y" firstAttribute="trailing" secondItem="p5T-NF-j9I" secondAttribute="trailing" constant="57" id="7Q9-gS-tOx"/>
+                            <constraint firstItem="vXp-e8-RVS" firstAttribute="top" secondItem="p5T-NF-j9I" secondAttribute="bottom" constant="5" id="882-Xu-Wn3"/>
+                            <constraint firstItem="vXp-e8-RVS" firstAttribute="leading" secondItem="fZz-yW-73Y" secondAttribute="leading" constant="139" id="Fy2-ac-4wI"/>
+                            <constraint firstItem="fZz-yW-73Y" firstAttribute="trailing" secondItem="peM-7n-9JP" secondAttribute="trailing" id="M7r-Z4-Ipg"/>
+                            <constraint firstItem="peM-7n-9JP" firstAttribute="leading" secondItem="fZz-yW-73Y" secondAttribute="leading" id="PZl-X5-PSl"/>
+                            <constraint firstItem="p5T-NF-j9I" firstAttribute="leading" secondItem="fZz-yW-73Y" secondAttribute="leading" constant="57" id="Rcc-LL-JLK"/>
+                            <constraint firstItem="fZz-yW-73Y" firstAttribute="bottom" secondItem="peM-7n-9JP" secondAttribute="bottom" id="ff1-wd-z5K"/>
+                            <constraint firstItem="p5T-NF-j9I" firstAttribute="top" secondItem="fZz-yW-73Y" secondAttribute="top" constant="697" id="hlq-ro-1Jy"/>
+                            <constraint firstItem="fZz-yW-73Y" firstAttribute="trailing" secondItem="vXp-e8-RVS" secondAttribute="trailing" constant="139" id="od2-5B-xWy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kws-1B-kLP"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="peM-7n-9JP" id="LcJ-sl-348"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1F-cu-8Lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2257.971014492754" y="233.70535714285714"/>
         </scene>
     </scenes>
     <resources>

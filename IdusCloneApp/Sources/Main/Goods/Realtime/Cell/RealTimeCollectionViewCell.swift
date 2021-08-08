@@ -23,9 +23,17 @@ class RealTimeCollectionViewCell: UICollectionViewCell {
     }
 
     func setCell(realtime: RealTime){
-        imageRealtime.sd_setImage(with: URL(string: realtime.prodImage!), completed: nil)
-        labelAuthor.text = realtime.authorName!
-        labelInfo.text = realtime.prodName!
+        if let z = realtime.prodImage{
+            imageRealtime.sd_setImage(with: URL(string: z), completed: nil)
+        }
+        if let y = realtime.authorName{
+            labelAuthor.text = y
+        }
+        
+        if let a = realtime.prodName{
+            labelInfo.text = a
+        }
+        
         if let x = realtime.reviewComment{
             labelReview.text = x
         }else{

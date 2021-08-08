@@ -35,18 +35,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPO-pg-m4i">
-                                <rect key="frame" x="183" y="437.5" width="48.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UAM-UZ-skb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YPO-pg-m4i" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="0r5-dz-DRe"/>
-                            <constraint firstItem="YPO-pg-m4i" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pcp-sh-enq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UAM-UZ-skb" secondAttribute="trailing" id="V1l-xI-Yvb"/>
+                            <constraint firstItem="UAM-UZ-skb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="duH-ta-4Zv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UAM-UZ-skb" secondAttribute="bottom" id="kOD-Af-HkB"/>
+                            <constraint firstItem="UAM-UZ-skb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xf1-cd-Vo6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8UY-3B-GcT"/>

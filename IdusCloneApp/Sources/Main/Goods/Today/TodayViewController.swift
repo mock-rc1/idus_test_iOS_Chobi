@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import XLPagerTabStrip
 
-class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollectionViewDelegate, BannerCollectionViewCellDelegate, EventCollectionViewCellDelegate, TodayGoodsCollectionViewCellDelegate{
+class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollectionViewDelegate, BannerCollectionViewCellDelegate, EventCollectionViewCellDelegate, TodayGoodsCollectionViewCellDelegate, TodayRelatedCollectionViewCellDelegate, TodaySaleCollectionViewCellDelegate{
     
    
     //MARK: - Outlet
@@ -23,11 +23,9 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     //투데이 데이터
     var todayData: TodayResult?
     
-    // 이벤트 배열
-    //#imageLiteral(resourceName: "BEST선물"),
+    // 이벤트 아이콘
     let eventTextArray: Array<String> = ["반값줍줍", "이벤트", "휴가꿀템", "취미클래스", "지금할인중", "써머스타일링" , "제로웨이스트", "비건","남성잇템", "친구초대쿠폰"]
     let eventArray: Array<UIImage> = [ #imageLiteral(resourceName: "반값줍줍"), #imageLiteral(resourceName: "BEST선물"), #imageLiteral(resourceName: "휴가꿀템"), #imageLiteral(resourceName: "취미클래스"), #imageLiteral(resourceName: "지금할인중"), #imageLiteral(resourceName: "써머스타일링"), #imageLiteral(resourceName: "제로웨이스트"), #imageLiteral(resourceName: "비건"), #imageLiteral(resourceName: "남성잇템"), #imageLiteral(resourceName: "친구초대쿠폰")]
-    let todayGoodsArray: Array<String> = ["천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이","천연 수정 크리스탈 원석 은 목걸이"]
     
     // 타이머 시간
     var timer = 0
@@ -59,27 +57,52 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     
     //MARK: 상세 페이지로 넘어가기
     
-    func goDetailPage(index: Int){
-        print("어쩌구")
+    func goDetailPage(index: Int, prodIdx: Int){
+        //print("어쩌구")
         let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
         guard let vc = detailStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
         vc.data = "\(index)번째 값"
+        vc.prodIdx = prodIdx
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //배너
     func collectionView(collectionviewcell: BannerCollectionViewCell?, index: Int, didTappedInTableViewCell: BannerTableViewCell) {
-        goDetailPage(index: index)
+        //goDetailPage(index: index)
     }
     
     // 이벤트
     func collectionView(collectionviewcell: EventCollectionViewCell?, index: Int, didTappedInTableViewCell: EventTableViewCell) {
-        goDetailPage(index: index)
+        //goDetailPage(index: index)
+    }
+    
+    //나와 연관된 상품
+    func collectionView(collectionviewcell: TodayRelatedCollectionViewCell?, index: Int, didTappedInTableViewCell: TodayRelatedTableViewCell) {
+        if let x=todayData{
+            goDetailPage(index: index, prodIdx: x.getVisitAlikeRes[index].prodIdx!)
+        }
+       
     }
     
     // 투데이 상품
     func collectionView(collectionviewcell: TodayGoodsCollectionViewCell?, index: Int, didTappedInTableViewCell: TodayGoodsTableViewCell) {
-        goDetailPage(index: index)
+        print("둘중에\(didTappedInTableViewCell.index)")
+        if let x=todayData{
+            if(didTappedInTableViewCell.index == 1){
+                goDetailPage(index: index, prodIdx: x.getTodayProdRes[index].prodIdx!)
+            }else{
+                goDetailPage(index: index, prodIdx: x.getRecOrderRes[index].prodIdx!)
+            }
+        }
+       
+    }
+    
+    // 할인 상품
+    func collectionView(collectionviewcell: TodaySaleCollectionViewCell?, index: Int, didTappedInTableViewCell: TodaySaleTableViewCell) {
+        if let x=todayData{
+            goDetailPage(index: index, prodIdx: x.getDisProdRes[index].prodIdx!)
+        }
+       
     }
     
     //할인 타이머
@@ -122,7 +145,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
             }
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayRelatedTableViewCell") as? TodayRelatedTableViewCell {
-                //cell.todayGoodsCellDelegate = self
+                cell.todayRelatedCellDelegate = self
                 if let x = todayData{
                     cell.setCell(row: x.getVisitAlikeRes)
                 }
@@ -141,7 +164,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
             }
         case 7:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TodaySaleTableViewCell") as? TodaySaleTableViewCell {
-                //cell.todayGoodsCellDelegate = self
+                cell.todaySaleCellDelegate = self
                 if let x = todayData{
                     cell.setCell(row: x.getDisProdRes)
                 }

@@ -8,12 +8,20 @@
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
 
+//MARK: Protocol
+protocol TodayRelatedCollectionViewCellDelegate: AnyObject {
+    func collectionView(collectionviewcell: TodayRelatedCollectionViewCell?, index: Int, didTappedInTableViewCell: TodayRelatedTableViewCell)
+}
+
+
 class TodayRelatedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var todayRelatedCollectionView: UICollectionView!
     // 스크롤
     let behavior = MSCollectionViewPeekingBehavior()
     
+    // 프로토콜 변수
+    weak var todayRelatedCellDelegate: TodayRelatedCollectionViewCellDelegate?
     var relatedArray: Array<TodayRelated> = []
     
     override func awakeFromNib() {
@@ -69,8 +77,8 @@ extension TodayRelatedTableViewCell : UICollectionViewDelegate, UICollectionView
         
         print("콜렉션 뷰 " + String(indexPath.row))
         
-        //let cell = collectionView.cellForItem(at: indexPath) as? EventCollectionViewCell
-           // self.eventCellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+        let cell = collectionView.cellForItem(at: indexPath) as? TodayRelatedCollectionViewCell
+        self.todayRelatedCellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
 
     }
     

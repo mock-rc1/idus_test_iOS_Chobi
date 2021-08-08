@@ -44,7 +44,7 @@
                             <constraint firstAttribute="width" constant="45" id="ohh-1W-jbm"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일단 작가님이 엄청" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9u8-af-pwK">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9u8-af-pwK">
                         <rect key="frame" x="46" y="320" width="161" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="EBh-gn-3wc"/>

@@ -36,7 +36,7 @@ class TodaySaleCollectionViewCell: UICollectionViewCell {
         labelSalePrice.text = "\(sale.saleCost!)".insertComma + "원"
         labelPrice.text = "\(sale.prodPrice!)".insertComma + "원"
         imageStar.image = rateStar(rate: sale.prodRatingAvg!)
-        
+        lableSale.text = "\(sale.salePercent!)%"
     }
     func rateStar(rate: Float) -> UIImage{
         if(rate >= 4.5){

@@ -15,6 +15,14 @@ class OptionNextViewController: UIViewController {
     var detailData: DetailResult?
     var finalSection: [String]?
     
+    //Post 항목들
+    var userIdx: Int?
+    var prodIdx: Int?
+    var prodSideIdx: [Int]?
+    
+    // Datamanager
+    lazy var dataManager: OptionNextDataManager = OptionNextDataManager()
+    
     @IBOutlet weak var labelTotal: UILabel!
     @IBOutlet weak var labelShipping: UILabel!
     
@@ -33,6 +41,15 @@ class OptionNextViewController: UIViewController {
     }
     //장바구니 페이지로
     @IBAction func btnBuy(_ sender: Any) {
+        // post 작품담기
+        /*
+        let input = OptionNextRequest(userIdx: 3, prodIdx: prodIdx!, authorIdx: 1, prodPrice: price! + shipping!,prodCount: 1,prodSideN: 2,prodSideIdx: prodSideIdx!,prodSideCount: [1,1])
+        print(input)
+        //print(email)
+        dataManager.postOptionNext(input, delegate: self, userIdx: 3)
+        */
+        // 페이지 이동
+        
         let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
         let cartViewController = detailStoryboard.instantiateViewController(identifier: "CartViewController")
         let vc = UINavigationController(rootViewController: cartViewController)
@@ -90,3 +107,13 @@ extension OptionNextViewController: UITableViewDataSource, UITableViewDelegate{
     }
 }
 
+extension OptionNextViewController {
+    func didSuccessOptionNext(_ result: OptionNextResponse) {
+        self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        //self.btnLoginPage()
+    }
+    
+    func failedToOptionNext(message: String) {
+        self.presentAlert(title: message)
+    }
+}

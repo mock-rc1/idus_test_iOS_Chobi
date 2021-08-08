@@ -25,6 +25,9 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
     //몇 번째 값인지
     var data: String?
     
+    // 제품 인덱스
+    var prodIdx: Int?
+    
     // 후기 개수, type(사진: true, false)
     var reviewCount: Int?
     var reviewPictureCount = 0
@@ -48,7 +51,7 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
         setupTableView()
         
         //get data
-        dataManager.getGoodsDetail(vc: self, userIdx: 3, prodIdx: 1)
+        dataManager.getGoodsDetail(vc: self, userIdx: 3, prodIdx: self.prodIdx!)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -93,6 +96,7 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
         nextVC.price = detailData?.getDetailRes.saleCost!
         nextVC.shipping = detailData?.getDetailRes.deliveryCost!
         nextVC.detailData = detailData
+        nextVC.prodIdx = self.prodIdx
         self.present(nextVC, animated: true, completion: nil)
     }
     
@@ -244,7 +248,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
             return tableView.estimatedRowHeight
         case 4:
             if let x = reviewCount{
-                return CGFloat(141 + (242 * reviewPictureCount) + (111 * (x - reviewPictureCount)) + 5)
+                return CGFloat(141 + 10 + (242 * reviewPictureCount) + (111 * (x - reviewPictureCount)))
             }else{
                 return CGFloat(141 + (242 * reviewPictureCount) + (111 * (reviewPictureCount)))
             }
@@ -253,9 +257,9 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate{
             return 140
         case 6: //댓글
             if let x = commentCount{
-                return CGFloat(128 + 20 + (149 * commentAnswerCount) + (62 * (x - commentAnswerCount)) - 62)
+                return CGFloat(128 + 20 + (149 * commentAnswerCount) + (62 * (x - commentAnswerCount)))
             }else{
-                return CGFloat(128 + (149 * commentAnswerCount) + (62 * (commentAnswerCount)) - 62)
+                return CGFloat(128 + (149 * commentAnswerCount) + (62 * (commentAnswerCount)))
             }
         case 7:
             return 285
@@ -337,11 +341,11 @@ extension DetailViewController {
         //댓글 개수
         commentCount = detailData!.getDetailCommentRes.count
         for i in detailData!.getDetailCommentRes{
-            if i.productReply != ""{
+            if i.productReply != nil{
                 commentAnswerCount += 1
             }
         }
-        
+        print("댓글 개수: \(commentCount!), 답글 있는 댓글: \(commentAnswerCount)")
         tableView.reloadData()
         //print(detailData?.getDetailProdImgRes)
     }

@@ -22,21 +22,27 @@ class OptionViewController: UIViewController {
     var shipping: Int?
     var detailData: DetailResult?
     
+    //상품 인덱스
+    var prodIdx: Int?
+    
     //총 옵션 개수
     var optionCount = 0
     // 옵션별 항목 개수
-    var optionSide = [0,0,0,0,0]
+    var optionSide = [0,0]
     
     // 테이블 뷰
-    var option1: [String] = ["유광","무광","필요없어요!"]
-    var option2: [String] = ["아이폰 6(+4000원)","갤럭시 s8(+4000원)"]
+    var option1: [String] = []
+    var option2: [String] = []
     
-    var option1Money: [Int] = [0, 0, 0]
-    var option2Money: [Int] = [4000, 4000]
+    var option1Money: [Int] = []
+    var option2Money: [Int] = []
     
-    var optionSection: [String] = ["표면 재질 선택", "기본 투명젤리케이스"]
+    var optionSection: [String] = ["",""]
+    
     
     var finalSection: [String] = []
+    
+    var prodSideIdx: [Int] = [0,0]
     //테이블 뷰 접기
     var folder = [false, false]
     
@@ -46,7 +52,7 @@ class OptionViewController: UIViewController {
         // Do any additional setup after loading the view.
         labelShipping.text = "\(shipping!)".insertComma + "원"
         labelTotalMoney.text = "\(price!)".insertComma + "원"
-        dataManager.getOption(vc: self, userIdx: 3, prodIdx: 1)
+        dataManager.getOption(vc: self, userIdx: 3, prodIdx: prodIdx!)
     }
 
     @IBAction func btnCart(_ sender: Any) {
@@ -60,6 +66,8 @@ class OptionViewController: UIViewController {
         nextVC.shipping = shipping
         nextVC.detailData = detailData
         nextVC.finalSection = finalSection
+        nextVC.prodSideIdx = prodSideIdx
+        nextVC.prodIdx = prodIdx
         self.present(nextVC, animated: false, completion: nil)
     }
     @IBAction func btnBack(_ sender: Any) {
@@ -131,12 +139,14 @@ extension OptionViewController: UITableViewDataSource, UITableViewDelegate{
             price! += option1Money[indexPath.row]
             labelTotalMoney.text = "\(price!)".insertComma + "원"
             finalSection.append("1. \(optionSection[0]): \(option1[indexPath.row]) /")
+            prodSideIdx[0] = indexPath.row
         }else if indexPath.section == 1{
             print(option2[indexPath.row])
             folder[1] = true
             price! += option2Money[indexPath.row]
             labelTotalMoney.text = "\(price!)".insertComma + "원"
             finalSection.append("2. \(optionSection[1]): \(option2[indexPath.row])")
+            prodSideIdx[1] = indexPath.row
         }
         if(folder[0] == true && folder[1] == true){
             print("다음 화면")
@@ -174,7 +184,7 @@ extension OptionViewController {
         print("DEBUG: 데이터 로딩 성공")
         let num = optionData!.count
         optionCount = optionData![num - 1].sideCateNum!
-        print(optionCount)
+        print("옵션 개수\(optionCount)")
         for option in optionData!{
             for i in 0..<optionCount{
                 if(option.sideCateNum! == (i+1)){
@@ -182,7 +192,21 @@ extension OptionViewController {
                 }
             }
         }
-        print(optionSide)
+        for option in optionData!{
+            //옵션 1이면
+            if(option.sideCateNum! == 1){
+                option1.append(option.prodSide!)
+                option1Money.append(option.prodSidePrice!)
+                optionSection[0] = option.prodSideCate!
+            }
+            //옵션 2이면
+            else if(option.sideCateNum! == 2){
+                option2.append(option.prodSide!)
+                option2Money.append(option.prodSidePrice!)
+                optionSection[1] = option.prodSideCate!
+            }
+        }
+        
         tableView.reloadData()
         //print(detailData?.getDetailProdImgRes)
     }

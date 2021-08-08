@@ -8,6 +8,11 @@
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
 
+//MARK: Protocol
+protocol TodaySaleCollectionViewCellDelegate: AnyObject {
+    func collectionView(collectionviewcell: TodaySaleCollectionViewCell?, index: Int, didTappedInTableViewCell: TodaySaleTableViewCell)
+}
+
 class TodaySaleTableViewCell: UITableViewCell , UICollectionViewDelegateFlowLayout{
 
     @IBOutlet weak var labelDate: UILabel!
@@ -17,6 +22,9 @@ class TodaySaleTableViewCell: UITableViewCell , UICollectionViewDelegateFlowLayo
     
     // 데이터 배열
     var saleArray: Array<TodaySale> = []
+    
+    // 프로토콜 변수
+    weak var todaySaleCellDelegate: TodaySaleCollectionViewCellDelegate?
     
     // 스크롤
     let behavior = MSCollectionViewPeekingBehavior()
@@ -73,8 +81,8 @@ extension TodaySaleTableViewCell : UICollectionViewDelegate, UICollectionViewDat
         
         print("콜렉션 뷰 " + String(indexPath.row))
         
-        //let cell = collectionView.cellForItem(at: indexPath) as? EventCollectionViewCell
-           // self.eventCellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+        let cell = collectionView.cellForItem(at: indexPath) as? TodaySaleCollectionViewCell
+        self.todaySaleCellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
 
     }
     

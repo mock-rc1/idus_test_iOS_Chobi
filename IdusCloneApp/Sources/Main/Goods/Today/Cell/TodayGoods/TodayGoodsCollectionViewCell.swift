@@ -27,18 +27,19 @@ class TodayGoodsCollectionViewCell: UICollectionViewCell {
             image.sd_setImage(with: URL(string: todayGoods.prodImage!), completed: nil)
             if let x = todayGoods.reviewComment{
                 labelReview.text = x
-            }else{
-                labelReview.text = ""
             }
             imageStar.image = rateStar(rate: todayGoods.prodRatingAvg!)
             labelReviewNum.text = "(\(todayGoods.prodReviewNum!))"
         }else{
-            self.labelTodayGoods.text = todayRealtime.prodName!
-            image.sd_setImage(with: URL(string: todayRealtime.prodImage!), completed: nil)
+            if let y = todayRealtime.prodName{
+                self.labelTodayGoods.text = y
+            }
+            if let z = todayRealtime.prodImage{
+                image.sd_setImage(with: URL(string: z), completed: nil)
+            }
+            
             if let x = todayRealtime.reviewComment{
                 labelReview.text = x
-            }else{
-                labelReview.text = ""
             }
             imageStar.image = rateStar(rate: todayRealtime.prodRatingAvg!)
             labelReviewNum.text = "(\(todayRealtime.prodReviewNum!))"

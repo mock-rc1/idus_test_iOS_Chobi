@@ -29,6 +29,12 @@ class CartViewController: UIViewController{
     @objc func moveBack(){
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func btnBuy(_ sender: Any) {
+        let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
+        let buyViewController = detailStoryboard.instantiateViewController(identifier: "BuyViewController")
+        self.navigationController?.pushViewController(buyViewController, animated: true)
+    }
 }
 // 테이블뷰 extension
 extension CartViewController: UITableViewDataSource, UITableViewDelegate{
