@@ -91,9 +91,7 @@ struct RealTimeReview: Decodable{
 struct New: Decodable{
     var prodIdx: Int?
     var createAt: String?
-    var prodReviewNum: Int?
-    var prodRatingAvg: Float?
     var prodImage: String?
-    var reviewComment: String?
     var prodName: String?
+    var authorName: String?
 }

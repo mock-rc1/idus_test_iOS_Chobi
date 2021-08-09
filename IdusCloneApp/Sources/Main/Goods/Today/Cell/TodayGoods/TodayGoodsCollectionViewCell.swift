@@ -27,6 +27,9 @@ class TodayGoodsCollectionViewCell: UICollectionViewCell {
             image.sd_setImage(with: URL(string: todayGoods.prodImage!), completed: nil)
             if let x = todayGoods.reviewComment{
                 labelReview.text = x
+                //print(x)
+            }else{
+                labelReview.text = ""
             }
             imageStar.image = rateStar(rate: todayGoods.prodRatingAvg!)
             labelReviewNum.text = "(\(todayGoods.prodReviewNum!))"
@@ -40,6 +43,8 @@ class TodayGoodsCollectionViewCell: UICollectionViewCell {
             
             if let x = todayRealtime.reviewComment{
                 labelReview.text = x
+            }else{
+                labelReview.text = ""
             }
             imageStar.image = rateStar(rate: todayRealtime.prodRatingAvg!)
             labelReviewNum.text = "(\(todayRealtime.prodReviewNum!))"

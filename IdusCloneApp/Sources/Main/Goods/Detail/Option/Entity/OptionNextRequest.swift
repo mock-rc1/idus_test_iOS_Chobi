@@ -9,10 +9,8 @@ struct OptionNextRequest: Encodable {
     var userIdx: Int?
     var prodIdx: Int?
     var authorIdx: Int?
-    var prodN: Int?
+    
     var prodPrice: [Int]?
     var prodCount: [Int]?
-    var prodSideN: Int?
     var prodSideIdx: [Int]?
-    var prodSideCount: [Int]?
 }

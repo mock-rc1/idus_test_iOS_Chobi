@@ -12,10 +12,13 @@ class CartViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         setupTableView()
+        print("주문번호 울랄라\(Constant.orderIdx)")
     }
     func configureUI() {
         

@@ -20,6 +20,10 @@ class OptionNextViewController: UIViewController {
     var prodIdx: Int?
     var prodSideIdx: [Int]?
     var prodPrice: [Int]?
+    
+    // 주문 번호
+    var orderIdx: Int?
+    
     // Datamanager
     lazy var dataManager: OptionNextDataManager = OptionNextDataManager()
     
@@ -43,20 +47,21 @@ class OptionNextViewController: UIViewController {
     @IBAction func btnBuy(_ sender: Any) {
         // post 작품담기
         
-        let input = OptionNextRequest(userIdx: 3, prodIdx: prodIdx!, authorIdx: 1, prodN: 1, prodPrice: prodPrice! ,prodCount: [1,1],prodSideN: 2,prodSideIdx: prodSideIdx!,prodSideCount: [1,1])
+        let input = OptionNextRequest(userIdx: 3, prodIdx: prodIdx!, authorIdx: 1, prodPrice: prodPrice! ,prodCount: [1,1],prodSideIdx: prodSideIdx!)
         print(input)
         //print(email)
         dataManager.postOptionNext(input, delegate: self, userIdx: 3)
-        
-        // 페이지 이동
-       
+        showIndicator()
+    }
+    // 페이지 이동
+    func goCartViewController()  {
         let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
         let cartViewController = detailStoryboard.instantiateViewController(identifier: "CartViewController")
         let vc = UINavigationController(rootViewController: cartViewController)
+        
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)
     }
-    
     
 
 }
@@ -109,10 +114,15 @@ extension OptionNextViewController: UITableViewDataSource, UITableViewDelegate{
 
 extension OptionNextViewController {
     func didSuccessOptionNext(_ result: OptionNextResponse) {
-        self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        dismissIndicator()
+        print("장바구니 담기 성공!\(result.message!)")
         if let x = result.result{
-            print(x.orderIdx!)
+            print("주문 번호\(x.orderIdx!)")
+            orderIdx = x.orderIdx
         }
+        Constant.orderIdx = orderIdx!
+        goCartViewController()
     }
     
     func failedToOptionNext(message: String) {

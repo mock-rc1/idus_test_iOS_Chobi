@@ -18,10 +18,10 @@ class NewCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     func setCell(new: New)  {
-        if let x = new.reviewComment{
-            labelInfo.text = x
-        }
-        labelProd.text = new.prodName!
+        
+        labelInfo.text = new.prodName!
+        
+        labelProd.text = new.authorName!
         imageNew.sd_setImage(with: URL(string: new.prodImage!), completed: nil)
     }
     
