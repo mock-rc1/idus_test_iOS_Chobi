@@ -43,6 +43,7 @@ class OptionViewController: UIViewController {
     var finalSection: [String] = []
     
     var prodSideIdx: [Int] = [0,0]
+    var prodPrice: [Int] = [0,0]
     //테이블 뷰 접기
     var folder = [false, false]
     
@@ -68,6 +69,7 @@ class OptionViewController: UIViewController {
         nextVC.finalSection = finalSection
         nextVC.prodSideIdx = prodSideIdx
         nextVC.prodIdx = prodIdx
+        nextVC.prodPrice = prodPrice
         self.present(nextVC, animated: false, completion: nil)
     }
     @IBAction func btnBack(_ sender: Any) {
@@ -140,6 +142,7 @@ extension OptionViewController: UITableViewDataSource, UITableViewDelegate{
             labelTotalMoney.text = "\(price!)".insertComma + "원"
             finalSection.append("1. \(optionSection[0]): \(option1[indexPath.row]) /")
             prodSideIdx[0] = indexPath.row
+            prodPrice[0] = option1Money[indexPath.row]
         }else if indexPath.section == 1{
             print(option2[indexPath.row])
             folder[1] = true
@@ -147,9 +150,11 @@ extension OptionViewController: UITableViewDataSource, UITableViewDelegate{
             labelTotalMoney.text = "\(price!)".insertComma + "원"
             finalSection.append("2. \(optionSection[1]): \(option2[indexPath.row])")
             prodSideIdx[1] = indexPath.row
+            prodPrice[1] = option2Money[indexPath.row]
         }
         if(folder[0] == true && folder[1] == true){
             print("다음 화면")
+            print("옵션별 가격 확인 :\(prodPrice)")
             nextPage()
         }
         tableView.reloadData()

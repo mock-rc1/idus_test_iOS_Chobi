@@ -39,6 +39,7 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
         
         //get data
         dataManager.getToday(vc: self, userIdx: 3, tab: "today")
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -245,6 +246,17 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
         
         
     }
+    /*
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        print(indexPath.row)
+            if indexPath.row  < 2{
+                print("you reached start of the table")
+                self.navigationController?.isNavigationBarHidden = true
+            }else{
+                self.navigationController?.isNavigationBarHidden = false
+            }
+        }*/
 }
 
 extension TodayViewController {

@@ -27,33 +27,120 @@
             </objects>
             <point key="canvasLocation" x="-813" y="92"/>
         </scene>
-        <!--View Controller-->
+        <!--Category View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoryViewController" id="Y6W-OH-hqX" customClass="CategoryViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LS-cV-pLs">
-                                <rect key="frame" x="177.5" y="437.5" width="59" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBI-RE-3mS">
+                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3JD-BK-6rz" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GLU-zv-4Q6"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IDY-fh-73z">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4LS-cV-pLs" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1ez-rt-WLA"/>
-                            <constraint firstItem="4LS-cV-pLs" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="cmP-db-Rrx"/>
+                            <constraint firstItem="3JD-BK-6rz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1MX-4K-Pvx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zBI-RE-3mS" secondAttribute="trailing" id="4yP-9H-62R"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zBI-RE-3mS" secondAttribute="bottom" id="BrJ-0K-yOx"/>
+                            <constraint firstItem="zBI-RE-3mS" firstAttribute="top" secondItem="3JD-BK-6rz" secondAttribute="bottom" id="YWI-ny-LcX"/>
+                            <constraint firstItem="3JD-BK-6rz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gTA-kT-F43"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3JD-BK-6rz" secondAttribute="trailing" id="hAb-iu-xWY"/>
+                            <constraint firstItem="zBI-RE-3mS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vtR-Ha-MIX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wiM-RY-NgK"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="3JD-BK-6rz" id="QLP-DU-r9B"/>
+                        <outlet property="containerView" destination="zBI-RE-3mS" id="G8Y-AI-7J1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="93"/>
+            <point key="canvasLocation" x="131.8840579710145" y="92.410714285714278"/>
+        </scene>
+        <!--Category Goods View Controller-->
+        <scene sceneID="r34-DJ-Aa2">
+            <objects>
+                <viewController storyboardIdentifier="CategoryGoodsViewController" id="leI-7d-SZi" customClass="CategoryGoodsViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JYN-u3-Mmp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fDf-lU-tI7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zRU-aK-t8N">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N8B-io-TdB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fDf-lU-tI7" firstAttribute="top" secondItem="N8B-io-TdB" secondAttribute="top" id="GsS-K1-HMG"/>
+                            <constraint firstItem="fDf-lU-tI7" firstAttribute="trailing" secondItem="N8B-io-TdB" secondAttribute="trailing" id="JFb-Jv-nlu"/>
+                            <constraint firstItem="fDf-lU-tI7" firstAttribute="bottom" secondItem="N8B-io-TdB" secondAttribute="bottom" id="ups-kf-r0k"/>
+                            <constraint firstItem="fDf-lU-tI7" firstAttribute="leading" secondItem="N8B-io-TdB" secondAttribute="leading" id="zjz-BR-CqD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="fDf-lU-tI7" id="1R1-5f-ZQd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwd-dx-iuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.02898550724649" y="-214.28571428571428"/>
+        </scene>
+        <!--Category Class View Controller-->
+        <scene sceneID="zSE-GM-1mH">
+            <objects>
+                <viewController storyboardIdentifier="CategoryClassViewController" id="Hgf-RY-uNw" customClass="CategoryClassViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgx-UI-Qp2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1LU-oq-hnI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ohG-Ug-3Rj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ohG-Ug-3Rj" firstAttribute="trailing" secondItem="1LU-oq-hnI" secondAttribute="trailing" id="Ged-OO-0jO"/>
+                            <constraint firstItem="ohG-Ug-3Rj" firstAttribute="bottom" secondItem="1LU-oq-hnI" secondAttribute="bottom" id="LMG-aH-AE5"/>
+                            <constraint firstItem="1LU-oq-hnI" firstAttribute="top" secondItem="ohG-Ug-3Rj" secondAttribute="top" id="UJt-ds-QEe"/>
+                            <constraint firstItem="1LU-oq-hnI" firstAttribute="leading" secondItem="ohG-Ug-3Rj" secondAttribute="leading" id="adg-jO-Nzc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1LU-oq-hnI" id="JHC-5G-oR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hId-ez-qLp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="522"/>
         </scene>
     </scenes>
     <resources>

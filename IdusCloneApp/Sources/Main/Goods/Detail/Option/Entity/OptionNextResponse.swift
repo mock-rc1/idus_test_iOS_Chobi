@@ -13,6 +13,7 @@ struct OptionNextResponse: Decodable {
     var result: OptionNextResult?
 }
 struct OptionNextResult: Decodable {
-    var orderProdIdx: String?
+    var orderIdx: Int?
+    var orderProdIdx: [Int]?
     var orderProdSideIdx : [Int]?
 }

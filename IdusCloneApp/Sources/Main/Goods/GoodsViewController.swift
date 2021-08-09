@@ -28,7 +28,12 @@ class GoodsViewController: ButtonBarPagerTabStripViewController{
         let image = #imageLiteral(resourceName: "상단로고")
         imageView.image = image
         navigationItem.titleView = imageView
-
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "보양식을 검색해주세요."
+        self.navigationItem.searchController = searchController
+        //self.navigationItem.title = "아이디어스"
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.automaticallyShowsCancelButton = false
     }
     
     // 탭바 디자인
@@ -65,5 +70,9 @@ class GoodsViewController: ButtonBarPagerTabStripViewController{
         return [child_1, child_2, child_3]
 
     }
+    
+    var lastContentOffset: CGFloat = 0.0
+    
+    
     
 }
