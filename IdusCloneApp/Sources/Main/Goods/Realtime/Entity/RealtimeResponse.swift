@@ -21,6 +21,6 @@ struct RealtimeResult: Decodable{
     var getDisProdRes: [TodaySale]?
     var getRecOrderRes: [TodayRealtime]?
     var getNowOrderRes: [RealTime]
-    var getNowReviewRes: [RealTimeReview]
+    var getNowReviewRes: [RealTimeReview]?
     var getNewRes: [New]?
 }

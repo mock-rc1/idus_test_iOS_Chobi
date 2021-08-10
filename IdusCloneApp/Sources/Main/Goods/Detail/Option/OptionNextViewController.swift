@@ -21,6 +21,7 @@ class OptionNextViewController: UIViewController {
     var prodSideIdx: [Int]?
     var prodPrice: [Int]?
     
+    
     // 주문 번호
     var orderIdx: Int?
     
@@ -46,7 +47,8 @@ class OptionNextViewController: UIViewController {
     //장바구니 페이지로
     @IBAction func btnBuy(_ sender: Any) {
         // post 작품담기
-        
+        prodSideIdx![0] += 1
+        prodSideIdx![1] += 3
         let input = OptionNextRequest(userIdx: 3, prodIdx: prodIdx!, authorIdx: 1, prodPrice: prodPrice! ,prodCount: [1,1],prodSideIdx: prodSideIdx!)
         print(input)
         //print(email)

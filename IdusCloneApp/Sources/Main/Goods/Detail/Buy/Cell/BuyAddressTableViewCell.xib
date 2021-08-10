@@ -111,7 +111,11 @@
                             <constraint firstAttribute="width" constant="25" id="9IN-0b-KKG"/>
                             <constraint firstAttribute="height" constant="25" id="TOk-he-6fm"/>
                         </constraints>
-                        <state key="normal" image="사각형 체크"/>
+                        <state key="normal" image="체크_빈"/>
+                        <state key="selected" image="사각형 체크"/>
+                        <connections>
+                            <action selector="btnSecure:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uID-cp-kbh"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -150,11 +154,18 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnSecure" destination="3ON-bz-YmN" id="zyc-dp-hVn"/>
+                <outlet property="labelAddress" destination="xlD-Bg-UcW" id="j29-yo-xtR"/>
+                <outlet property="labelName" destination="VPj-Da-KCA" id="mzh-dS-7ez"/>
+                <outlet property="labelPhone" destination="ybO-3U-mcl" id="axV-6l-NjQ"/>
+            </connections>
             <point key="canvasLocation" x="118.84057971014494" y="191.85267857142856"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="사각형 체크" width="36" height="36"/>
         <image name="주소123" width="340" height="82"/>
+        <image name="체크_빈" width="36" height="36"/>
     </resources>
 </document>

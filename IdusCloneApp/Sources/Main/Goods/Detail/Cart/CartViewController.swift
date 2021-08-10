@@ -4,21 +4,38 @@
 //
 //  Created by 김수빈 on 2021/08/07.
 //
-
+import SDWebImage
 import Foundation
 import UIKit
+/*
+protocol OrderRequest: AnyObject {
+    func btnOrderRequest() -> String
+}*/
 
 class CartViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
+    //var delegate: OrderRequest?
+    @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var labelShippingPrice: UILabel!
     
+    // Datamanager
+    lazy var dataManager: CartDataManager = CartDataManager()
+    //제품 원래 가격
+    var price = 0
     
+    var cartData: CartResult?
+    var addressRequest = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         setupTableView()
         print("주문번호 울랄라\(Constant.orderIdx)")
+        price = Constant.price
+        print("Constant.price \(Constant.price)")
+        dataManager.getCart(vc: self, userIdx: 3, orderIdx: Constant.orderIdx)
+        
     }
     func configureUI() {
         
@@ -34,8 +51,18 @@ class CartViewController: UIViewController{
     }
     
     @IBAction func btnBuy(_ sender: Any) {
+        /*
+        let addressRequest = delegate?.btnOrderRequest()
+        if let x = addressRequest{
+            print(x)
+        }*/
+        tableView.reloadData()
+        //sleep(1000)
+        print("주문 요청: \(addressRequest)")
+        
         let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
         let buyViewController = detailStoryboard.instantiateViewController(identifier: "BuyViewController")
+        
         self.navigationController?.pushViewController(buyViewController, animated: true)
     }
 }
@@ -53,10 +80,30 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell") as? CartTableViewCell {
                 //cell.bannerCellDelegate = self
-                /*
-                if let x = newData?.getNewRes{
-                    cell.setCell(new: x)
-                }*/
+                
+                if let x = cartData{
+                    cell.labelAuthor.text = x.getNowBasketinfoRes.authorName!
+                    cell.imageProd.sd_setImage(with: URL(string: x.getNowBasketinfoRes.prodImage!), completed: nil)
+                    cell.labelTitle.text = x.getNowBasketinfoRes.prodName!
+                    cell.labelShipping.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
+                    cell.labelMake.text = x.getNowBasketinfoRes.prodNum!
+                    labelShippingPrice.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
+                    var optionList = ""
+                    var optionPrice = 0
+                    for option in x.getNowBasketOptionRes{
+                        optionList += "- \(option.prodSideCate!) : \(option.prodSide!) \n"
+                        optionPrice = option.optionPrice!
+                    }
+                    cell.labelOption.text = optionList
+                    
+                    labelPrice.text = "\(optionPrice)".insertComma + "원"
+                    cell.labelPrice.text = "\(optionPrice)".insertComma + "원"
+                    cell.labelTotalPrice.text = "\(optionPrice)".insertComma + "원"
+                }
+                if let y = cell.textRequest.text{
+                    addressRequest = y
+                }
+                
                 return cell
             }
         
@@ -89,5 +136,21 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
             self.tableView.register(curatingCellNib, forCellReuseIdentifier: "CartTableViewCell")
         
         
+    }
+}
+extension CartViewController {
+    func didSuccessCart(_ result: CartResponse) {
+        //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        print("장바구니 가져오기 성공!\(result.message!)")
+        print(result.result)
+        cartData = result.result
+        tableView.reloadData()
+        
+        //labelPrice.text = "\(Constant.price)".insertComma + "원"
+        //labelShippingPrice.text = "\(String(describing: cartData?.getNowBasketinfoRes.deliveryCost!))".insertComma + "원"
+    }
+    
+    func failedToCart(message: String) {
+        self.presentAlert(title: message)
     }
 }

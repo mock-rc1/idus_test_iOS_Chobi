@@ -85,6 +85,10 @@
                                     <constraint firstAttribute="width" constant="25" id="mlE-BI-Nav"/>
                                 </constraints>
                                 <state key="normal" image="체크_빈"/>
+                                <state key="selected" image="사각형 체크"/>
+                                <connections>
+                                    <action selector="btnSupport:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="amW-1C-tFG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745289999996" green="0.92549026010000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -123,10 +127,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnSupport" destination="Cvo-9S-t6r" id="pML-FB-3r7"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="169.08482142857142"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="사각형 체크" width="36" height="36"/>
         <image name="체크_빈" width="36" height="36"/>
     </resources>
 </document>

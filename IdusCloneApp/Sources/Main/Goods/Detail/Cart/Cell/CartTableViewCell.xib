@@ -38,25 +38,29 @@
                             <constraint firstAttribute="height" constant="90" id="b9s-nS-ifN"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가죽벨트" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csh-eO-7Pc">
-                        <rect key="frame" x="157" y="127" width="59" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가죽벨트" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csh-eO-7Pc">
+                        <rect key="frame" x="157" y="109" width="247" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="iTQ-cL-B8Q"/>
+                            <constraint firstAttribute="width" constant="247" id="nDG-kr-Mi8"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문 시 제작" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tZ-gF-hbj">
-                        <rect key="frame" x="157" y="154" width="72.5" height="18"/>
+                        <rect key="frame" x="157" y="166" width="72.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문 시 제작" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CS-nc-Ttx">
-                        <rect key="frame" x="54" y="212" width="228" height="81"/>
+                        <rect key="frame" x="54" y="212" width="262" height="81"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="81" id="RbR-6g-SxK"/>
-                            <constraint firstAttribute="width" constant="228" id="mdn-VA-FaY"/>
+                            <constraint firstAttribute="width" constant="262" id="mdn-VA-FaY"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -166,7 +170,7 @@
                     <constraint firstItem="H5H-Qi-8Oo" firstAttribute="top" secondItem="8CS-nc-Ttx" secondAttribute="bottom" constant="13" id="0J7-LZ-dXl"/>
                     <constraint firstItem="SWE-6L-2pP" firstAttribute="leading" secondItem="8CS-nc-Ttx" secondAttribute="leading" id="2hy-VB-Aao"/>
                     <constraint firstItem="VAF-pL-SRS" firstAttribute="top" secondItem="8CS-nc-Ttx" secondAttribute="bottom" constant="20" id="3bG-qa-k3V"/>
-                    <constraint firstItem="csh-eO-7Pc" firstAttribute="top" secondItem="uw9-i2-mpd" secondAttribute="bottom" constant="48" id="46L-PK-X8m"/>
+                    <constraint firstItem="csh-eO-7Pc" firstAttribute="top" secondItem="uw9-i2-mpd" secondAttribute="bottom" constant="30" id="46L-PK-X8m"/>
                     <constraint firstItem="ojX-R7-0Y9" firstAttribute="centerY" secondItem="RP9-I2-Kc3" secondAttribute="centerY" id="4AS-Gc-dZc"/>
                     <constraint firstItem="ObC-Wn-8CB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="34" id="95l-dP-7KK"/>
                     <constraint firstItem="b3Z-Up-6tN" firstAttribute="leading" secondItem="H5H-Qi-8Oo" secondAttribute="trailing" constant="118" id="CBg-wC-VM6"/>
@@ -196,7 +200,7 @@
                     <constraint firstItem="NOn-Fg-uHj" firstAttribute="top" secondItem="RP9-I2-Kc3" secondAttribute="bottom" constant="17.5" id="oA6-Y3-ChI"/>
                     <constraint firstItem="8CS-nc-Ttx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="34" id="rKl-Oc-5JO"/>
                     <constraint firstItem="czT-UO-jOl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="rlu-Hc-hiS"/>
-                    <constraint firstItem="2tZ-gF-hbj" firstAttribute="top" secondItem="csh-eO-7Pc" secondAttribute="bottom" constant="6.5" id="sCZ-xS-Sd0"/>
+                    <constraint firstItem="2tZ-gF-hbj" firstAttribute="top" secondItem="csh-eO-7Pc" secondAttribute="bottom" constant="11" id="sCZ-xS-Sd0"/>
                     <constraint firstItem="Igz-W0-8qp" firstAttribute="leading" secondItem="czT-UO-jOl" secondAttribute="trailing" constant="20" id="sGz-yM-WmD"/>
                     <constraint firstItem="sb0-g0-whn" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="txp-ld-idF"/>
                     <constraint firstItem="8CS-nc-Ttx" firstAttribute="top" secondItem="SWE-6L-2pP" secondAttribute="bottom" constant="20" id="ud4-MX-Msj"/>

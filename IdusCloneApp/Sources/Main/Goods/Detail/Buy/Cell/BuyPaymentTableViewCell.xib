@@ -31,6 +31,9 @@
                         </constraints>
                         <state key="normal" backgroundImage="구매_원형"/>
                         <state key="selected" backgroundImage="구매_원형주황"/>
+                        <connections>
+                            <action selector="btn1:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g0P-sG-hAm"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="간편하게 카드 결제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oY-dn-Vgm">
                         <rect key="frame" x="66" y="67" width="127" height="21"/>
@@ -60,6 +63,9 @@
                         </constraints>
                         <state key="normal" backgroundImage="구매_원형"/>
                         <state key="selected" backgroundImage="구매_원형주황"/>
+                        <connections>
+                            <action selector="btn2:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oLf-kp-xAG"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복잡하게 카드 결제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1L-LH-e2v">
                         <rect key="frame" x="67" y="142.5" width="127" height="21"/>
@@ -84,6 +90,9 @@
                         </constraints>
                         <state key="normal" backgroundImage="구매_원형"/>
                         <state key="selected" backgroundImage="구매_원형주황"/>
+                        <connections>
+                            <action selector="btn3:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TQK-Yj-4y8"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G2b-aF-8mV">
                         <rect key="frame" x="20" y="247.5" width="374" height="1"/>
@@ -110,6 +119,9 @@
                         </constraints>
                         <state key="normal" backgroundImage="구매_원형"/>
                         <state key="selected" backgroundImage="구매_원형주황"/>
+                        <connections>
+                            <action selector="btn4:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GKo-p9-QKp"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MRp-Ue-IeC">
                         <rect key="frame" x="20" y="310" width="374" height="1"/>
@@ -136,6 +148,9 @@
                         </constraints>
                         <state key="normal" backgroundImage="구매_원형"/>
                         <state key="selected" backgroundImage="구매_원형주황"/>
+                        <connections>
+                            <action selector="btn5:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wek-Um-ytC"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W12-1O-mwW">
                         <rect key="frame" x="20" y="371.5" width="374" height="1"/>
@@ -155,6 +170,9 @@
                         </constraints>
                         <state key="normal" backgroundImage="구매_원형"/>
                         <state key="selected" backgroundImage="구매_원형주황"/>
+                        <connections>
+                            <action selector="btn7:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3eX-cb-yxl"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnm-ES-3TW">
                         <rect key="frame" x="67" y="453" width="87" height="22"/>
@@ -178,6 +196,9 @@
                         </constraints>
                         <state key="normal" backgroundImage="구매_원형"/>
                         <state key="selected" backgroundImage="구매_원형주황"/>
+                        <connections>
+                            <action selector="btn6:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="z7X-cu-SwG"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2gC-Se-f6P">
                         <rect key="frame" x="20" y="433" width="374" height="1"/>
@@ -254,6 +275,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btn1" destination="hb9-i7-VtP" id="GWJ-7I-7Ft"/>
+                <outlet property="btn2" destination="f4L-Q7-3Zd" id="3ta-yN-zKN"/>
+                <outlet property="btn3" destination="f89-7E-3Q2" id="fq6-r8-xQz"/>
+                <outlet property="btn4" destination="VKl-EQ-kw7" id="yx1-kM-xLp"/>
+                <outlet property="btn5" destination="MXX-r2-bdg" id="PxZ-2S-8AL"/>
+                <outlet property="btn6" destination="rsS-lO-zNK" id="Do7-jz-7xo"/>
+                <outlet property="btn7" destination="lyJ-KE-BV0" id="Wcd-CJ-C6D"/>
+            </connections>
             <point key="canvasLocation" x="-391.304347826087" y="266.18303571428572"/>
         </tableViewCell>
     </objects>

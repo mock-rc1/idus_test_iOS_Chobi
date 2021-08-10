@@ -108,6 +108,8 @@
 		C34CD16D26BD0B7800216317 /* TodaySaleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34CD16B26BD0B7800216317 /* TodaySaleTableViewCell.xib */; };
 		C34CD17026BD0E8800216317 /* TodaySaleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34CD16E26BD0E8800216317 /* TodaySaleCollectionViewCell.swift */; };
 		C34CD17126BD0E8800216317 /* TodaySaleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C34CD16F26BD0E8800216317 /* TodaySaleCollectionViewCell.xib */; };
+		C362624E26C247020026B225 /* CartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362624D26C247020026B225 /* CartResponse.swift */; };
+		C362625026C2471C0026B225 /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362624F26C2471C0026B225 /* CartDataManager.swift */; };
 		C381B46326BC4CD500EF26D9 /* DetailCommentQCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381B46126BC4CD500EF26D9 /* DetailCommentQCollectionViewCell.swift */; };
 		C381B46426BC4CD500EF26D9 /* DetailCommentQCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C381B46226BC4CD500EF26D9 /* DetailCommentQCollectionViewCell.xib */; };
 		C381B46726BC4D6B00EF26D9 /* DetailCommentACollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C381B46526BC4D6B00EF26D9 /* DetailCommentACollectionViewCell.swift */; };
@@ -301,6 +303,8 @@
 		C34CD16B26BD0B7800216317 /* TodaySaleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodaySaleTableViewCell.xib; sourceTree = "<group>"; };
 		C34CD16E26BD0E8800216317 /* TodaySaleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySaleCollectionViewCell.swift; sourceTree = "<group>"; };
 		C34CD16F26BD0E8800216317 /* TodaySaleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodaySaleCollectionViewCell.xib; sourceTree = "<group>"; };
+		C362624D26C247020026B225 /* CartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResponse.swift; sourceTree = "<group>"; };
+		C362624F26C2471C0026B225 /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
 		C381B46126BC4CD500EF26D9 /* DetailCommentQCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCommentQCollectionViewCell.swift; sourceTree = "<group>"; };
 		C381B46226BC4CD500EF26D9 /* DetailCommentQCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCommentQCollectionViewCell.xib; sourceTree = "<group>"; };
 		C381B46526BC4D6B00EF26D9 /* DetailCommentACollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCommentACollectionViewCell.swift; sourceTree = "<group>"; };
@@ -531,6 +535,8 @@
 		C31909AA26BE710900CECBB5 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				C362624C26C246DC0026B225 /* Entity */,
+				C362624B26C246C80026B225 /* DataManager */,
 				C31909AB26BE717E00CECBB5 /* Cell */,
 				C31909B026BE81B000CECBB5 /* CartViewController.swift */,
 			);
@@ -869,6 +875,22 @@
 				C34CD16726BD080200216317 /* OptionTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C362624B26C246C80026B225 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C362624F26C2471C0026B225 /* CartDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		C362624C26C246DC0026B225 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C362624D26C247020026B225 /* CartResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		C3825FA926B6BEB7009CAD58 /* Today */ = {
@@ -1387,6 +1409,7 @@
 				C34B033C26C141C5001C1C7B /* CategoryGoodsCollectionViewCell.swift in Sources */,
 				C3825FB426B6C33B009CAD58 /* NewViewController.swift in Sources */,
 				C33F736F26B5450C00A57CFA /* BaseViewController.swift in Sources */,
+				C362625026C2471C0026B225 /* CartDataManager.swift in Sources */,
 				C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */,
 				C39FABDD26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.swift in Sources */,
 				C39FABB226BFF3B0003DDFE9 /* LineTableViewCell.swift in Sources */,
@@ -1407,6 +1430,7 @@
 				C3CA6C0C26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.swift in Sources */,
 				C31909AE26BE719E00CECBB5 /* CartTableViewCell.swift in Sources */,
 				C341B1DA26BD4A5500B8ADB7 /* TodayDataManager.swift in Sources */,
+				C362624E26C247020026B225 /* CartResponse.swift in Sources */,
 				C307D9E526BAB683000F8179 /* DetailCommentTableViewCell.swift in Sources */,
 				C341B1D826BD4A4300B8ADB7 /* TodayResponse.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,

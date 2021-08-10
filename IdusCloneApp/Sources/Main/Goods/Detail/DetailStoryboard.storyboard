@@ -226,6 +226,8 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="labelPrice" destination="r4T-aP-3Zv" id="XDg-87-gZU"/>
+                        <outlet property="labelShippingPrice" destination="iHD-7j-PO4" id="kwO-rf-5iU"/>
                         <outlet property="tableView" destination="nuk-wU-2No" id="qVu-PF-oyc"/>
                     </connections>
                 </viewController>

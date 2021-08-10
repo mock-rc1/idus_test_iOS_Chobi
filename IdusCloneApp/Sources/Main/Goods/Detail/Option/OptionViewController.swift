@@ -43,16 +43,19 @@ class OptionViewController: UIViewController {
     var finalSection: [String] = []
     
     var prodSideIdx: [Int] = [0,0]
-    var prodPrice: [Int] = [0,0]
+    var prodPrice: [Int] = [0]
     //테이블 뷰 접기
     var folder = [false, false]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Constant.price = self.price!
+        print("Constant.price\(Constant.price)")
         setupTableView()
         // Do any additional setup after loading the view.
         labelShipping.text = "\(shipping!)".insertComma + "원"
         labelTotalMoney.text = "\(price!)".insertComma + "원"
+        
         dataManager.getOption(vc: self, userIdx: 3, prodIdx: prodIdx!)
     }
 
@@ -142,7 +145,7 @@ extension OptionViewController: UITableViewDataSource, UITableViewDelegate{
             labelTotalMoney.text = "\(price!)".insertComma + "원"
             finalSection.append("1. \(optionSection[0]): \(option1[indexPath.row]) /")
             prodSideIdx[0] = indexPath.row
-            prodPrice[0] = option1Money[indexPath.row]
+            prodPrice[0] += option1Money[indexPath.row]
         }else if indexPath.section == 1{
             print(option2[indexPath.row])
             folder[1] = true
@@ -150,10 +153,11 @@ extension OptionViewController: UITableViewDataSource, UITableViewDelegate{
             labelTotalMoney.text = "\(price!)".insertComma + "원"
             finalSection.append("2. \(optionSection[1]): \(option2[indexPath.row])")
             prodSideIdx[1] = indexPath.row
-            prodPrice[1] = option2Money[indexPath.row]
+            prodPrice[0] += option2Money[indexPath.row]
         }
         if(folder[0] == true && folder[1] == true){
             print("다음 화면")
+            prodPrice[0] += Constant.price
             print("옵션별 가격 확인 :\(prodPrice)")
             nextPage()
         }

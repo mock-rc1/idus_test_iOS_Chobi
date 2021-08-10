@@ -8,6 +8,12 @@
 import UIKit
 
 class CartTableViewCell: UITableViewCell {
+    
+    /*
+    func btnOrderRequest() -> String {
+        return self.textRequest.text!
+    }*/
+    
 
     
     @IBOutlet weak var labelAuthor: UILabel!
