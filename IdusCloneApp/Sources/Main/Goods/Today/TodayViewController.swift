@@ -201,7 +201,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
         case 1:
             return 100
         case 2,4,6,8:
-            return 40
+            return 50
         case 3:
             return 380
             //

@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbg-cb-ORR">
-                        <rect key="frame" x="337.5" y="0.0" width="53" height="30"/>
+                        <rect key="frame" x="347" y="0.0" width="53" height="30"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <state key="normal" title="더보기 &gt;">
                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,8 +50,8 @@
                     <constraint firstItem="OzA-Mt-G4H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TL6-NH-Tc0"/>
                     <constraint firstItem="loC-Yr-ob1" firstAttribute="top" secondItem="gbg-cb-ORR" secondAttribute="bottom" constant="17.5" id="jzA-GX-CYQ"/>
                     <constraint firstItem="gbg-cb-ORR" firstAttribute="centerY" secondItem="OzA-Mt-G4H" secondAttribute="centerY" id="kQ8-Lx-8nN"/>
+                    <constraint firstAttribute="trailing" secondItem="gbg-cb-ORR" secondAttribute="trailing" constant="14" id="nBc-zU-hmg"/>
                     <constraint firstItem="OzA-Mt-G4H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qV6-Xf-kHA"/>
-                    <constraint firstItem="gbg-cb-ORR" firstAttribute="leading" secondItem="OzA-Mt-G4H" secondAttribute="trailing" constant="99.5" id="uhC-Ob-qSN"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

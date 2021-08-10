@@ -40,7 +40,7 @@
             <connections>
                 <outlet property="eventCollectionView" destination="Xzx-ms-p6j" id="SmF-92-PaF"/>
             </connections>
-            <point key="canvasLocation" x="125" y="100"/>
+            <point key="canvasLocation" x="124.6376811594203" y="99.776785714285708"/>
         </tableViewCell>
     </objects>
     <resources>

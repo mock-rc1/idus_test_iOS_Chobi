@@ -43,7 +43,7 @@
                 <outlet property="imageEvent" destination="iFO-KY-3fz" id="i6u-ho-UTU"/>
                 <outlet property="labelEvent" destination="qPB-Lp-6dA" id="Eui-ox-Xw8"/>
             </connections>
-            <point key="canvasLocation" x="87" y="98"/>
+            <point key="canvasLocation" x="86.956521739130437" y="97.433035714285708"/>
         </collectionViewCell>
     </objects>
     <resources>

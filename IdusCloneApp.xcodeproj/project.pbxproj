@@ -182,6 +182,26 @@
 		C3CA6C0826BAD60D00D98DC4 /* DetailOtherGoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CA6C0626BAD60D00D98DC4 /* DetailOtherGoodsTableViewCell.xib */; };
 		C3CA6C0C26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA6C0A26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.swift */; };
 		C3CA6C0D26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CA6C0B26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.xib */; };
+		C3D0A71D26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A71B26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.swift */; };
+		C3D0A71E26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A71C26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.xib */; };
+		C3D0A72126C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A71F26C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.swift */; };
+		C3D0A72226C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A72026C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.xib */; };
+		C3D0A72526C2A30100B674B5 /* ClassEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A72326C2A30100B674B5 /* ClassEventCollectionViewCell.swift */; };
+		C3D0A72626C2A30100B674B5 /* ClassEventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A72426C2A30100B674B5 /* ClassEventCollectionViewCell.xib */; };
+		C3D0A72926C2A45300B674B5 /* ClassEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A72726C2A45300B674B5 /* ClassEventTableViewCell.swift */; };
+		C3D0A72A26C2A45300B674B5 /* ClassEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A72826C2A45300B674B5 /* ClassEventTableViewCell.xib */; };
+		C3D0A73026C2A67100B674B5 /* ClassOfflineBannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A72E26C2A67100B674B5 /* ClassOfflineBannerTableViewCell.swift */; };
+		C3D0A73126C2A67100B674B5 /* ClassOfflineBannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A72F26C2A67100B674B5 /* ClassOfflineBannerTableViewCell.xib */; };
+		C3D0A73426C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A73226C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.swift */; };
+		C3D0A73526C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A73326C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.xib */; };
+		C3D0A73926C2AA4200B674B5 /* ClassCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A73726C2AA4200B674B5 /* ClassCategoryTableViewCell.swift */; };
+		C3D0A73A26C2AA4200B674B5 /* ClassCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A73826C2AA4200B674B5 /* ClassCategoryTableViewCell.xib */; };
+		C3D0A73E26C2AD5D00B674B5 /* MyClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A73C26C2AD5D00B674B5 /* MyClassTableViewCell.swift */; };
+		C3D0A73F26C2AD5D00B674B5 /* MyClassTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A73D26C2AD5D00B674B5 /* MyClassTableViewCell.xib */; };
+		C3D0A74226C2AD6E00B674B5 /* MyClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A74026C2AD6E00B674B5 /* MyClassCollectionViewCell.swift */; };
+		C3D0A74326C2AD6E00B674B5 /* MyClassCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A74126C2AD6E00B674B5 /* MyClassCollectionViewCell.xib */; };
+		C3D0A74726C2B3FE00B674B5 /* ClassLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A74526C2B3FE00B674B5 /* ClassLineTableViewCell.swift */; };
+		C3D0A74826C2B3FE00B674B5 /* ClassLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A74626C2B3FE00B674B5 /* ClassLineTableViewCell.xib */; };
 		C3E2039026B8289C00022591 /* EmailLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */; };
 		C3E2039226B828B500022591 /* EmailLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039126B828B500022591 /* EmailLoginResponse.swift */; };
 		C3E2039426B828E400022591 /* EmailLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039326B828E400022591 /* EmailLoginDataManager.swift */; };
@@ -377,6 +397,26 @@
 		C3CA6C0626BAD60D00D98DC4 /* DetailOtherGoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailOtherGoodsTableViewCell.xib; sourceTree = "<group>"; };
 		C3CA6C0A26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWithGoodsTableViewCell.swift; sourceTree = "<group>"; };
 		C3CA6C0B26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailWithGoodsTableViewCell.xib; sourceTree = "<group>"; };
+		C3D0A71B26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOnlineBannerTableViewCell.swift; sourceTree = "<group>"; };
+		C3D0A71C26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassOnlineBannerTableViewCell.xib; sourceTree = "<group>"; };
+		C3D0A71F26C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOnlineBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3D0A72026C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassOnlineBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3D0A72326C2A30100B674B5 /* ClassEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3D0A72426C2A30100B674B5 /* ClassEventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassEventCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3D0A72726C2A45300B674B5 /* ClassEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEventTableViewCell.swift; sourceTree = "<group>"; };
+		C3D0A72826C2A45300B674B5 /* ClassEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassEventTableViewCell.xib; sourceTree = "<group>"; };
+		C3D0A72E26C2A67100B674B5 /* ClassOfflineBannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOfflineBannerTableViewCell.swift; sourceTree = "<group>"; };
+		C3D0A72F26C2A67100B674B5 /* ClassOfflineBannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassOfflineBannerTableViewCell.xib; sourceTree = "<group>"; };
+		C3D0A73226C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOfflineBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3D0A73326C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassOfflineBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3D0A73726C2AA4200B674B5 /* ClassCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		C3D0A73826C2AA4200B674B5 /* ClassCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		C3D0A73C26C2AD5D00B674B5 /* MyClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassTableViewCell.swift; sourceTree = "<group>"; };
+		C3D0A73D26C2AD5D00B674B5 /* MyClassTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyClassTableViewCell.xib; sourceTree = "<group>"; };
+		C3D0A74026C2AD6E00B674B5 /* MyClassCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClassCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3D0A74126C2AD6E00B674B5 /* MyClassCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyClassCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3D0A74526C2B3FE00B674B5 /* ClassLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassLineTableViewCell.swift; sourceTree = "<group>"; };
+		C3D0A74626C2B3FE00B674B5 /* ClassLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassLineTableViewCell.xib; sourceTree = "<group>"; };
 		C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginRequest.swift; sourceTree = "<group>"; };
 		C3E2039126B828B500022591 /* EmailLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginResponse.swift; sourceTree = "<group>"; };
 		C3E2039326B828E400022591 /* EmailLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginDataManager.swift; sourceTree = "<group>"; };
@@ -817,6 +857,7 @@
 		C349C16026C0740800F13EB2 /* Online */ = {
 			isa = PBXGroup;
 			children = (
+				C3D0A71A26C2967800B674B5 /* Cell */,
 				C349C16226C0743200F13EB2 /* ClassOnlineViewController.swift */,
 			);
 			path = Online;
@@ -825,6 +866,7 @@
 		C349C16126C0740F00F13EB2 /* Offline */ = {
 			isa = PBXGroup;
 			children = (
+				C3D0A71926C2965100B674B5 /* Cell */,
 				C349C16426C0744300F13EB2 /* ClassOfflineViewController.swift */,
 			);
 			path = Offline;
@@ -1092,6 +1134,88 @@
 			path = DetailWithGoods;
 			sourceTree = "<group>";
 		};
+		C3D0A71926C2965100B674B5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A73626C2AA1D00B674B5 /* Category */,
+				C3D0A72D26C2A65600B674B5 /* Banner */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C3D0A71A26C2967800B674B5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A74426C2B3E500B674B5 /* Line */,
+				C3D0A73B26C2AD4100B674B5 /* MyClass */,
+				C3D0A72C26C2A63C00B674B5 /* Event */,
+				C3D0A72B26C2A62F00B674B5 /* Banner */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C3D0A72B26C2A62F00B674B5 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A71B26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.swift */,
+				C3D0A71C26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.xib */,
+				C3D0A71F26C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.swift */,
+				C3D0A72026C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.xib */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		C3D0A72C26C2A63C00B674B5 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A72326C2A30100B674B5 /* ClassEventCollectionViewCell.swift */,
+				C3D0A72426C2A30100B674B5 /* ClassEventCollectionViewCell.xib */,
+				C3D0A72726C2A45300B674B5 /* ClassEventTableViewCell.swift */,
+				C3D0A72826C2A45300B674B5 /* ClassEventTableViewCell.xib */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		C3D0A72D26C2A65600B674B5 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A72E26C2A67100B674B5 /* ClassOfflineBannerTableViewCell.swift */,
+				C3D0A72F26C2A67100B674B5 /* ClassOfflineBannerTableViewCell.xib */,
+				C3D0A73226C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.swift */,
+				C3D0A73326C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.xib */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		C3D0A73626C2AA1D00B674B5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A73726C2AA4200B674B5 /* ClassCategoryTableViewCell.swift */,
+				C3D0A73826C2AA4200B674B5 /* ClassCategoryTableViewCell.xib */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C3D0A73B26C2AD4100B674B5 /* MyClass */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A73C26C2AD5D00B674B5 /* MyClassTableViewCell.swift */,
+				C3D0A73D26C2AD5D00B674B5 /* MyClassTableViewCell.xib */,
+				C3D0A74026C2AD6E00B674B5 /* MyClassCollectionViewCell.swift */,
+				C3D0A74126C2AD6E00B674B5 /* MyClassCollectionViewCell.xib */,
+			);
+			path = MyClass;
+			sourceTree = "<group>";
+		};
+		C3D0A74426C2B3E500B674B5 /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A74526C2B3FE00B674B5 /* ClassLineTableViewCell.swift */,
+				C3D0A74626C2B3FE00B674B5 /* ClassLineTableViewCell.xib */,
+			);
+			path = Line;
+			sourceTree = "<group>";
+		};
 		C3E2038D26B8286A00022591 /* Datamanager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1250,6 +1374,7 @@
 			files = (
 				C39FABAB26BFE862003DDFE9 /* BuyUserTableViewCell.xib in Resources */,
 				C39FABC326C00515003DDFE9 /* BuyAgreeTableViewCell.xib in Resources */,
+				C3D0A72226C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.xib in Resources */,
 				C39FABBB26BFFFAB003DDFE9 /* BuyInfoTableViewCell.xib in Resources */,
 				C39FABDA26C022E9003DDFE9 /* MyInfoNoticeTableViewCell.xib in Resources */,
 				C307D9E126BA7CB2000F8179 /* DetailKeywordTableViewCell.xib in Resources */,
@@ -1260,6 +1385,7 @@
 				C34CD16026BCF59A00216317 /* OptionViewController.xib in Resources */,
 				C3825FB226B6C31A009CAD58 /* NewStoryboard.storyboard in Resources */,
 				C307D9EE26BABB27000F8179 /* DetailCommentATableViewCell.xib in Resources */,
+				C3D0A72A26C2A45300B674B5 /* ClassEventTableViewCell.xib in Resources */,
 				C34CD16926BD080200216317 /* OptionTableViewCell.xib in Resources */,
 				C3F46CBB26BAE61D0084316E /* DetailImageCollectionViewCell.xib in Resources */,
 				C307D9D026BA44C5000F8179 /* DetailReviewTableViewCell.xib in Resources */,
@@ -1267,6 +1393,7 @@
 				C317E01426B693A6004FF5F8 /* CategoryStoryboard.storyboard in Resources */,
 				C307D9EA26BAB856000F8179 /* DetailCommentQTableViewCell.xib in Resources */,
 				C307D9D826BA4C57000F8179 /* DetailPictureReviewCollectionViewCell.xib in Resources */,
+				C3D0A74326C2AD6E00B674B5 /* MyClassCollectionViewCell.xib in Resources */,
 				C3CA6C0826BAD60D00D98DC4 /* DetailOtherGoodsTableViewCell.xib in Resources */,
 				C3CA6C0D26BAD87E00D98DC4 /* DetailWithGoodsTableViewCell.xib in Resources */,
 				C381B46826BC4D6B00EF26D9 /* DetailCommentACollectionViewCell.xib in Resources */,
@@ -1293,13 +1420,16 @@
 				C31909CA26BEB7F800CECBB5 /* NewTableViewCell.xib in Resources */,
 				C31909BE26BEA46300CECBB5 /* RealTimeCollectionViewCell.xib in Resources */,
 				C39FABD626C02269003DDFE9 /* MyInfoRecentTableViewCell.xib in Resources */,
+				C3D0A73F26C2AD5D00B674B5 /* MyClassTableViewCell.xib in Resources */,
 				C31909D226BEBC6000CECBB5 /* NewCollectionViewCell.xib in Resources */,
 				C307D9D426BA4758000F8179 /* DetailReviewCollectionViewCell.xib in Resources */,
 				C38E587926BD2018002A9A0F /* TodayRelatedCollectionViewCell.xib in Resources */,
 				C33F736C26B5450C00A57CFA /* NotoSansCJKkr-Medium.otf in Resources */,
 				C38E587526BD1F1F002A9A0F /* TodayRelatedTableViewCell.xib in Resources */,
+				C3D0A73526C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.xib in Resources */,
 				C39FABBF26C003E0003DDFE9 /* BuyPaymentInfoTableViewCell.xib in Resources */,
 				C3A4522126BDC3AB006258EF /* OptionNextViewController.xib in Resources */,
+				C3D0A73126C2A67100B674B5 /* ClassOfflineBannerTableViewCell.xib in Resources */,
 				C381B46C26BC5B7F00EF26D9 /* DetailOtherGoodsCollectionViewCell.xib in Resources */,
 				C39FABD226C021F7003DDFE9 /* MyInfoBannerTableViewCell.xib in Resources */,
 				C39FABCA26C01684003DDFE9 /* MyInfoProfileTableViewCell.xib in Resources */,
@@ -1312,10 +1442,14 @@
 				C317E00526B68887004FF5F8 /* GoodsStoryboard.storyboard in Resources */,
 				C307D9E626BAB683000F8179 /* DetailCommentTableViewCell.xib in Resources */,
 				C39FABCE26C01E45003DDFE9 /* MyInfoExtraTableViewCell.xib in Resources */,
+				C3D0A73A26C2AA4200B674B5 /* ClassCategoryTableViewCell.xib in Resources */,
+				C3D0A74826C2B3FE00B674B5 /* ClassLineTableViewCell.xib in Resources */,
 				C34B033D26C141C5001C1C7B /* CategoryGoodsCollectionViewCell.xib in Resources */,
 				C3B7922A26B94C6400F87593 /* DetailImageTableViewCell.xib in Resources */,
 				C3FFFFFF26B78CF2000F6988 /* EventTableViewCell.xib in Resources */,
+				C3D0A71E26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.xib in Resources */,
 				C32A80ED26B6D4DA00E03C6A /* BannerCollectionViewCell.xib in Resources */,
+				C3D0A72626C2A30100B674B5 /* ClassEventCollectionViewCell.xib in Resources */,
 				C39FABAF26BFEB4C003DDFE9 /* BuyAddressTableViewCell.xib in Resources */,
 				C31909AF26BE719E00CECBB5 /* CartTableViewCell.xib in Resources */,
 				C33F736E26B5450C00A57CFA /* NotoSansCJKkr-Bold.otf in Resources */,
@@ -1383,6 +1517,7 @@
 				C34B034526C1517C001C1C7B /* AllCategoryTableViewCell.swift in Sources */,
 				C317E00726B688B8004FF5F8 /* GoodsViewController.swift in Sources */,
 				C39FABBA26BFFFAB003DDFE9 /* BuyInfoTableViewCell.swift in Sources */,
+				C3D0A72526C2A30100B674B5 /* ClassEventCollectionViewCell.swift in Sources */,
 				C38E587826BD2018002A9A0F /* TodayRelatedCollectionViewCell.swift in Sources */,
 				C3FFFFFA26B78C75000F6988 /* EventCollectionViewCell.swift in Sources */,
 				C396857026B5723F004FB9D6 /* LoginViewController.swift in Sources */,
@@ -1395,9 +1530,11 @@
 				C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */,
 				C39FABC226C00515003DDFE9 /* BuyAgreeTableViewCell.swift in Sources */,
 				C349C15726C058DE00F13EB2 /* SearchNextVC.swift in Sources */,
+				C3D0A73426C2A68600B674B5 /* ClassOfflineBannerCollectionViewCell.swift in Sources */,
 				C34CD16826BD080200216317 /* OptionTableViewCell.swift in Sources */,
 				C33F736426B5450C00A57CFA /* Date.swift in Sources */,
 				C34B034126C15162001C1C7B /* CategoryClassTopTableViewCell.swift in Sources */,
+				C3D0A74226C2AD6E00B674B5 /* MyClassCollectionViewCell.swift in Sources */,
 				C3FFFFFE26B78CF2000F6988 /* EventTableViewCell.swift in Sources */,
 				C3C8A95E26BB85A100256F2E /* DetailDataManager.swift in Sources */,
 				C3FF001126B7EECD000F6988 /* DetailViewController.swift in Sources */,
@@ -1413,11 +1550,14 @@
 				C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */,
 				C39FABDD26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.swift in Sources */,
 				C39FABB226BFF3B0003DDFE9 /* LineTableViewCell.swift in Sources */,
+				C3D0A72126C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.swift in Sources */,
 				C381B46726BC4D6B00EF26D9 /* DetailCommentACollectionViewCell.swift in Sources */,
 				C39FABC526C01366003DDFE9 /* MyInfoViewController.swift in Sources */,
 				C307D9ED26BABB27000F8179 /* DetailCommentATableViewCell.swift in Sources */,
+				C3D0A73926C2AA4200B674B5 /* ClassCategoryTableViewCell.swift in Sources */,
 				C32A80E826B6D4BC00E03C6A /* BannerTableViewCell.swift in Sources */,
 				C34CD17026BD0E8800216317 /* TodaySaleCollectionViewCell.swift in Sources */,
+				C3D0A72926C2A45300B674B5 /* ClassEventTableViewCell.swift in Sources */,
 				C39FABB626BFF5A6003DDFE9 /* BuyPaymentTableViewCell.swift in Sources */,
 				C31909D626BEC05800CECBB5 /* NewDataManager.swift in Sources */,
 				C34CD16426BD037E00216317 /* AllSelectedTableViewCell.swift in Sources */,
@@ -1440,9 +1580,11 @@
 				C307D9E926BAB856000F8179 /* DetailCommentQTableViewCell.swift in Sources */,
 				C34CD15F26BCF59A00216317 /* OptionViewController.swift in Sources */,
 				C33F736326B5450C00A57CFA /* Device.swift in Sources */,
+				C3D0A74726C2B3FE00B674B5 /* ClassLineTableViewCell.swift in Sources */,
 				C307D9E026BA7CB2000F8179 /* DetailKeywordTableViewCell.swift in Sources */,
 				C3B7923926B9640300F87593 /* DetailInfoTableViewCell.swift in Sources */,
 				C39FABA626BFD3AF003DDFE9 /* BuyViewController.swift in Sources */,
+				C3D0A73E26C2AD5D00B674B5 /* MyClassTableViewCell.swift in Sources */,
 				C3B7923526B9621F00F87593 /* DetailShippingTableViewCell.swift in Sources */,
 				C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */,
 				C39FABAA26BFE862003DDFE9 /* BuyUserTableViewCell.swift in Sources */,
@@ -1470,10 +1612,12 @@
 				C307D9D326BA4758000F8179 /* DetailReviewCollectionViewCell.swift in Sources */,
 				C31909B526BEA29A00CECBB5 /* RealTimeTopTableViewCell.swift in Sources */,
 				C39FAB9F26BFBCFD003DDFE9 /* OptionNextDataManager.swift in Sources */,
+				C3D0A73026C2A67100B674B5 /* ClassOfflineBannerTableViewCell.swift in Sources */,
 				C39FABD926C022E9003DDFE9 /* MyInfoNoticeTableViewCell.swift in Sources */,
 				C31909C226BEAE8D00CECBB5 /* RealtimeDatamanager.swift in Sources */,
 				C31909B926BEA42300CECBB5 /* RealTimeTableViewCell.swift in Sources */,
 				C39FABCD26C01E45003DDFE9 /* MyInfoExtraTableViewCell.swift in Sources */,
+				C3D0A71D26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.swift in Sources */,
 				C3C8A96026BB85B100256F2E /* DetailResponse.swift in Sources */,
 				C341B1DE26BD721400B8ADB7 /* OptionDataManager.swift in Sources */,
 				C31909BD26BEA46300CECBB5 /* RealTimeCollectionViewCell.swift in Sources */,
