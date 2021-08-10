@@ -9,6 +9,7 @@ import UIKit
 
 class BuyInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelInfo: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -13,6 +13,8 @@ class BuyAddressTableViewCell: UITableViewCell {
     @IBOutlet weak var labelPhone: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
     @IBOutlet weak var btnSecure: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

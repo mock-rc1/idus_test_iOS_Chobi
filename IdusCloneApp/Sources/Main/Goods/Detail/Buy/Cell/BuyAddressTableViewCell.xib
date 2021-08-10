@@ -157,7 +157,7 @@
             <connections>
                 <outlet property="btnSecure" destination="3ON-bz-YmN" id="zyc-dp-hVn"/>
                 <outlet property="labelAddress" destination="xlD-Bg-UcW" id="j29-yo-xtR"/>
-                <outlet property="labelName" destination="VPj-Da-KCA" id="mzh-dS-7ez"/>
+                <outlet property="labelName" destination="VPj-Da-KCA" id="ibh-JU-rEr"/>
                 <outlet property="labelPhone" destination="ybO-3U-mcl" id="axV-6l-NjQ"/>
             </connections>
             <point key="canvasLocation" x="118.84057971014494" y="191.85267857142856"/>

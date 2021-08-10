@@ -9,6 +9,9 @@ import UIKit
 
 class BuyUserTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var labelUser: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

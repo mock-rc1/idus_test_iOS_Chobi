@@ -301,6 +301,7 @@
                     <navigationItem key="navigationItem" id="Kws-1B-kLP"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="labelPayment" destination="p5T-NF-j9I" id="Tjr-sw-2g9"/>
                         <outlet property="tableView" destination="peM-7n-9JP" id="LcJ-sl-348"/>
                     </connections>
                 </viewController>

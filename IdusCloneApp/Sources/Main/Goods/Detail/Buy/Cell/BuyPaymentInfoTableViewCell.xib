@@ -129,6 +129,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="btnSupport" destination="Cvo-9S-t6r" id="pML-FB-3r7"/>
+                <outlet property="labelPrice" destination="qMF-UZ-V7G" id="cs3-Za-0M1"/>
+                <outlet property="labelShipping" destination="qJV-VG-XVD" id="swD-hh-eSz"/>
+                <outlet property="labelTotalPrice" destination="S5o-26-zs0" id="Cks-XB-fdm"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="169.08482142857142"/>
         </tableViewCell>

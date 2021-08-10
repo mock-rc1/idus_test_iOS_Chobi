@@ -8,14 +8,26 @@
 import Foundation
 import UIKit
 
-class BuyViewController: BaseViewController{
+class BuyViewController: BaseViewController, PaymentProtocol{
+    func didSelectBtnPayment(type: Int) {
+        paymentType = type
+        print(type)
+        tableView.reloadData()
+    }
+    
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var labelPayment: UILabel!
     // Datamanager
     lazy var dataManager: BuyDataManager = BuyDataManager()
-    var buyData: BuyResult?
     
+    // Datamanager
+    lazy var dataManager2: PaymentDataManager = PaymentDataManager()
+    
+    var buyData: BuyResult?
+    var paymentType = 1
+    var totalPrice = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -37,6 +49,10 @@ class BuyViewController: BaseViewController{
     
     @IBAction func btnBuy(_ sender: Any) {
         print("결제")
+        let input = PaymentRequest(orderIdx: Constant.orderIdx, totalPrice: totalPrice, deliveryIdx: 1, paymentType: paymentType)
+        print(input)
+        //print(email)
+        dataManager2.patchPayment(input, delegate: self, userIdx: 3)
     }
     
 }
@@ -54,55 +70,91 @@ extension BuyViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "BuyUserTableViewCell") as? BuyUserTableViewCell {
                 //cell.bannerCellDelegate = self
-                /*
-                if let x = newData?.getNewRes{
-                    cell.setCell(new: x)
-                }*/
+                
+                if let x = buyData?.getPaymentInfoRes{
+                    cell.labelUser.text = "\(x.userName!)(" + "\(x.phoneNum!)".pretty() + ")"
+                }
                 return cell
             }
         case 1,3,5,7,9,11:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "LineTableViewCell") as? LineTableViewCell {
                 //cell.bannerCellDelegate = self
-                /*
-                if let x = newData?.getNewRes{
-                    cell.setCell(new: x)
-                }*/
+                
                 return cell
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "BuyAddressTableViewCell") as? BuyAddressTableViewCell {
                 //cell.bannerCellDelegate = self
-                /*
-                if let x = newData?.getNewRes{
-                    cell.setCell(new: x)
-                }*/
+                if let x = buyData?.getPaymentDeliveryRes{
+                    cell.labelName.text = x[0].deliveryName!
+                    cell.labelPhone.text = x[0].deliveryPhoneNum!.pretty()
+                    cell.labelAddress.text = x[0].address!
+                    
+                }
                 return cell
             }
         case 4:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "BuyInfoTableViewCell") as? BuyInfoTableViewCell {
                 //cell.bannerCellDelegate = self
-                /*
-                if let x = newData?.getNewRes{
-                    cell.setCell(new: x)
-                }*/
+                
+                if let x = buyData?.getPaymentProdRes{
+                    cell.labelInfo.text = x[0].prodName!
+                    
+                }
                 return cell
             }
         case 6:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "BuyPaymentTableViewCell") as? BuyPaymentTableViewCell {
+                cell.delegate = self
                 //cell.bannerCellDelegate = self
                 /*
-                if let x = newData?.getNewRes{
-                    cell.setCell(new: x)
+                if cell.btn1.isSelected{
+                    paymentType = 1
+                }else if cell.btn2.isSelected{
+                    paymentType = 2
+                }else if cell.btn3.isSelected{
+                    paymentType = 3
+                }else if cell.btn4.isSelected{
+                    paymentType = 4
+                }else if cell.btn5.isSelected{
+                    paymentType = 5
+                }else if cell.btn6.isSelected{
+                    paymentType = 6
+                }else if cell.btn7.isSelected{
+                    paymentType = 7
                 }*/
                 return cell
             }
         case 8:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "BuyPaymentInfoTableViewCell") as? BuyPaymentInfoTableViewCell {
                 //cell.bannerCellDelegate = self
-                /*
-                if let x = newData?.getNewRes{
-                    cell.setCell(new: x)
-                }*/
+                var data = 0
+                if let x = buyData?.getPaymentInfoRes{
+                    cell.labelPrice.text = "\(x.totalProdPrice!)".insertComma + "원"
+                    data += x.totalProdPrice!
+                }
+                if let y = buyData?.getPaymentProdRes{
+                    cell.labelShipping.text = "\(y[0].deliveryCost!)".insertComma + "원"
+                    data += y[0].deliveryCost!
+                }
+                cell.labelTotalPrice.text = "\(data)".insertComma + "원"
+                
+                if(paymentType == 1){
+                    labelPayment.text = "\(data)".insertComma + "원 간편하게 카드 결제"
+                }else if(paymentType == 2){
+                    labelPayment.text = "\(data)".insertComma + "원 복잡하게 카드 결제"
+                }else if(paymentType == 3){
+                    labelPayment.text = "\(data)".insertComma + "원 차이"
+                }else if(paymentType == 4){
+                    labelPayment.text = "\(data)".insertComma + "원 네이버페이"
+                }else if(paymentType == 5){
+                    labelPayment.text = "\(data)".insertComma + "원 계좌이체/무통장입금"
+                }else if(paymentType == 6){
+                    labelPayment.text = "\(data)".insertComma + "원 휴대폰 결제"
+                }else if(paymentType == 7){
+                    labelPayment.text = "\(data)".insertComma + "원 토스"
+                }
+                totalPrice = data
                 return cell
             }
         case 10:
@@ -190,3 +242,58 @@ extension BuyViewController {
         self.presentAlert(title: message)
     }
 }
+extension BuyViewController {
+    func didSuccessPayment(_ result: PaymentResponse) {
+        //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        //dismissIndicator()
+        print("결제 성공! \(result.message!)")
+        
+    }
+    
+    func failedToPayment(message: String) {
+        self.presentAlert(title: message)
+    }
+}
+
+
+extension String { func pretty() -> String {
+    let _str = self.replacingOccurrences(of: "-", with: "")
+    // 하이픈 모두 빼준다
+    let arr = Array(_str)
+    if arr.count > 3 {
+        let prefix = String(format: "%@%@", String(arr[0]), String(arr[1]))
+        if prefix == "02" { // 서울지역은 02번호
+            if let regex = try? NSRegularExpression(pattern: "([0-9]{2})([0-9]{3,4})([0-9]{4})", options: .caseInsensitive)
+            {
+                let modString = regex.stringByReplacingMatches(in: _str, options: [], range: NSRange(_str.startIndex..., in: _str), withTemplate: "$1-$2-$3")
+                return modString
+                
+            }
+            
+        }
+        else if prefix == "15" || prefix == "16" || prefix == "18"
+        { // 썩을 지능망...
+            if let regex = try? NSRegularExpression(pattern: "([0-9]{4})([0-9]{4})", options: .caseInsensitive) {
+                let modString = regex.stringByReplacingMatches(in: _str, options: [], range: NSRange(_str.startIndex..., in: _str), withTemplate: "$1-$2")
+                return modString
+                
+            }
+            
+        } else { // 나머지는 휴대폰번호 (010-xxxx-xxxx, 031-xxx-xxxx, 061-xxxx-xxxx 식이라 상관무)
+            if let regex = try? NSRegularExpression(pattern: "([0-9]{3})([0-9]{3,4})([0-9]{4})", options: .caseInsensitive)
+            {
+                let modString = regex.stringByReplacingMatches(in: _str, options: [], range: NSRange(_str.startIndex..., in: _str), withTemplate: "$1-$2-$3")
+                return modString
+                
+            }
+            
+        }
+        
+    }
+    return self
+    
+}
+
+}
+
+

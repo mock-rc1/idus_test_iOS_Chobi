@@ -9,6 +9,10 @@ import UIKit
 
 class BuyPaymentInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var labelShipping: UILabel!
+    @IBOutlet weak var labelTotalPrice: UILabel!
+    
     @IBOutlet weak var btnSupport: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
