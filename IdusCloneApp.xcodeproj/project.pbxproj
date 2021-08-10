@@ -202,6 +202,8 @@
 		C3D0A74326C2AD6E00B674B5 /* MyClassCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A74126C2AD6E00B674B5 /* MyClassCollectionViewCell.xib */; };
 		C3D0A74726C2B3FE00B674B5 /* ClassLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A74526C2B3FE00B674B5 /* ClassLineTableViewCell.swift */; };
 		C3D0A74826C2B3FE00B674B5 /* ClassLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A74626C2B3FE00B674B5 /* ClassLineTableViewCell.xib */; };
+		C3D0A74C26C2B7C900B674B5 /* BuyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A74B26C2B7C900B674B5 /* BuyDataManager.swift */; };
+		C3D0A74E26C2B7D900B674B5 /* BuyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A74D26C2B7D900B674B5 /* BuyResponse.swift */; };
 		C3E2039026B8289C00022591 /* EmailLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */; };
 		C3E2039226B828B500022591 /* EmailLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039126B828B500022591 /* EmailLoginResponse.swift */; };
 		C3E2039426B828E400022591 /* EmailLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E2039326B828E400022591 /* EmailLoginDataManager.swift */; };
@@ -417,6 +419,8 @@
 		C3D0A74126C2AD6E00B674B5 /* MyClassCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyClassCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3D0A74526C2B3FE00B674B5 /* ClassLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassLineTableViewCell.swift; sourceTree = "<group>"; };
 		C3D0A74626C2B3FE00B674B5 /* ClassLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassLineTableViewCell.xib; sourceTree = "<group>"; };
+		C3D0A74B26C2B7C900B674B5 /* BuyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyDataManager.swift; sourceTree = "<group>"; };
+		C3D0A74D26C2B7D900B674B5 /* BuyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyResponse.swift; sourceTree = "<group>"; };
 		C3E2038F26B8289C00022591 /* EmailLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginRequest.swift; sourceTree = "<group>"; };
 		C3E2039126B828B500022591 /* EmailLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginResponse.swift; sourceTree = "<group>"; };
 		C3E2039326B828E400022591 /* EmailLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginDataManager.swift; sourceTree = "<group>"; };
@@ -995,6 +999,8 @@
 		C39FABA426BFD38A003DDFE9 /* Buy */ = {
 			isa = PBXGroup;
 			children = (
+				C3D0A74A26C2B7AE00B674B5 /* DataManager */,
+				C3D0A74926C2B7A700B674B5 /* Entity */,
 				C39FABA726BFE836003DDFE9 /* Cell */,
 				C39FABA526BFD3AF003DDFE9 /* BuyViewController.swift */,
 			);
@@ -1214,6 +1220,22 @@
 				C3D0A74626C2B3FE00B674B5 /* ClassLineTableViewCell.xib */,
 			);
 			path = Line;
+			sourceTree = "<group>";
+		};
+		C3D0A74926C2B7A700B674B5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A74D26C2B7D900B674B5 /* BuyResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C3D0A74A26C2B7AE00B674B5 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0A74B26C2B7C900B674B5 /* BuyDataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		C3E2038D26B8286A00022591 /* Datamanager */ = {
@@ -1511,6 +1533,7 @@
 			files = (
 				C34CD16C26BD0B7800216317 /* TodaySaleTableViewCell.swift in Sources */,
 				C31909CD26BEB83900CECBB5 /* NewTopTableViewCell.swift in Sources */,
+				C3D0A74E26C2B7D900B674B5 /* BuyResponse.swift in Sources */,
 				C3B0B80D26B81EAD00588D2D /* UIView.swift in Sources */,
 				C3E2039026B8289C00022591 /* EmailLoginRequest.swift in Sources */,
 				C3CA6C0726BAD60D00D98DC4 /* DetailOtherGoodsTableViewCell.swift in Sources */,
@@ -1549,6 +1572,7 @@
 				C362625026C2471C0026B225 /* CartDataManager.swift in Sources */,
 				C396857226B5753C004FB9D6 /* RegisterViewController.swift in Sources */,
 				C39FABDD26C02343003DDFE9 /* MyInfoAboutIdusTableViewCell.swift in Sources */,
+				C3D0A74C26C2B7C900B674B5 /* BuyDataManager.swift in Sources */,
 				C39FABB226BFF3B0003DDFE9 /* LineTableViewCell.swift in Sources */,
 				C3D0A72126C29BBE00B674B5 /* ClassOnlineBannerCollectionViewCell.swift in Sources */,
 				C381B46726BC4D6B00EF26D9 /* DetailCommentACollectionViewCell.swift in Sources */,

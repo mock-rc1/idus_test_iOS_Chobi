@@ -12,12 +12,16 @@ class BuyViewController: BaseViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    // Datamanager
+    lazy var dataManager: BuyDataManager = BuyDataManager()
+    var buyData: BuyResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         setupTableView()
+        
+        dataManager.getBuy(vc: self, userIdx: 3, orderIdx: Constant.orderIdx)
     }
     func configureUI() {
         
@@ -168,5 +172,21 @@ extension BuyViewController: UITableViewDataSource, UITableViewDelegate{
         let agreeCellNib = UINib(nibName: "BuyAgreeTableViewCell", bundle: nil)
         self.tableView.register(agreeCellNib, forCellReuseIdentifier: "BuyAgreeTableViewCell")
         
+    }
+}
+extension BuyViewController {
+    func didSuccessBuy(_ result: BuyResponse) {
+        //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        print("결제 정보 가져오기 성공!\(result.message!)")
+        print(result.result)
+        buyData = result.result
+        tableView.reloadData()
+        
+        //labelPrice.text = "\(Constant.price)".insertComma + "원"
+        //labelShippingPrice.text = "\(String(describing: cartData?.getNowBasketinfoRes.deliveryCost!))".insertComma + "원"
+    }
+    
+    func failedToBuy(message: String) {
+        self.presentAlert(title: message)
     }
 }
