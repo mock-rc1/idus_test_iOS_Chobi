@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+protocol ShippingProtocol: AnyObject {
+    func didSelectBtnShipping()
+}
 class MyInfoProfileTableViewCell: UITableViewCell {
-
+    var delegate: ShippingProtocol?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,9 @@ class MyInfoProfileTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    @IBAction func btnShipping(_ sender: Any) {
+        self.delegate?.didSelectBtnShipping()
     }
     
 }

@@ -6,7 +6,16 @@
 //
 import UIKit
 import Foundation
-class MyInfoViewController: BaseViewController{
+class MyInfoViewController: BaseViewController,  ShippingProtocol{
+    
+    
+    func didSelectBtnShipping() {
+        //
+        let myInfoStoryboard = UIStoryboard(name: "MyInfoStoryboard", bundle: nil)
+        guard let vc = myInfoStoryboard.instantiateViewController(withIdentifier: "MyShippingViewController") as? MyShippingViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -53,7 +62,7 @@ extension MyInfoViewController: UITableViewDataSource, UITableViewDelegate{
         switch indexPath.row {
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "MyInfoProfileTableViewCell") as? MyInfoProfileTableViewCell {
-                //cell.bannerCellDelegate = self
+                cell.delegate = self
                 /*
                 if let x = newData?.getNewRes{
                     cell.setCell(new: x)

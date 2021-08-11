@@ -114,6 +114,9 @@
                                     <constraint firstAttribute="width" secondItem="ygL-VF-6uc" secondAttribute="height" multiplier="67:50" id="ovt-ZS-alG"/>
                                 </constraints>
                                 <state key="normal" image="주문 배송"/>
+                                <connections>
+                                    <action selector="btnShipping:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BIw-6d-i6O"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMf-Eu-jCW">
                                 <rect key="frame" x="114" y="0.0" width="38.5" height="35"/>

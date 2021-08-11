@@ -171,6 +171,14 @@
 		C3A6DD8426C410B7005C70F7 /* MakeOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD8326C410B7005C70F7 /* MakeOrderRequest.swift */; };
 		C3A6DD8626C410C6005C70F7 /* MakeOrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD8526C410C6005C70F7 /* MakeOrderResponse.swift */; };
 		C3A6DD8826C410D9005C70F7 /* MakeOrderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD8726C410D9005C70F7 /* MakeOrderDataManager.swift */; };
+		C3A6DDA226C44CA5005C70F7 /* MyShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DDA126C44CA5005C70F7 /* MyShippingViewController.swift */; };
+		C3A6DDA726C44DC1005C70F7 /* ShippingGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DDA626C44DC1005C70F7 /* ShippingGoodsViewController.swift */; };
+		C3A6DDA926C44E60005C70F7 /* ShippingOnlineClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DDA826C44E60005C70F7 /* ShippingOnlineClassViewController.swift */; };
+		C3A6DDAB26C44EA0005C70F7 /* ShippingOfflineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DDAA26C44EA0005C70F7 /* ShippingOfflineViewController.swift */; };
+		C3A6DDAF26C45223005C70F7 /* ShippingGoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DDAD26C45223005C70F7 /* ShippingGoodsTableViewCell.swift */; };
+		C3A6DDB026C45223005C70F7 /* ShippingGoodsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A6DDAE26C45223005C70F7 /* ShippingGoodsTableViewCell.xib */; };
+		C3A6DDB426C45510005C70F7 /* MyShippingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DDB326C45510005C70F7 /* MyShippingResponse.swift */; };
+		C3A6DDB626C4551C005C70F7 /* MyShippingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DDB526C4551C005C70F7 /* MyShippingDataManager.swift */; };
 		C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */; };
 		C3B0B80726B8004A00588D2D /* TodayGoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */; };
 		C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */; };
@@ -399,6 +407,14 @@
 		C3A6DD8326C410B7005C70F7 /* MakeOrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOrderRequest.swift; sourceTree = "<group>"; };
 		C3A6DD8526C410C6005C70F7 /* MakeOrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOrderResponse.swift; sourceTree = "<group>"; };
 		C3A6DD8726C410D9005C70F7 /* MakeOrderDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOrderDataManager.swift; sourceTree = "<group>"; };
+		C3A6DDA126C44CA5005C70F7 /* MyShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShippingViewController.swift; sourceTree = "<group>"; };
+		C3A6DDA626C44DC1005C70F7 /* ShippingGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingGoodsViewController.swift; sourceTree = "<group>"; };
+		C3A6DDA826C44E60005C70F7 /* ShippingOnlineClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingOnlineClassViewController.swift; sourceTree = "<group>"; };
+		C3A6DDAA26C44EA0005C70F7 /* ShippingOfflineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingOfflineViewController.swift; sourceTree = "<group>"; };
+		C3A6DDAD26C45223005C70F7 /* ShippingGoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingGoodsTableViewCell.swift; sourceTree = "<group>"; };
+		C3A6DDAE26C45223005C70F7 /* ShippingGoodsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShippingGoodsTableViewCell.xib; sourceTree = "<group>"; };
+		C3A6DDB326C45510005C70F7 /* MyShippingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShippingResponse.swift; sourceTree = "<group>"; };
+		C3A6DDB526C4551C005C70F7 /* MyShippingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShippingDataManager.swift; sourceTree = "<group>"; };
 		C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayGoodsCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsTableViewCell.swift; sourceTree = "<group>"; };
@@ -591,6 +607,7 @@
 		C317E00B26B68F8F004FF5F8 /* MyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				C3A6DDA026C44C8D005C70F7 /* MyShipping */,
 				C39FABC626C0165B003DDFE9 /* Cell */,
 				C317E01526B69464004FF5F8 /* MyInfoStoryboard.storyboard */,
 				C39FABC426C01366003DDFE9 /* MyInfoViewController.swift */,
@@ -1077,6 +1094,69 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		C3A6DDA026C44C8D005C70F7 /* MyShipping */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6DDA526C44DAE005C70F7 /* OfflineClass */,
+				C3A6DDA426C44DA1005C70F7 /* OnlineClass */,
+				C3A6DDA326C44D96005C70F7 /* Goods */,
+				C3A6DDA126C44CA5005C70F7 /* MyShippingViewController.swift */,
+			);
+			path = MyShipping;
+			sourceTree = "<group>";
+		};
+		C3A6DDA326C44D96005C70F7 /* Goods */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6DDB226C454F7005C70F7 /* DataManager */,
+				C3A6DDB126C454EF005C70F7 /* Entity */,
+				C3A6DDAC26C4520F005C70F7 /* Cell */,
+				C3A6DDA626C44DC1005C70F7 /* ShippingGoodsViewController.swift */,
+			);
+			path = Goods;
+			sourceTree = "<group>";
+		};
+		C3A6DDA426C44DA1005C70F7 /* OnlineClass */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6DDA826C44E60005C70F7 /* ShippingOnlineClassViewController.swift */,
+			);
+			path = OnlineClass;
+			sourceTree = "<group>";
+		};
+		C3A6DDA526C44DAE005C70F7 /* OfflineClass */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6DDAA26C44EA0005C70F7 /* ShippingOfflineViewController.swift */,
+			);
+			path = OfflineClass;
+			sourceTree = "<group>";
+		};
+		C3A6DDAC26C4520F005C70F7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6DDAD26C45223005C70F7 /* ShippingGoodsTableViewCell.swift */,
+				C3A6DDAE26C45223005C70F7 /* ShippingGoodsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C3A6DDB126C454EF005C70F7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6DDB326C45510005C70F7 /* MyShippingResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C3A6DDB226C454F7005C70F7 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6DDB526C4551C005C70F7 /* MyShippingDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		C3B7922626B94BFA00F87593 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1445,6 +1525,7 @@
 				C3F46CBB26BAE61D0084316E /* DetailImageCollectionViewCell.xib in Resources */,
 				C307D9D026BA44C5000F8179 /* DetailReviewTableViewCell.xib in Resources */,
 				C3B7923026B94F0100F87593 /* DetailSummaryTableViewCell.xib in Resources */,
+				C3A6DDB026C45223005C70F7 /* ShippingGoodsTableViewCell.xib in Resources */,
 				C317E01426B693A6004FF5F8 /* CategoryStoryboard.storyboard in Resources */,
 				C307D9EA26BAB856000F8179 /* DetailCommentQTableViewCell.xib in Resources */,
 				C307D9D826BA4C57000F8179 /* DetailPictureReviewCollectionViewCell.xib in Resources */,
@@ -1566,6 +1647,7 @@
 			files = (
 				C34CD16C26BD0B7800216317 /* TodaySaleTableViewCell.swift in Sources */,
 				C31909CD26BEB83900CECBB5 /* NewTopTableViewCell.swift in Sources */,
+				C3A6DDB426C45510005C70F7 /* MyShippingResponse.swift in Sources */,
 				C3D0A74E26C2B7D900B674B5 /* BuyResponse.swift in Sources */,
 				C3B0B80D26B81EAD00588D2D /* UIView.swift in Sources */,
 				C3E2039026B8289C00022591 /* EmailLoginRequest.swift in Sources */,
@@ -1582,6 +1664,7 @@
 				C3A6DD7A26C3CC6D005C70F7 /* BasketDataManager.swift in Sources */,
 				C32A80EC26B6D4DA00E03C6A /* BannerCollectionViewCell.swift in Sources */,
 				C3825FB626B6C3FA009CAD58 /* RealtimeViewController.swift in Sources */,
+				C3A6DDAB26C44EA0005C70F7 /* ShippingOfflineViewController.swift in Sources */,
 				C33F733926B5444200A57CFA /* AppDelegate.swift in Sources */,
 				C3825FAD26B6BEEE009CAD58 /* TodayViewController.swift in Sources */,
 				C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */,
@@ -1592,6 +1675,7 @@
 				C33F736426B5450C00A57CFA /* Date.swift in Sources */,
 				C34B034126C15162001C1C7B /* CategoryClassTopTableViewCell.swift in Sources */,
 				C3D0A74226C2AD6E00B674B5 /* MyClassCollectionViewCell.swift in Sources */,
+				C3A6DDAF26C45223005C70F7 /* ShippingGoodsTableViewCell.swift in Sources */,
 				C3FFFFFE26B78CF2000F6988 /* EventTableViewCell.swift in Sources */,
 				C3C8A95E26BB85A100256F2E /* DetailDataManager.swift in Sources */,
 				C3A6DD8026C3FBCE005C70F7 /* BasketCartResponse.swift in Sources */,
@@ -1625,6 +1709,7 @@
 				C3A6DD7C26C3CC80005C70F7 /* BasketRequest.swift in Sources */,
 				C381B46F26BC5DB800EF26D9 /* DetailWithCollectionViewCell.swift in Sources */,
 				C3A6DD8826C410D9005C70F7 /* MakeOrderDataManager.swift in Sources */,
+				C3A6DDA726C44DC1005C70F7 /* ShippingGoodsViewController.swift in Sources */,
 				C34B034926C1518F001C1C7B /* AllLocationTableViewCell.swift in Sources */,
 				C349C16326C0743200F13EB2 /* ClassOnlineViewController.swift in Sources */,
 				C39FABA326BFBD32003DDFE9 /* OptionNextRequest.swift in Sources */,
@@ -1637,6 +1722,7 @@
 				C341B1D826BD4A4300B8ADB7 /* TodayResponse.swift in Sources */,
 				C33F736726B5450C00A57CFA /* UIViewController.swift in Sources */,
 				C39FABBE26C003E0003DDFE9 /* BuyPaymentInfoTableViewCell.swift in Sources */,
+				C3A6DDA226C44CA5005C70F7 /* MyShippingViewController.swift in Sources */,
 				C307D9F626BAC0E4000F8179 /* DetailAuthorTableViewCell.swift in Sources */,
 				C3A4522026BDC3AB006258EF /* OptionNextViewController.swift in Sources */,
 				C307D9E926BAB856000F8179 /* DetailCommentQTableViewCell.swift in Sources */,
@@ -1645,6 +1731,7 @@
 				C3D0A74726C2B3FE00B674B5 /* ClassLineTableViewCell.swift in Sources */,
 				C307D9E026BA7CB2000F8179 /* DetailKeywordTableViewCell.swift in Sources */,
 				C3B7923926B9640300F87593 /* DetailInfoTableViewCell.swift in Sources */,
+				C3A6DDB626C4551C005C70F7 /* MyShippingDataManager.swift in Sources */,
 				C39FABA626BFD3AF003DDFE9 /* BuyViewController.swift in Sources */,
 				C3D0A73E26C2AD5D00B674B5 /* MyClassTableViewCell.swift in Sources */,
 				C3D0A75026C2F4CF00B674B5 /* PaymentDataManager.swift in Sources */,
@@ -1658,6 +1745,7 @@
 				C349C15F26C05F9900F13EB2 /* CategoryGoodsViewController.swift in Sources */,
 				C33F736126B5450C00A57CFA /* Constant.swift in Sources */,
 				C31909B126BE81B000CECBB5 /* CartViewController.swift in Sources */,
+				C3A6DDA926C44E60005C70F7 /* ShippingOnlineClassViewController.swift in Sources */,
 				C3A6DD8226C3FBD6005C70F7 /* BasketCartDataManager.swift in Sources */,
 				C349C14F26C04A6200F13EB2 /* SearchViewController.swift in Sources */,
 				C3A6DD8626C410C6005C70F7 /* MakeOrderResponse.swift in Sources */,
