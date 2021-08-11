@@ -12,37 +12,36 @@ class ClassViewController: ButtonBarPagerTabStripViewController{
         configureButtonBar()
         super.viewDidLoad()
         setCustomNavigationBar()
+        
         //navi()
     }
     
-    // 내비게이션 바 디자인
-    func setCustomNavigationBar() {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        //imageView.contentMode = .scaleAspectFit
-        let image = #imageLiteral(resourceName: "상단로고")
-        imageView.image = image
-        navigationItem.titleView = imageView
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "보양식을 검색해주세요."
-        self.navigationItem.searchController = searchController
-        //self.navigationItem.title = "아이디어스"
-        searchController.hidesNavigationBarDuringPresentation = true
-        searchController.automaticallyShowsCancelButton = false
-
-    }
+    
     @objc func btnCart() {
         
     }
     @objc func btnCartegory() {
         
     }
-    func navi(){
+    // 내비게이션 바 디자인
+    func setCustomNavigationBar() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        //#imageLiteral(resourceName: "아이디어스로고2")
+        let image = #imageLiteral(resourceName: "아이디어스로고2")
+        imageView.image = image
+        navigationItem.titleView = imageView
         let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "보양식을 검색해주세요."
-        self.navigationItem.searchController = searchController
-        self.navigationItem.title = "아이디어스"
-        //self.navigationController?.navigationBar.prefersLargeTitles = true // Large title로 하고싶을 때 추가
+        searchController.searchBar.placeholder = "무료배송을 검색해보세요."
+        searchController.searchBar.backgroundColor = UIColor.white
+        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.barTintColor = UIColor.white
 
+        
+        self.navigationItem.searchController = searchController
+        //self.navigationItem.title = "아이디어스"
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.automaticallyShowsCancelButton = false
     }
     // 탭바 디자인
     func configureButtonBar() {

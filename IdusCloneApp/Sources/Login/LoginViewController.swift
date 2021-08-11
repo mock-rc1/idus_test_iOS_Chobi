@@ -122,7 +122,7 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
       
       let req = AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization])
       
-      req.responseJSON { response in
+        req.responseJSON { [self] response in
         guard let result = response.value as? [String: Any] else { return }
         guard let object = result["response"] as? [String: Any] else { return }
         guard let name = object["name"] as? String else { return }
@@ -134,10 +134,17 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
         //self.nameLabel.text = "\(name)"
         //self.emailLabel.text = "\(email)"
         //self.id.text = "\(id)"
+        self.loginInstance?.requestDeleteToken()
+            let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+            changeRootViewController(mainTabBarController)
       }
     }
     @IBAction func btnNaverLogin(_ sender: Any) {
         loginInstance?.requestThirdPartyLogin()
+    }
+    
+    @IBAction func btnNaverLogout(_ sender: Any) {
+        loginInstance?.requestDeleteToken()
     }
     
     //MARK: 기존 회원 로그인

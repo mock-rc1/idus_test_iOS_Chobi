@@ -8,7 +8,7 @@ import UIKit
 import Foundation
 import XLPagerTabStrip
 
-class GoodsViewController: ButtonBarPagerTabStripViewController{
+class GoodsViewController: ButtonBarPagerTabStripViewController, UISearchControllerDelegate{
     
     //MARK: - Outlet
     
@@ -18,18 +18,30 @@ class GoodsViewController: ButtonBarPagerTabStripViewController{
         super.viewDidLoad()
         setCustomNavigationBar()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        setCustomNavigationBar()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        setCustomNavigationBar()
+    }
     //MARK: - Helpers
     
     // 내비게이션 바 디자인
     func setCustomNavigationBar() {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        //imageView.contentMode = .scaleAspectFit
-        let image = #imageLiteral(resourceName: "상단로고")
+        imageView.contentMode = .scaleAspectFit
+        //#imageLiteral(resourceName: "아이디어스로고2")
+        let image = #imageLiteral(resourceName: "아이디어스로고2")
         imageView.image = image
         navigationItem.titleView = imageView
         let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "보양식을 검색해주세요."
+        searchController.searchBar.placeholder = "무료배송을 검색해보세요."
+        searchController.searchBar.backgroundColor = UIColor.white
+        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.barTintColor = UIColor.white
+
+        
         self.navigationItem.searchController = searchController
         //self.navigationItem.title = "아이디어스"
         searchController.hidesNavigationBarDuringPresentation = true
@@ -76,3 +88,5 @@ class GoodsViewController: ButtonBarPagerTabStripViewController{
     
     
 }
+
+

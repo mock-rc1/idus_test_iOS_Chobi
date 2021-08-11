@@ -54,6 +54,10 @@ class BuyViewController: BaseViewController, PaymentProtocol{
         //print(email)
         dataManager2.patchPayment(input, delegate: self, userIdx: 3)
     }
+    func goMainPage()  {
+        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+        changeRootViewController(mainTabBarController)
+    }
     
 }
 // 테이블뷰 extension
@@ -247,7 +251,7 @@ extension BuyViewController {
         //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
         //dismissIndicator()
         print("결제 성공! \(result.message!)")
-        
+        self.goMainPage()
     }
     
     func failedToPayment(message: String) {

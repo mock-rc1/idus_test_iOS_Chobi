@@ -48,6 +48,7 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
+        setCustomNavigationBar()
     }
     //MARK: - Helpers
     
@@ -55,7 +56,26 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
             return IndicatorInfo(title: "투데이")
     }
-    
+    // 내비게이션 바 디자인
+    func setCustomNavigationBar() {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.contentMode = .scaleAspectFit
+        //#imageLiteral(resourceName: "아이디어스로고2")
+        let image = #imageLiteral(resourceName: "아이디어스로고2")
+        imageView.image = image
+        navigationItem.titleView = imageView
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.placeholder = "무료배송을 검색해보세요."
+        searchController.searchBar.backgroundColor = UIColor.white
+        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.barTintColor = UIColor.white
+
+        
+        self.navigationItem.searchController = searchController
+        //self.navigationItem.title = "아이디어스"
+        //searchController.hidesNavigationBarDuringPresentation = true
+        searchController.automaticallyShowsCancelButton = false
+    }
     //MARK: 상세 페이지로 넘어가기
     
     func goDetailPage(index: Int, prodIdx: Int){

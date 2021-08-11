@@ -66,12 +66,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjV-Ca-L9S">
-                                <rect key="frame" x="10.5" y="638" width="391" height="66"/>
+                                <rect key="frame" x="10.5" y="638" width="391" height="78"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="391" id="QrU-9n-Q8N"/>
-                                    <constraint firstAttribute="height" constant="66" id="fWE-NX-27F"/>
+                                    <constraint firstAttribute="height" constant="78" id="fWE-NX-27F"/>
                                 </constraints>
-                                <state key="normal" image="로그인_네이버"/>
+                                <state key="normal" image="로그인_네이버-1"/>
                                 <connections>
                                     <action selector="btnNaverLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3R-eg-Dw4"/>
                                 </connections>
@@ -86,12 +86,19 @@
                                     <action selector="btnNoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vw-E2-y1P"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhT-Yk-qKb">
+                                <rect key="frame" x="313" y="767" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="btnNaverLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ql-pa-F5Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rbj-Hn-Yws" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="1xM-Z5-Mf9"/>
-                            <constraint firstItem="TxF-zl-uHv" firstAttribute="top" secondItem="tjV-Ca-L9S" secondAttribute="bottom" constant="60" id="3ja-mI-829"/>
+                            <constraint firstItem="TxF-zl-uHv" firstAttribute="top" secondItem="tjV-Ca-L9S" secondAttribute="bottom" constant="48" id="3ja-mI-829"/>
                             <constraint firstItem="TxF-zl-uHv" firstAttribute="centerX" secondItem="rbj-Hn-Yws" secondAttribute="centerX" id="61G-V4-MBi"/>
                             <constraint firstItem="eDr-Ph-5Zw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8q6-d8-GgK"/>
                             <constraint firstItem="TxF-zl-uHv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="B1J-Wo-0th"/>
@@ -735,7 +742,7 @@
         <image name="로그인_기존회원_카카오톡" width="249" height="88"/>
         <image name="로그인_기존회원_트위터" width="249" height="90"/>
         <image name="로그인_기존회원_페이스북" width="248" height="88"/>
-        <image name="로그인_네이버" width="1000" height="200"/>
+        <image name="로그인_네이버-1" width="1000" height="200"/>
         <image name="로그인_이메일_닫기" width="33" height="32"/>
         <image name="로그인_카카오" width="607" height="89"/>
         <image name="로그인_쿠폰" width="606" height="522"/>

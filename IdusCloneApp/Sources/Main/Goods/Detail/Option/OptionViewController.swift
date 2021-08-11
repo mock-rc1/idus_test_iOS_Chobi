@@ -73,6 +73,8 @@ class OptionViewController: UIViewController {
         nextVC.prodSideIdx = prodSideIdx
         nextVC.prodIdx = prodIdx
         nextVC.prodPrice = prodPrice
+        //첫번째 옵션 개수
+        nextVC.option1 = optionSide[0]
         self.present(nextVC, animated: false, completion: nil)
     }
     @IBAction func btnBack(_ sender: Any) {

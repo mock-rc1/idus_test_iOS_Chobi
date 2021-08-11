@@ -65,7 +65,11 @@
                             <constraint firstItem="mCj-yK-psZ" firstAttribute="bottom" secondItem="Jif-eJ-a5X" secondAttribute="bottom" id="yGM-fo-Wnm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AWb-Qb-hzU"/>
+                    <navigationItem key="navigationItem" id="AWb-Qb-hzU">
+                        <barButtonItem key="rightBarButtonItem" image="상단_장바구니" id="cXo-iA-jfk">
+                            <color key="tintColor" red="0.38431376220000002" green="0.38431376220000002" blue="0.38431376220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonBarView" destination="6vO-V6-wAz" id="4dv-TP-lvf"/>
                         <outlet property="containerView" destination="Jif-eJ-a5X" id="RP1-0z-Aks"/>
@@ -137,6 +141,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="상단_장바구니" width="25" height="23"/>
         <image name="탭바_클래스" width="25" height="20"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

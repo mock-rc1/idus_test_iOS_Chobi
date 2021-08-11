@@ -45,7 +45,7 @@ extension MyInfoViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(String(lists.count) + " 줄")
-        return 10
+        return 11
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,7 +88,7 @@ extension MyInfoViewController: UITableViewDataSource, UITableViewDelegate{
                 return cell
             }
         case 6:
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "MyInfoNoticeTableViewCell") as? MyInfoNoticeTableViewCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "MyInfoRecentTableViewCell") as? MyInfoRecentTableViewCell {
                 //cell.bannerCellDelegate = self
                 /*
                 if let x = newData?.getNewRes{
@@ -97,6 +97,15 @@ extension MyInfoViewController: UITableViewDataSource, UITableViewDelegate{
                 return cell
             }
         case 8:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "MyInfoNoticeTableViewCell") as? MyInfoNoticeTableViewCell {
+                //cell.bannerCellDelegate = self
+                /*
+                if let x = newData?.getNewRes{
+                    cell.setCell(new: x)
+                }*/
+                return cell
+            }
+        case 10:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "MyInfoAboutIdusTableViewCell") as? MyInfoAboutIdusTableViewCell {
                 //cell.bannerCellDelegate = self
                 /*
@@ -122,8 +131,14 @@ extension MyInfoViewController: UITableViewDataSource, UITableViewDelegate{
             return 15
         case 2:
             return 310
-        case 4,6,8:
-            return tableView.estimatedRowHeight
+        case 4:
+            return 92
+        case 6:
+            return 316
+        case 8:
+            return 235
+        case 10:
+            return 328
         default:
             return 0
         }
@@ -154,6 +169,9 @@ extension MyInfoViewController: UITableViewDataSource, UITableViewDelegate{
         
         let myInfoAboutIdusCellNib = UINib(nibName: "MyInfoAboutIdusTableViewCell", bundle: nil)
         self.tableView.register(myInfoAboutIdusCellNib, forCellReuseIdentifier: "MyInfoAboutIdusTableViewCell")
+        
+        let myInfoRecentIdusCellNib = UINib(nibName: "MyInfoRecentTableViewCell", bundle: nil)
+        self.tableView.register(myInfoRecentIdusCellNib, forCellReuseIdentifier: "MyInfoRecentTableViewCell")
         
     }
 }
