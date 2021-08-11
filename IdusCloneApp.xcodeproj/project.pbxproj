@@ -166,6 +166,8 @@
 		C3A6DD7A26C3CC6D005C70F7 /* BasketDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD7926C3CC6C005C70F7 /* BasketDataManager.swift */; };
 		C3A6DD7C26C3CC80005C70F7 /* BasketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD7B26C3CC80005C70F7 /* BasketRequest.swift */; };
 		C3A6DD7E26C3CC91005C70F7 /* BasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD7D26C3CC91005C70F7 /* BasketResponse.swift */; };
+		C3A6DD8026C3FBCE005C70F7 /* BasketCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD7F26C3FBCE005C70F7 /* BasketCartResponse.swift */; };
+		C3A6DD8226C3FBD6005C70F7 /* BasketCartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD8126C3FBD6005C70F7 /* BasketCartDataManager.swift */; };
 		C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */; };
 		C3B0B80726B8004A00588D2D /* TodayGoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */; };
 		C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */; };
@@ -389,6 +391,8 @@
 		C3A6DD7926C3CC6C005C70F7 /* BasketDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketDataManager.swift; sourceTree = "<group>"; };
 		C3A6DD7B26C3CC80005C70F7 /* BasketRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequest.swift; sourceTree = "<group>"; };
 		C3A6DD7D26C3CC91005C70F7 /* BasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketResponse.swift; sourceTree = "<group>"; };
+		C3A6DD7F26C3FBCE005C70F7 /* BasketCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCartResponse.swift; sourceTree = "<group>"; };
+		C3A6DD8126C3FBD6005C70F7 /* BasketCartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCartDataManager.swift; sourceTree = "<group>"; };
 		C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayGoodsCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsTableViewCell.swift; sourceTree = "<group>"; };
@@ -942,6 +946,7 @@
 			isa = PBXGroup;
 			children = (
 				C362624F26C2471C0026B225 /* CartDataManager.swift */,
+				C3A6DD8126C3FBD6005C70F7 /* BasketCartDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -950,6 +955,7 @@
 			isa = PBXGroup;
 			children = (
 				C362624D26C247020026B225 /* CartResponse.swift */,
+				C3A6DD7F26C3FBCE005C70F7 /* BasketCartResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1579,6 +1585,7 @@
 				C3D0A74226C2AD6E00B674B5 /* MyClassCollectionViewCell.swift in Sources */,
 				C3FFFFFE26B78CF2000F6988 /* EventTableViewCell.swift in Sources */,
 				C3C8A95E26BB85A100256F2E /* DetailDataManager.swift in Sources */,
+				C3A6DD8026C3FBCE005C70F7 /* BasketCartResponse.swift in Sources */,
 				C3FF001126B7EECD000F6988 /* DetailViewController.swift in Sources */,
 				C3FF000526B79586000F6988 /* RegisterResponse.swift in Sources */,
 				C33F733B26B5444200A57CFA /* SceneDelegate.swift in Sources */,
@@ -1641,6 +1648,7 @@
 				C349C15F26C05F9900F13EB2 /* CategoryGoodsViewController.swift in Sources */,
 				C33F736126B5450C00A57CFA /* Constant.swift in Sources */,
 				C31909B126BE81B000CECBB5 /* CartViewController.swift in Sources */,
+				C3A6DD8226C3FBD6005C70F7 /* BasketCartDataManager.swift in Sources */,
 				C349C14F26C04A6200F13EB2 /* SearchViewController.swift in Sources */,
 				C3B7922F26B94F0100F87593 /* DetailSummaryTableViewCell.swift in Sources */,
 				C349C16526C0744300F13EB2 /* ClassOfflineViewController.swift in Sources */,

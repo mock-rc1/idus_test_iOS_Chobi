@@ -16,4 +16,5 @@ struct Constant {
     static var basketIdx:Int = 0
     //
     static var price:Int = 0
+    static var isBasket:Bool = false
 }

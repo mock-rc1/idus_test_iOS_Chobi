@@ -85,7 +85,13 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
     }
     
     @objc func moveCart() {
+        Constant.isBasket = true
+        let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
+        let cartViewController = detailStoryboard.instantiateViewController(identifier: "CartViewController")
+        let vc = UINavigationController(rootViewController: cartViewController)
         
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     // 탭바 버튼

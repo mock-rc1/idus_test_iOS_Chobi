@@ -22,19 +22,31 @@ class CartViewController: UIViewController{
     
     // Datamanager
     lazy var dataManager: CartDataManager = CartDataManager()
+    // Datamanager
+    lazy var dataManager2: BasketCartDataManager = BasketCartDataManager()
+    
     //제품 원래 가격
     var price = 0
     
     var cartData: CartResult?
+    var basketCartData: BasketCartResult?
     var addressRequest = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         setupTableView()
-        print("주문번호 울랄라\(Constant.orderIdx)")
-        price = Constant.price
-        print("Constant.price \(Constant.price)")
-        dataManager.getCart(vc: self, userIdx: 3, orderIdx: Constant.orderIdx)
+        if(Constant.isBasket){
+            print("장바구니번호 울랄라\(Constant.basketIdx)")
+            //price = Constant.price
+            //print("Constant.price \(Constant.price)")
+            dataManager2.getBasketCart(vc: self, userIdx: 3)
+        }else{
+            print("주문번호 울랄라\(Constant.orderIdx)")
+            price = Constant.price
+            print("Constant.price \(Constant.price)")
+            dataManager.getCart(vc: self, userIdx: 3, orderIdx: Constant.orderIdx)
+        }
+        
         
     }
     func configureUI() {
@@ -58,12 +70,19 @@ class CartViewController: UIViewController{
         }*/
         tableView.reloadData()
         //sleep(1000)
-        print("주문 요청: \(addressRequest)")
         
-        let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
-        let buyViewController = detailStoryboard.instantiateViewController(identifier: "BuyViewController")
+        if(Constant.isBasket){
+            
+        }else{
+            print("주문 요청: \(addressRequest)")
+            
+            
+            let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
+            let buyViewController = detailStoryboard.instantiateViewController(identifier: "BuyViewController")
+            
+            self.navigationController?.pushViewController(buyViewController, animated: true)
+        }
         
-        self.navigationController?.pushViewController(buyViewController, animated: true)
     }
 }
 // 테이블뷰 extension
@@ -80,29 +99,63 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell") as? CartTableViewCell {
                 //cell.bannerCellDelegate = self
-                
-                if let x = cartData{
-                    cell.labelAuthor.text = x.getNowBasketinfoRes.authorName!
-                    cell.imageProd.sd_setImage(with: URL(string: x.getNowBasketinfoRes.prodImage!), completed: nil)
-                    cell.labelTitle.text = x.getNowBasketinfoRes.prodName!
-                    cell.labelShipping.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
-                    cell.labelMake.text = x.getNowBasketinfoRes.prodNum!
-                    labelShippingPrice.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
-                    var optionList = ""
-                    var optionPrice = 0
-                    for option in x.getNowBasketOptionRes{
-                        optionList += "- \(option.prodSideCate!) : \(option.prodSide!) \n"
-                        optionPrice = option.optionPrice!
+                if(Constant.isBasket){
+                    if let x = basketCartData{
+                        var optionList = ""
+                        var optionPrice = 0
+                        var prodIdx = 0
+                        for option in x.getBasketPriceRes{
+                            if(option.basketIdx! == Constant.basketIdx){
+                                optionList += "- \(option.prodSideCate!) : \(option.prodSide!) \n"
+                                optionPrice = option.optionPrice!
+                                prodIdx = option.prodIdx!
+                            }
+                        }
+                        cell.labelOption.text = optionList
+                        
+                        labelPrice.text = "\(optionPrice)".insertComma + "원"
+                        cell.labelPrice.text = "\(optionPrice)".insertComma + "원"
+                        cell.labelTotalPrice.text = "\(optionPrice)".insertComma + "원"
+                        
+                        for info in x.getBasketInfoRes{
+                            if(prodIdx == info.prodIdx!){
+                                cell.labelAuthor.text = info.authorName!
+                                
+                                cell.labelTitle.text = info.prodName!
+                                cell.labelShipping.text = "\(info.deliveryCost!)".insertComma + "원"
+                                cell.labelMake.text = info.prodNum!
+                                labelShippingPrice.text = "\(info.deliveryCost!)".insertComma + "원"
+                            }
+                        }
                     }
-                    cell.labelOption.text = optionList
-                    
-                    labelPrice.text = "\(optionPrice)".insertComma + "원"
-                    cell.labelPrice.text = "\(optionPrice)".insertComma + "원"
-                    cell.labelTotalPrice.text = "\(optionPrice)".insertComma + "원"
+                    if let y = cell.textRequest.text{
+                        addressRequest = y
+                    }
+                }else{
+                    if let x = cartData{
+                        cell.labelAuthor.text = x.getNowBasketinfoRes.authorName!
+                        cell.imageProd.sd_setImage(with: URL(string: x.getNowBasketinfoRes.prodImage!), completed: nil)
+                        cell.labelTitle.text = x.getNowBasketinfoRes.prodName!
+                        cell.labelShipping.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
+                        cell.labelMake.text = x.getNowBasketinfoRes.prodNum!
+                        labelShippingPrice.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
+                        var optionList = ""
+                        var optionPrice = 0
+                        for option in x.getNowBasketOptionRes{
+                            optionList += "- \(option.prodSideCate!) : \(option.prodSide!) \n"
+                            optionPrice = option.optionPrice!
+                        }
+                        cell.labelOption.text = optionList
+                        
+                        labelPrice.text = "\(optionPrice)".insertComma + "원"
+                        cell.labelPrice.text = "\(optionPrice)".insertComma + "원"
+                        cell.labelTotalPrice.text = "\(optionPrice)".insertComma + "원"
+                    }
+                    if let y = cell.textRequest.text{
+                        addressRequest = y
+                    }
                 }
-                if let y = cell.textRequest.text{
-                    addressRequest = y
-                }
+                
                 
                 return cell
             }
@@ -151,6 +204,22 @@ extension CartViewController {
     }
     
     func failedToCart(message: String) {
+        self.presentAlert(title: message)
+    }
+}
+extension CartViewController {
+    func didSuccessBasketCart(_ result: BasketCartResponse) {
+        //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        print("장바구니 가져오기 성공!\(result.message!)")
+        print(result.result)
+        basketCartData = result.result
+        tableView.reloadData()
+        
+        //labelPrice.text = "\(Constant.price)".insertComma + "원"
+        //labelShippingPrice.text = "\(String(describing: cartData?.getNowBasketinfoRes.deliveryCost!))".insertComma + "원"
+    }
+    
+    func failedToBasketCart(message: String) {
         self.presentAlert(title: message)
     }
 }

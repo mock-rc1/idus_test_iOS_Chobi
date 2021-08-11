@@ -103,6 +103,7 @@ class OptionNextViewController: UIViewController {
     }
     // 페이지 이동
     func goCartViewController()  {
+        Constant.isBasket = false
         let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
         let cartViewController = detailStoryboard.instantiateViewController(identifier: "CartViewController")
         let vc = UINavigationController(rootViewController: cartViewController)
