@@ -25,9 +25,12 @@ class CartViewController: UIViewController{
     // Datamanager
     lazy var dataManager2: BasketCartDataManager = BasketCartDataManager()
     
+    // Datamanager
+    lazy var dataManager3: MakeOrderDataManager = MakeOrderDataManager()
+    
     //제품 원래 가격
     var price = 0
-    
+    var orderProdIdx = 0
     var cartData: CartResult?
     var basketCartData: BasketCartResult?
     var addressRequest = ""
@@ -62,6 +65,13 @@ class CartViewController: UIViewController{
         dismiss(animated: true, completion: nil)
     }
     
+    func goBuyPage() {
+        let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
+        let buyViewController = detailStoryboard.instantiateViewController(identifier: "BuyViewController")
+        
+        self.navigationController?.pushViewController(buyViewController, animated: true)
+    }
+    
     @IBAction func btnBuy(_ sender: Any) {
         /*
         let addressRequest = delegate?.btnOrderRequest()
@@ -69,22 +79,25 @@ class CartViewController: UIViewController{
             print(x)
         }*/
         tableView.reloadData()
-        //sleep(1000)
+        
+        let basketIdx = [Constant.basketIdx]
+        let order = [orderProdIdx]
         
         if(Constant.isBasket){
-            
+            let input = MakeOrderRequest(basketIdx: basketIdx, orderProdIdx: order)
+            dataManager3.postMakeOrder(input, delegate: self, userIdx: 3)
         }else{
             print("주문 요청: \(addressRequest)")
             
+            goBuyPage()
             
-            let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
-            let buyViewController = detailStoryboard.instantiateViewController(identifier: "BuyViewController")
-            
-            self.navigationController?.pushViewController(buyViewController, animated: true)
         }
         
     }
 }
+
+
+
 // 테이블뷰 extension
 extension CartViewController: UITableViewDataSource, UITableViewDelegate{
     
@@ -109,6 +122,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
                                 optionList += "- \(option.prodSideCate!) : \(option.prodSide!) \n"
                                 optionPrice = option.optionPrice!
                                 prodIdx = option.prodIdx!
+                                orderProdIdx = option.orderProdIdx!
                             }
                         }
                         cell.labelOption.text = optionList
@@ -120,7 +134,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
                         for info in x.getBasketInfoRes{
                             if(prodIdx == info.prodIdx!){
                                 cell.labelAuthor.text = info.authorName!
-                                
+                                cell.imageProd.sd_setImage(with: URL(string: info.prodImage!), completed: nil)
                                 cell.labelTitle.text = info.prodName!
                                 cell.labelShipping.text = "\(info.deliveryCost!)".insertComma + "원"
                                 cell.labelMake.text = info.prodNum!
@@ -220,6 +234,20 @@ extension CartViewController {
     }
     
     func failedToBasketCart(message: String) {
+        self.presentAlert(title: message)
+    }
+}
+extension CartViewController {
+    func didSuccessMakeOrder(_ result: MakeOrderResponse) {
+        //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        print("장바구니 주문 생성 성공!\(result.message!)")
+        print(result.result)
+        Constant.orderIdx = result.result.orderIdx!
+        goBuyPage()
+        
+    }
+    
+    func failedToMakeOrder(message: String) {
         self.presentAlert(title: message)
     }
 }

@@ -25,6 +25,7 @@ struct GetBasketInfoRes: Decodable{
     var request: String?
     var totalProd: Int?
     var deliveryCost: Int?
+    var prodImage: String?
 }
 struct GetBasketPriceRes: Decodable{
     var basketIdx: Int?

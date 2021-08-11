@@ -168,6 +168,9 @@
 		C3A6DD7E26C3CC91005C70F7 /* BasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD7D26C3CC91005C70F7 /* BasketResponse.swift */; };
 		C3A6DD8026C3FBCE005C70F7 /* BasketCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD7F26C3FBCE005C70F7 /* BasketCartResponse.swift */; };
 		C3A6DD8226C3FBD6005C70F7 /* BasketCartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD8126C3FBD6005C70F7 /* BasketCartDataManager.swift */; };
+		C3A6DD8426C410B7005C70F7 /* MakeOrderRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD8326C410B7005C70F7 /* MakeOrderRequest.swift */; };
+		C3A6DD8626C410C6005C70F7 /* MakeOrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD8526C410C6005C70F7 /* MakeOrderResponse.swift */; };
+		C3A6DD8826C410D9005C70F7 /* MakeOrderDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A6DD8726C410D9005C70F7 /* MakeOrderDataManager.swift */; };
 		C3B0B80626B8004A00588D2D /* TodayGoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */; };
 		C3B0B80726B8004A00588D2D /* TodayGoodsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */; };
 		C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */; };
@@ -393,6 +396,9 @@
 		C3A6DD7D26C3CC91005C70F7 /* BasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketResponse.swift; sourceTree = "<group>"; };
 		C3A6DD7F26C3FBCE005C70F7 /* BasketCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCartResponse.swift; sourceTree = "<group>"; };
 		C3A6DD8126C3FBD6005C70F7 /* BasketCartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCartDataManager.swift; sourceTree = "<group>"; };
+		C3A6DD8326C410B7005C70F7 /* MakeOrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOrderRequest.swift; sourceTree = "<group>"; };
+		C3A6DD8526C410C6005C70F7 /* MakeOrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOrderResponse.swift; sourceTree = "<group>"; };
+		C3A6DD8726C410D9005C70F7 /* MakeOrderDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOrderDataManager.swift; sourceTree = "<group>"; };
 		C3B0B80426B8004A00588D2D /* TodayGoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3B0B80526B8004A00588D2D /* TodayGoodsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayGoodsCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3B0B80826B8006E00588D2D /* TodayGoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGoodsTableViewCell.swift; sourceTree = "<group>"; };
@@ -947,6 +953,7 @@
 			children = (
 				C362624F26C2471C0026B225 /* CartDataManager.swift */,
 				C3A6DD8126C3FBD6005C70F7 /* BasketCartDataManager.swift */,
+				C3A6DD8726C410D9005C70F7 /* MakeOrderDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -956,6 +963,8 @@
 			children = (
 				C362624D26C247020026B225 /* CartResponse.swift */,
 				C3A6DD7F26C3FBCE005C70F7 /* BasketCartResponse.swift */,
+				C3A6DD8326C410B7005C70F7 /* MakeOrderRequest.swift */,
+				C3A6DD8526C410C6005C70F7 /* MakeOrderResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1615,6 +1624,7 @@
 				C381B46B26BC5B7F00EF26D9 /* DetailOtherGoodsCollectionViewCell.swift in Sources */,
 				C3A6DD7C26C3CC80005C70F7 /* BasketRequest.swift in Sources */,
 				C381B46F26BC5DB800EF26D9 /* DetailWithCollectionViewCell.swift in Sources */,
+				C3A6DD8826C410D9005C70F7 /* MakeOrderDataManager.swift in Sources */,
 				C34B034926C1518F001C1C7B /* AllLocationTableViewCell.swift in Sources */,
 				C349C16326C0743200F13EB2 /* ClassOnlineViewController.swift in Sources */,
 				C39FABA326BFBD32003DDFE9 /* OptionNextRequest.swift in Sources */,
@@ -1650,6 +1660,7 @@
 				C31909B126BE81B000CECBB5 /* CartViewController.swift in Sources */,
 				C3A6DD8226C3FBD6005C70F7 /* BasketCartDataManager.swift in Sources */,
 				C349C14F26C04A6200F13EB2 /* SearchViewController.swift in Sources */,
+				C3A6DD8626C410C6005C70F7 /* MakeOrderResponse.swift in Sources */,
 				C3B7922F26B94F0100F87593 /* DetailSummaryTableViewCell.swift in Sources */,
 				C349C16526C0744300F13EB2 /* ClassOfflineViewController.swift in Sources */,
 				C3B7922926B94C6400F87593 /* DetailImageTableViewCell.swift in Sources */,
@@ -1673,6 +1684,7 @@
 				C31909B926BEA42300CECBB5 /* RealTimeTableViewCell.swift in Sources */,
 				C39FABCD26C01E45003DDFE9 /* MyInfoExtraTableViewCell.swift in Sources */,
 				C3D0A71D26C296AF00B674B5 /* ClassOnlineBannerTableViewCell.swift in Sources */,
+				C3A6DD8426C410B7005C70F7 /* MakeOrderRequest.swift in Sources */,
 				C3C8A96026BB85B100256F2E /* DetailResponse.swift in Sources */,
 				C341B1DE26BD721400B8ADB7 /* OptionDataManager.swift in Sources */,
 				C31909BD26BEA46300CECBB5 /* RealTimeCollectionViewCell.swift in Sources */,
