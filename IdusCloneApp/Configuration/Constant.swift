@@ -13,6 +13,7 @@ struct Constant {
     static var userIdx: Int = 0
     
     static var orderIdx:Int = 0
+    static var basketIdx:Int = 0
     //
     static var price:Int = 0
 }

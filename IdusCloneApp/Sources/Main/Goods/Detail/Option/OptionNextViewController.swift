@@ -27,8 +27,13 @@ class OptionNextViewController: UIViewController {
     // 주문 번호
     var orderIdx: Int?
     
+    //장바구니 번호
+    var basketIdx: Int?
+ 
+    
     // Datamanager
     lazy var dataManager: OptionNextDataManager = OptionNextDataManager()
+    lazy var dataManager2: BasketDataManager = BasketDataManager()
     
     @IBOutlet weak var labelTotal: UILabel!
     @IBOutlet weak var labelShipping: UILabel!
@@ -42,20 +47,59 @@ class OptionNextViewController: UIViewController {
         labelTotal.text = "\(price!)".insertComma + "원"
         
     }
-
+    
     @IBAction func btnBack(_ sender: Any) {
-        dismiss(animated: false, completion: nil)
+        dismiss(animated: false)
+            
+      
     }
-    //장바구니 페이지로
+    //즉시구매 장바구니 페이지로
     @IBAction func btnBuy(_ sender: Any) {
         // post 작품담기
-        prodSideIdx![0] += 1
-        prodSideIdx![1] += 1 + option1!
-        let input = OptionNextRequest(userIdx: 3, prodIdx: prodIdx!, authorIdx: 1, prodPrice: prodPrice! ,prodCount: [1,1],prodSideIdx: prodSideIdx!)
+        
+        var authorIdx = 1
+        if(detailData!.getDetailRes.authorName! == "씨리얼즈"){
+            authorIdx = 2
+        }else if(detailData!.getDetailRes.authorName! == "레스터"){
+            authorIdx = 3
+            prodSideIdx![0] += 20
+            prodSideIdx![1] += 20 + option1!
+        }else if(detailData!.getDetailRes.authorName! == "체크포러브"){
+            authorIdx = 4
+        }else{
+            prodSideIdx![0] += 1
+            prodSideIdx![1] += 1 + option1!
+        }
+        
+        let input = OptionNextRequest(userIdx: 3, prodIdx: prodIdx!, authorIdx: authorIdx, prodPrice: prodPrice! ,prodCount: [1,1],prodSideIdx: prodSideIdx!)
         print(input)
         //print(email)
+        
         dataManager.postOptionNext(input, delegate: self, userIdx: 3)
         showIndicator()
+    }
+    @IBAction func btnBaskets(_ sender: Any) {
+        
+        var authorIdx = 1
+        if(detailData!.getDetailRes.authorName! == "씨리얼즈"){
+            authorIdx = 2
+        }else if(detailData!.getDetailRes.authorName! == "레스터"){
+            authorIdx = 3
+            prodSideIdx![0] += 20
+            prodSideIdx![1] += 20 + option1!
+        }else if(detailData!.getDetailRes.authorName! == "체크포러브"){
+            authorIdx = 4
+        }else{
+            prodSideIdx![0] += 1
+            prodSideIdx![1] += 1 + option1!
+        }
+        
+        let input = BasketRequest(userIdx: 3, prodIdx: prodIdx!, authorIdx: authorIdx, prodPrice: prodPrice! ,prodCount: [1,1],prodSideIdx: prodSideIdx!)
+        print(input)
+        //print(email)
+        dataManager2.postBasket(input, delegate: self, userIdx: 3)
+        showIndicator()
+        
     }
     // 페이지 이동
     func goCartViewController()  {
@@ -126,10 +170,35 @@ extension OptionNextViewController {
             orderIdx = x.orderIdx
         }
         Constant.orderIdx = orderIdx!
+        
         goCartViewController()
+        
+       
     }
     
     func failedToOptionNext(message: String) {
+        self.presentAlert(title: message)
+    }
+}
+extension OptionNextViewController {
+    func didSuccessBasket(_ result: BasketResponse) {
+        //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
+        dismissIndicator()
+        self.presentBottomAlert(message: "장바구니 담기 성공!")
+        print("장바구니 담기 성공!\(result.message!)")
+        if let x = result.result{
+            print("장바구니 번호\(x.basketIdx![0])")
+            basketIdx = x.basketIdx![0]
+        }
+        Constant.basketIdx = basketIdx!
+        
+        //self.dismiss(animated: true)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+
+       
+    }
+    
+    func failedToBasket(message: String) {
         self.presentAlert(title: message)
     }
 }
