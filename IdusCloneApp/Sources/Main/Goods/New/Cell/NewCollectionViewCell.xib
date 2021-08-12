@@ -51,6 +51,10 @@
                             <constraint firstAttribute="height" constant="29" id="YGz-cy-EJJ"/>
                         </constraints>
                         <state key="normal" image="찜_전"/>
+                        <state key="selected" image="찜_후"/>
+                        <connections>
+                            <action selector="btnCheck:" destination="gTV-IL-0wX" eventType="touchUpInside" id="uYC-Wp-sf7"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -70,6 +74,7 @@
             </constraints>
             <size key="customSize" width="174" height="155"/>
             <connections>
+                <outlet property="btnCheck" destination="sXp-DH-QQ3" id="v4p-Z4-EEi"/>
                 <outlet property="imageNew" destination="hdu-En-0T2" id="LcL-uy-Rj3"/>
                 <outlet property="labelInfo" destination="NKe-MV-NNw" id="jAl-A6-jWo"/>
                 <outlet property="labelProd" destination="x0S-LS-dbq" id="ygd-qC-TQ4"/>
@@ -79,5 +84,6 @@
     </objects>
     <resources>
         <image name="찜_전" width="47" height="44"/>
+        <image name="찜_후" width="44" height="39"/>
     </resources>
 </document>

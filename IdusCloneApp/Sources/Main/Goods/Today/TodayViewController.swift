@@ -91,6 +91,7 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     func collectionView(collectionviewcell: BannerCollectionViewCell?, index: Int, didTappedInTableViewCell: BannerTableViewCell) {
         let todayStoryboard = UIStoryboard(name: "TodayStoryboard", bundle: nil)
         guard let vc = todayStoryboard.instantiateViewController(withIdentifier: "BannerViewController") as? BannerViewController else { return }
+        vc.index = index
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -98,6 +99,7 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     func collectionView(collectionviewcell: EventCollectionViewCell?, index: Int, didTappedInTableViewCell: EventTableViewCell) {
         let todayStoryboard = UIStoryboard(name: "TodayStoryboard", bundle: nil)
         guard let vc = todayStoryboard.instantiateViewController(withIdentifier: "EventViewController") as? EventViewController else { return }
+        vc.index = index
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

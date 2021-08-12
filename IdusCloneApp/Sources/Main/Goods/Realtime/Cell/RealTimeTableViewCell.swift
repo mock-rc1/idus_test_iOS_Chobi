@@ -13,7 +13,7 @@ class RealTimeTableViewCell: UITableViewCell {
     
     // 데이터 배열
     var realtimeArray: Array<RealTime> = []
-    
+    var cellheight = 1.7
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,7 +44,7 @@ extension RealTimeTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             // 컬렉션 뷰 한 줄에 2개가 딱 맞게 정사각형으로 들어가게!
         let width = collectionView.bounds.width / 2.17
-        return CGSize(width: width, height: width * 1.7)
+        return CGSize(width: width, height: width * CGFloat(cellheight))
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RealTimeCollectionViewCell", for: indexPath) as? RealTimeCollectionViewCell {
@@ -74,4 +74,9 @@ extension RealTimeTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         self.realtimeArray = realtime
         self.realTimeCollectionView.reloadData()
     }
+    func setHeight(height: Double)  {
+        self.cellheight = height
+        self.realTimeCollectionView.reloadData()
+    }
+    
 }

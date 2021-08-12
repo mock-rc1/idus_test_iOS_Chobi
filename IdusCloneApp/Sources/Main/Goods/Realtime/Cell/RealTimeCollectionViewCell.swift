@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 class RealTimeCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var btnHeart: UIButton!
     
     @IBOutlet weak var imageRealtime: UIImageView!
     @IBOutlet weak var labelAuthor: UILabel!
@@ -22,6 +23,13 @@ class RealTimeCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    @IBAction func btnHeart(_ sender: Any) {
+        if(btnHeart.isSelected){
+            btnHeart.isSelected = false
+        }else{
+            btnHeart.isSelected = true
+        }
+    }
     func setCell(realtime: RealTime){
         if let z = realtime.prodImage{
             imageRealtime.sd_setImage(with: URL(string: z), completed: nil)

@@ -24,8 +24,11 @@ class MyInfoViewController: BaseViewController,  ShippingProtocol{
         super.viewDidLoad()
         configureUI()
         setupTableView()
+        self.tabBarController?.tabBar.isHidden = false
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
     func configureUI() {
         // #imageLiteral(resourceName: "상단_종")
         let btnChat = UIBarButtonItem(image: #imageLiteral(resourceName: "상단_채팅"), style: .plain, target: self, action: #selector(moveChat))

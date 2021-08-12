@@ -9,8 +9,17 @@ import Foundation
 import UIKit
 import XLPagerTabStrip
 
-class RealtimeViewController: BaseViewController, IndicatorInfoProvider{
+class RealtimeViewController: BaseViewController, IndicatorInfoProvider, CheckDelegate{
+    func didSelectedCheckButton(isChecked: Bool) {
+        if(isChecked){
+            height = 1.0
+        }else{
+            height = 1.7
+        }
+        tableView.reloadData()
+    }
     
+    var height = 1.7
     //MARK: - Outlet
     var onlyImage = false
     //실시간 데이터
@@ -72,7 +81,7 @@ extension RealtimeViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "RealTimeTopTableViewCell") as? RealTimeTopTableViewCell {
                 //cell.bannerCellDelegate = self
-                
+                cell.delegate = self
                 return cell
             }
         case 1:
@@ -80,6 +89,7 @@ extension RealtimeViewController: UITableViewDataSource, UITableViewDelegate{
                 //cell.bannerCellDelegate = self
                 if let x = realtimeData?.getNowOrderRes{
                     cell.setCell(realtime: x)
+                    cell.setHeight(height: height)
                 }
                 return cell
             }

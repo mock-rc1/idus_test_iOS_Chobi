@@ -35,7 +35,7 @@ class ClassViewController: ButtonBarPagerTabStripViewController{
         imageView.image = image
         navigationItem.titleView = imageView
         let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchBar.placeholder = "무료배송을 검색해보세요."
+        searchController.searchBar.placeholder = "온라인 클래스 검색"
         searchController.searchBar.backgroundColor = UIColor.white
         searchController.searchBar.tintColor = UIColor.white
         searchController.searchBar.barTintColor = UIColor.white

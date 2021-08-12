@@ -12,6 +12,7 @@ class NewTableViewCell: UITableViewCell {
     @IBOutlet weak var newCollectionView: UICollectionView!
     // 데이터 배열
     var newArray: Array<New> = []
+    var cellheight = 1.4
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -42,7 +43,7 @@ extension NewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             // 컬렉션 뷰 한 줄에 2개가 딱 맞게 정사각형으로 들어가게!
         let width = collectionView.bounds.width / 2.17
-        return CGSize(width: width, height: width * 1.4)
+        return CGSize(width: width, height: width * CGFloat(cellheight))
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewCollectionViewCell", for: indexPath) as? NewCollectionViewCell {
@@ -70,6 +71,11 @@ extension NewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource
     //데이터 가져올 함수
     func setCell(new: Array<New>)  {
         self.newArray = new
+        self.newCollectionView.reloadData()
+    }
+    
+    func setHeight(height: Double)  {
+        self.cellheight = height
         self.newCollectionView.reloadData()
     }
 }

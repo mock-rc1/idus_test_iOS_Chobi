@@ -25,9 +25,13 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <state key="normal" image="square" catalog="system">
+                        <state key="normal" image="체크_빈">
                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <state key="selected" image="사각형 체크"/>
+                        <connections>
+                            <action selector="btnCheck:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="baw-5x-c5d"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지금! 새로 등록된 작품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvL-SA-0mO">
                         <rect key="frame" x="6" y="50" width="125" height="17"/>
@@ -35,8 +39,8 @@
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8월 7일 19:58 기준" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9R-4B-kI2">
-                        <rect key="frame" x="283" y="50" width="113.5" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8월 12일 19:58 기준" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9R-4B-kI2">
+                        <rect key="frame" x="276.5" y="50" width="120" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -60,10 +64,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnCheck" destination="HDj-NH-DYG" id="9GB-Jf-eqN"/>
+            </connections>
             <point key="canvasLocation" x="132" y="95"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="square" catalog="system" width="128" height="114"/>
+        <image name="사각형 체크" width="36" height="36"/>
+        <image name="체크_빈" width="36" height="36"/>
     </resources>
 </document>

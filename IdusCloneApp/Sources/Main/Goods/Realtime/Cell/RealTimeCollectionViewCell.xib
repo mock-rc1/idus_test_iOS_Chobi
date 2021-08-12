@@ -81,6 +81,10 @@
                             <constraint firstAttribute="width" constant="32" id="jFa-pS-CPU"/>
                         </constraints>
                         <state key="normal" image="찜_전"/>
+                        <state key="selected" image="찜_후"/>
+                        <connections>
+                            <action selector="btnHeart:" destination="gTV-IL-0wX" eventType="touchUpInside" id="PGE-6u-4ke"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -106,6 +110,7 @@
             </constraints>
             <size key="customSize" width="217" height="329"/>
             <connections>
+                <outlet property="btnHeart" destination="EDB-IM-cGN" id="3NF-6e-wBK"/>
                 <outlet property="imageRealtime" destination="gzR-EP-fAM" id="tOO-2W-PCX"/>
                 <outlet property="imageStar" destination="LK2-pf-cci" id="ajC-kO-FcY"/>
                 <outlet property="labelAuthor" destination="vdT-mN-0K6" id="Vxy-Ba-Yln"/>
@@ -119,6 +124,7 @@
     <resources>
         <image name="별5개" width="386" height="70"/>
         <image name="찜_전" width="47" height="44"/>
+        <image name="찜_후" width="44" height="39"/>
         <image name="후기" width="75" height="56"/>
     </resources>
 </document>

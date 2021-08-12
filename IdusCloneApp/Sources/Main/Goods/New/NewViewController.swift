@@ -9,7 +9,16 @@ import Foundation
 import UIKit
 import XLPagerTabStrip
 
-class NewViewController: BaseViewController, IndicatorInfoProvider{
+class NewViewController: BaseViewController, IndicatorInfoProvider, HeartDelegate{
+    func didSelectedHeartButton(isChecked: Bool) {
+        if(isChecked){
+            height = 1.0
+        }else{
+            height = 1.4
+        }
+        tableView.reloadData()
+    }
+    
     
     //MARK: - Outlet
     
@@ -17,6 +26,8 @@ class NewViewController: BaseViewController, IndicatorInfoProvider{
     
     //실시간 데이터
     var newData: NewResult?
+    
+    var height = 1.4
     // Datamanager
     lazy var dataManager: NewDataManager = NewDataManager()
     
@@ -67,7 +78,7 @@ extension NewViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "NewTopTableViewCell") as? NewTopTableViewCell {
                 //cell.bannerCellDelegate = self
-                
+                cell.delegate = self
                 return cell
             }
         case 1:
@@ -75,6 +86,7 @@ extension NewViewController: UITableViewDataSource, UITableViewDelegate{
                 //cell.bannerCellDelegate = self
                 if let x = newData?.getNewRes{
                     cell.setCell(new: x)
+                    cell.setHeight(height: height)
                 }
                 return cell
             }

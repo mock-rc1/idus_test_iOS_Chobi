@@ -6,9 +6,15 @@
 //
 
 import UIKit
+protocol CheckDelegate: AnyObject {
+    func didSelectedCheckButton(isChecked: Bool)
+   
+}
 
 class RealTimeTopTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var btnCheck: UIButton!
+    var delegate: CheckDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +24,16 @@ class RealTimeTopTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    @IBAction func btnCheck(_ sender: Any) {
+        if(btnCheck.isSelected){
+            btnCheck.isSelected = false
+            delegate?.didSelectedCheckButton(isChecked: false)
+        }else{
+            btnCheck.isSelected = true
+            delegate?.didSelectedCheckButton(isChecked: true)
+        }
+        
     }
     
 }

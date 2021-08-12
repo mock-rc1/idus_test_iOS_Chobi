@@ -10,6 +10,7 @@ import UIKit
 class NewCollectionViewCell: UICollectionViewCell {
 
     
+    @IBOutlet weak var btnCheck: UIButton!
     @IBOutlet weak var labelInfo: UILabel!
     @IBOutlet weak var labelProd: UILabel!
     @IBOutlet weak var imageNew: UIImageView!
@@ -25,4 +26,11 @@ class NewCollectionViewCell: UICollectionViewCell {
         imageNew.sd_setImage(with: URL(string: new.prodImage!), completed: nil)
     }
     
+    @IBAction func btnCheck(_ sender: Any) {
+        if(btnCheck.isSelected){
+            btnCheck.isSelected = false
+        }else{
+            btnCheck.isSelected = true
+        }
+    }
 }

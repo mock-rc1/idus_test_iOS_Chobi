@@ -12,6 +12,7 @@ class MyShippingViewController: ButtonBarPagerTabStripViewController {
         configureButtonBar()
         super.viewDidLoad()
         configureUI()
+        self.tabBarController?.tabBar.isHidden = true
     }
     func configureUI() {
         
