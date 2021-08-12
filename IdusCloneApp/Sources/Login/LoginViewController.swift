@@ -73,6 +73,8 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
                     let data = try? Data(contentsOf: url) {
                     //self.imageProfile.image = UIImage(data: data)
                 }
+                let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+                self.changeRootViewController(mainTabBarController)
             }
         }
     }
