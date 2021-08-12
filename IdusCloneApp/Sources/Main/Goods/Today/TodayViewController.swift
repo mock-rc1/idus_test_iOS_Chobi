@@ -196,7 +196,12 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate{
                     cell.setCell(row: x.getDisProdRes)
                 }
                 if let arr = cell.labelTimer.text?.components(separatedBy: ":"){
-                    cell.labelTimer.text = "\(arr[0]):\(arr[1]):\(String(Int(arr[2])! - 1))"
+                    if(Int(arr[2]) == 0){
+                        cell.labelTimer.text = "\(arr[0]):\(String(Int(arr[1])! - 1)):59"
+                    }else{
+                        cell.labelTimer.text = "\(arr[0]):\(arr[1]):\(String(Int(arr[2])! - 1))"
+                    }
+                    
                 }
                 
                 return cell
