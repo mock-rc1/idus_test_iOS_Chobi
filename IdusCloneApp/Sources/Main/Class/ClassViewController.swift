@@ -8,6 +8,9 @@
 import Foundation
 import XLPagerTabStrip
 class ClassViewController: ButtonBarPagerTabStripViewController{
+    
+    
+    
     override func viewDidLoad() {
         configureButtonBar()
         super.viewDidLoad()

@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hDV-Nv-pfA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hDV-Nv-pfA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -39,8 +39,64 @@
             </objects>
             <point key="canvasLocation" x="-230" y="56"/>
         </scene>
+        <!--Event View Controller-->
+        <scene sceneID="2Tu-gu-ysa">
+            <objects>
+                <viewController storyboardIdentifier="EventViewController" id="fIE-AI-3X7" customClass="EventViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EUU-w7-YLg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="이벤트상세" translatesAutoresizingMaskIntoConstraints="NO" id="idG-q3-3Kv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e1a-2Z-4f0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="idG-q3-3Kv" firstAttribute="leading" secondItem="e1a-2Z-4f0" secondAttribute="leading" id="3h6-5u-2tN"/>
+                            <constraint firstItem="idG-q3-3Kv" firstAttribute="top" secondItem="e1a-2Z-4f0" secondAttribute="top" id="ELJ-F3-I33"/>
+                            <constraint firstItem="idG-q3-3Kv" firstAttribute="trailing" secondItem="e1a-2Z-4f0" secondAttribute="trailing" id="IWq-dS-j1A"/>
+                            <constraint firstItem="idG-q3-3Kv" firstAttribute="bottom" secondItem="e1a-2Z-4f0" secondAttribute="bottom" id="z2t-vp-31N"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Obe-fW-7HY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577" y="339"/>
+        </scene>
+        <!--Banner View Controller-->
+        <scene sceneID="sDn-Du-pBn">
+            <objects>
+                <viewController storyboardIdentifier="BannerViewController" id="J1z-Yc-m3h" customClass="BannerViewController" customModule="IdusCloneApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rFq-Tc-bCa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="배너상세" translatesAutoresizingMaskIntoConstraints="NO" id="a0P-ry-A6s">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ioa-fD-OlY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ioa-fD-OlY" firstAttribute="trailing" secondItem="a0P-ry-A6s" secondAttribute="trailing" id="UUM-AI-VzN"/>
+                            <constraint firstItem="a0P-ry-A6s" firstAttribute="top" secondItem="Ioa-fD-OlY" secondAttribute="top" id="ixt-Lv-OcJ"/>
+                            <constraint firstItem="a0P-ry-A6s" firstAttribute="leading" secondItem="Ioa-fD-OlY" secondAttribute="leading" id="jw9-HB-vAB"/>
+                            <constraint firstItem="Ioa-fD-OlY" firstAttribute="bottom" secondItem="a0P-ry-A6s" secondAttribute="bottom" id="u8u-sk-BBz"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEV-Fm-OHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="-385"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="배너상세" width="640" height="1008"/>
+        <image name="이벤트상세" width="640" height="1008"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

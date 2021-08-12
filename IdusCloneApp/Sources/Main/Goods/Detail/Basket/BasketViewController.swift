@@ -1,56 +1,44 @@
 //
-//  CartViewController.swift
+//  BaskekViewController.swift
 //  IdusCloneApp
 //
-//  Created by 김수빈 on 2021/08/07.
+//  Created by 김수빈 on 2021/08/12.
 //
 import SDWebImage
-import Foundation
 import UIKit
-/*
-protocol OrderRequest: AnyObject {
-    func btnOrderRequest() -> String
-}*/
-
-class CartViewController: UIViewController{
+import Foundation
+class BasketViewController: BaseViewController{
+    
     
     @IBOutlet weak var tableView: UITableView!
-    
-    //var delegate: OrderRequest?
     @IBOutlet weak var labelPrice: UILabel!
-    @IBOutlet weak var labelShippingPrice: UILabel!
+    @IBOutlet weak var labelShipping: UILabel!
+    @IBOutlet weak var btnRadio1: UIButton!
     
-    // Datamanager
-    lazy var dataManager: CartDataManager = CartDataManager()
+    @IBOutlet weak var btnRadio2: UIButton!
+    
     // Datamanager
     lazy var dataManager2: BasketCartDataManager = BasketCartDataManager()
-    
     // Datamanager
     lazy var dataManager3: MakeOrderDataManager = MakeOrderDataManager()
-    
     //제품 원래 가격
     var price = 0
     var orderProdIdx = 0
     var cartData: CartResult?
     var basketCartData: BasketCartResult?
     var addressRequest = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnRadio1.isSelected = true
         configureUI()
         setupTableView()
         if(Constant.isBasket){
             print("장바구니번호 울랄라\(Constant.basketIdx)")
             //price = Constant.price
             //print("Constant.price \(Constant.price)")
-            //dataManager2.getBasketCart(vc: self, userIdx: 3)
-        }else{
-            print("주문번호 울랄라\(Constant.orderIdx)")
-            price = Constant.price
-            print("Constant.price \(Constant.price)")
-            dataManager.getCart(vc: self, userIdx: 3, orderIdx: Constant.orderIdx)
+            dataManager2.getBasketCart(vc: self, userIdx: 3)
         }
-        
-        
     }
     func configureUI() {
         
@@ -64,20 +52,7 @@ class CartViewController: UIViewController{
     @objc func moveBack(){
         dismiss(animated: true, completion: nil)
     }
-    
-    func goBuyPage() {
-        let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
-        let buyViewController = detailStoryboard.instantiateViewController(identifier: "BuyViewController")
-        
-        self.navigationController?.pushViewController(buyViewController, animated: true)
-    }
-    
     @IBAction func btnBuy(_ sender: Any) {
-        /*
-        let addressRequest = delegate?.btnOrderRequest()
-        if let x = addressRequest{
-            print(x)
-        }*/
         tableView.reloadData()
         
         let basketIdx = [Constant.basketIdx]
@@ -85,21 +60,36 @@ class CartViewController: UIViewController{
         
         if(Constant.isBasket){
             let input = MakeOrderRequest(basketIdx: basketIdx, orderProdIdx: order)
-            //dataManager3.postMakeOrder(input, delegate: self, userIdx: 3)
+            dataManager3.postMakeOrder(input, delegate: self, userIdx: 3)
         }else{
             print("주문 요청: \(addressRequest)")
             
             goBuyPage()
             
         }
+    }
+    func goBuyPage() {
+        let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
+        let buyViewController = detailStoryboard.instantiateViewController(identifier: "BuyViewController")
         
+        self.navigationController?.pushViewController(buyViewController, animated: true)
+    }
+    @IBAction func btnRadio1(_ sender: Any) {
+        if(!btnRadio1.isSelected){
+            btnRadio1.isSelected = true
+            btnRadio2.isSelected = false
+        }
+    }
+    
+    @IBAction func btnRadio2(_ sender: Any) {
+        if(!btnRadio2.isSelected){
+            btnRadio1.isSelected = false
+            btnRadio2.isSelected = true
+        }
     }
 }
-
-
-
 // 테이블뷰 extension
-extension CartViewController: UITableViewDataSource, UITableViewDelegate{
+extension BasketViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(String(lists.count) + " 줄")
@@ -138,7 +128,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
                                 cell.labelTitle.text = info.prodName!
                                 cell.labelShipping.text = "\(info.deliveryCost!)".insertComma + "원"
                                 cell.labelMake.text = info.prodNum!
-                                labelShippingPrice.text = "\(info.deliveryCost!)".insertComma + "원"
+                                labelShipping.text = "\(info.deliveryCost!)".insertComma + "원"
                             }
                         }
                     }
@@ -152,7 +142,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
                         cell.labelTitle.text = x.getNowBasketinfoRes.prodName!
                         cell.labelShipping.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
                         cell.labelMake.text = x.getNowBasketinfoRes.prodNum!
-                        labelShippingPrice.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
+                        labelShipping.text = "\(x.getNowBasketinfoRes.deliveryCost!)".insertComma + "원"
                         var optionList = ""
                         var optionPrice = 0
                         for option in x.getNowBasketOptionRes{
@@ -205,23 +195,8 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
         
     }
 }
-extension CartViewController {
-    func didSuccessCart(_ result: CartResponse) {
-        //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
-        print("장바구니 가져오기 성공!\(result.message!)")
-        print(result.result)
-        cartData = result.result
-        tableView.reloadData()
-        
-        //labelPrice.text = "\(Constant.price)".insertComma + "원"
-        //labelShippingPrice.text = "\(String(describing: cartData?.getNowBasketinfoRes.deliveryCost!))".insertComma + "원"
-    }
-    
-    func failedToCart(message: String) {
-        self.presentAlert(title: message)
-    }
-}
-extension CartViewController {
+
+extension BasketViewController {
     func didSuccessBasketCart(_ result: BasketCartResponse) {
         //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
         print("장바구니 가져오기 성공!\(result.message!)")
@@ -237,7 +212,7 @@ extension CartViewController {
         self.presentAlert(title: message)
     }
 }
-extension CartViewController {
+extension BasketViewController {
     func didSuccessMakeOrder(_ result: MakeOrderResponse) {
         //self.presentAlert(title: "장바구니 담기 성공!", message: result.message)
         print("장바구니 주문 생성 성공!\(result.message!)")

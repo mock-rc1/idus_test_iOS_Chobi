@@ -55,6 +55,9 @@
 		C31909D226BEBC6000CECBB5 /* NewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31909D026BEBC6000CECBB5 /* NewCollectionViewCell.xib */; };
 		C31909D626BEC05800CECBB5 /* NewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31909D526BEC05800CECBB5 /* NewDataManager.swift */; };
 		C31909D826BEC0A000CECBB5 /* NewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31909D726BEC0A000CECBB5 /* NewResponse.swift */; };
+		C31DA92626C4F329006C0912 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA92526C4F329006C0912 /* BasketViewController.swift */; };
+		C31DA92826C50DF3006C0912 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA92726C50DF3006C0912 /* BannerViewController.swift */; };
+		C31DA92A26C50E39006C0912 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31DA92926C50E39006C0912 /* EventViewController.swift */; };
 		C32A80E826B6D4BC00E03C6A /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A80E626B6D4BC00E03C6A /* BannerTableViewCell.swift */; };
 		C32A80E926B6D4BC00E03C6A /* BannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C32A80E726B6D4BC00E03C6A /* BannerTableViewCell.xib */; };
 		C32A80EC26B6D4DA00E03C6A /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32A80EA26B6D4DA00E03C6A /* BannerCollectionViewCell.swift */; };
@@ -289,6 +292,9 @@
 		C31909D026BEBC6000CECBB5 /* NewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCollectionViewCell.xib; sourceTree = "<group>"; };
 		C31909D526BEC05800CECBB5 /* NewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDataManager.swift; sourceTree = "<group>"; };
 		C31909D726BEC0A000CECBB5 /* NewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResponse.swift; sourceTree = "<group>"; };
+		C31DA92526C4F329006C0912 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		C31DA92726C50DF3006C0912 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		C31DA92926C50E39006C0912 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		C32A80E626B6D4BC00E03C6A /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
 		C32A80E726B6D4BC00E03C6A /* BannerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerTableViewCell.xib; sourceTree = "<group>"; };
 		C32A80EA26B6D4DA00E03C6A /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -693,6 +699,14 @@
 			path = Datamanager;
 			sourceTree = "<group>";
 		};
+		C31DA92426C4F310006C0912 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				C31DA92526C4F329006C0912 /* BasketViewController.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
 		C32A80E426B6D2F000E03C6A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +727,7 @@
 				C32A80E726B6D4BC00E03C6A /* BannerTableViewCell.xib */,
 				C32A80EA26B6D4DA00E03C6A /* BannerCollectionViewCell.swift */,
 				C32A80EB26B6D4DA00E03C6A /* BannerCollectionViewCell.xib */,
+				C31DA92726C50DF3006C0912 /* BannerViewController.swift */,
 			);
 			path = Banner;
 			sourceTree = "<group>";
@@ -1417,6 +1432,7 @@
 		C3FF000C26B7EE74000F6988 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				C31DA92426C4F310006C0912 /* Basket */,
 				C39FABA426BFD38A003DDFE9 /* Buy */,
 				C31909AA26BE710900CECBB5 /* Cart */,
 				C34CD15C26BCF58900216317 /* Option */,
@@ -1436,6 +1452,7 @@
 				C3FFFFF926B78C75000F6988 /* EventCollectionViewCell.xib */,
 				C3FFFFFC26B78CF2000F6988 /* EventTableViewCell.swift */,
 				C3FFFFFD26B78CF2000F6988 /* EventTableViewCell.xib */,
+				C31DA92926C50E39006C0912 /* EventViewController.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -1666,6 +1683,7 @@
 				C3825FB626B6C3FA009CAD58 /* RealtimeViewController.swift in Sources */,
 				C3A6DDAB26C44EA0005C70F7 /* ShippingOfflineViewController.swift in Sources */,
 				C33F733926B5444200A57CFA /* AppDelegate.swift in Sources */,
+				C31DA92626C4F329006C0912 /* BasketViewController.swift in Sources */,
 				C3825FAD26B6BEEE009CAD58 /* TodayViewController.swift in Sources */,
 				C3B0B80A26B8006E00588D2D /* TodayGoodsTableViewCell.swift in Sources */,
 				C39FABC226C00515003DDFE9 /* BuyAgreeTableViewCell.swift in Sources */,
@@ -1709,6 +1727,7 @@
 				C3A6DD7C26C3CC80005C70F7 /* BasketRequest.swift in Sources */,
 				C381B46F26BC5DB800EF26D9 /* DetailWithCollectionViewCell.swift in Sources */,
 				C3A6DD8826C410D9005C70F7 /* MakeOrderDataManager.swift in Sources */,
+				C31DA92A26C50E39006C0912 /* EventViewController.swift in Sources */,
 				C3A6DDA726C44DC1005C70F7 /* ShippingGoodsViewController.swift in Sources */,
 				C34B034926C1518F001C1C7B /* AllLocationTableViewCell.swift in Sources */,
 				C349C16326C0743200F13EB2 /* ClassOnlineViewController.swift in Sources */,
@@ -1744,6 +1763,7 @@
 				C317E00226B67C93004FF5F8 /* EmailLoginViewController.swift in Sources */,
 				C349C15F26C05F9900F13EB2 /* CategoryGoodsViewController.swift in Sources */,
 				C33F736126B5450C00A57CFA /* Constant.swift in Sources */,
+				C31DA92826C50DF3006C0912 /* BannerViewController.swift in Sources */,
 				C31909B126BE81B000CECBB5 /* CartViewController.swift in Sources */,
 				C3A6DDA926C44E60005C70F7 /* ShippingOnlineClassViewController.swift in Sources */,
 				C3A6DD8226C3FBD6005C70F7 /* BasketCartDataManager.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class BasketCartDataManager {
-    func getBasketCart(vc: CartViewController, userIdx: Int) {
+    func getBasketCart(vc: BasketViewController, userIdx: Int) {
         let url = "\(Constant.BASE_URL)/users/\(userIdx)/orders/baskets"
         
         let header: HTTPHeaders = [ "Content-Type":"application/json",

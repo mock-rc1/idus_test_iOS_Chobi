@@ -7,7 +7,7 @@
 import Alamofire
 import Foundation
 class MakeOrderDataManager{
-    func postMakeOrder(_ parameters: MakeOrderRequest, delegate: CartViewController, userIdx: Int) {
+    func postMakeOrder(_ parameters: MakeOrderRequest, delegate: BasketViewController, userIdx: Int) {
         
         let header: HTTPHeaders = [ "Content-Type":"application/json",
                                      "X-ACCESS-TOKEN":"\(Constant.jwtToken)"]

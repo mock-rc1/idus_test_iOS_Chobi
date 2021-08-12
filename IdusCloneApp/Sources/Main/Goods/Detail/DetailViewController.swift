@@ -87,8 +87,8 @@ class DetailViewController: BaseViewController, DetailImageCollectionViewCellDel
     @objc func moveCart() {
         Constant.isBasket = true
         let detailStoryboard = UIStoryboard(name: "DetailStoryboard", bundle: nil)
-        let cartViewController = detailStoryboard.instantiateViewController(identifier: "CartViewController")
-        let vc = UINavigationController(rootViewController: cartViewController)
+        let basketViewController = detailStoryboard.instantiateViewController(identifier: "BasketViewController")
+        let vc = UINavigationController(rootViewController: basketViewController)
         
         vc.modalPresentationStyle = .overFullScreen
         self.present(vc, animated: true, completion: nil)

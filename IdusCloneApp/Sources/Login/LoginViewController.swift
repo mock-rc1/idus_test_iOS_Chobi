@@ -46,8 +46,8 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
                     _ = oauthToken
                             
                     // 어세스토큰
-                    //let accessToken = oauthToken?.accessToken
-                            
+                    let accessToken = oauthToken?.accessToken
+                        print("어세스코큰 \(accessToken)")
                     //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
                     self.setUserInfo()
                 }

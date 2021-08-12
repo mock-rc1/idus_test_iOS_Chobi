@@ -12,7 +12,7 @@ import XLPagerTabStrip
 class RealtimeViewController: BaseViewController, IndicatorInfoProvider{
     
     //MARK: - Outlet
-    
+    var onlyImage = false
     //실시간 데이터
     var realtimeData: RealtimeResult?
     

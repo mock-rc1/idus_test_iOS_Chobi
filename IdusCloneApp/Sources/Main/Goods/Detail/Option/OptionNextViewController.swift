@@ -60,12 +60,16 @@ class OptionNextViewController: UIViewController {
         var authorIdx = 1
         if(detailData!.getDetailRes.authorName! == "씨리얼즈"){
             authorIdx = 2
+            prodSideIdx![0] += 6
+            prodSideIdx![1] += 6 + option1!
         }else if(detailData!.getDetailRes.authorName! == "레스터"){
             authorIdx = 3
             prodSideIdx![0] += 20
             prodSideIdx![1] += 20 + option1!
         }else if(detailData!.getDetailRes.authorName! == "체크포러브"){
             authorIdx = 4
+            prodSideIdx![0] += 35
+            prodSideIdx![1] += 35 + option1!
         }else{
             prodSideIdx![0] += 1
             prodSideIdx![1] += 1 + option1!

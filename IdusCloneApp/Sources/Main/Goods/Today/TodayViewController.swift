@@ -89,12 +89,16 @@ class TodayViewController: BaseViewController, IndicatorInfoProvider, UICollecti
     
     //배너
     func collectionView(collectionviewcell: BannerCollectionViewCell?, index: Int, didTappedInTableViewCell: BannerTableViewCell) {
-        //goDetailPage(index: index)
+        let todayStoryboard = UIStoryboard(name: "TodayStoryboard", bundle: nil)
+        guard let vc = todayStoryboard.instantiateViewController(withIdentifier: "BannerViewController") as? BannerViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // 이벤트
     func collectionView(collectionviewcell: EventCollectionViewCell?, index: Int, didTappedInTableViewCell: EventTableViewCell) {
-        //goDetailPage(index: index)
+        let todayStoryboard = UIStoryboard(name: "TodayStoryboard", bundle: nil)
+        guard let vc = todayStoryboard.instantiateViewController(withIdentifier: "EventViewController") as? EventViewController else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //나와 연관된 상품
