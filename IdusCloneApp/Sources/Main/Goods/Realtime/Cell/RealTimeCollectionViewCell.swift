@@ -33,13 +33,19 @@ class RealTimeCollectionViewCell: UICollectionViewCell {
     func setCell(realtime: RealTime){
         if let z = realtime.prodImage{
             imageRealtime.sd_setImage(with: URL(string: z), completed: nil)
+        }else{
+            imageRealtime.image = #imageLiteral(resourceName: "null이미지")
         }
         if let y = realtime.authorName{
             labelAuthor.text = y
+        }else{
+            labelAuthor.text = "엠제이 폰케이스"
         }
         
         if let a = realtime.prodName{
             labelInfo.text = a
+        }else{
+            labelInfo.text = "푸밍 하트톡 폰케이스 스마트톡 생일선물"
         }
         
         if let x = realtime.reviewComment{
@@ -47,6 +53,7 @@ class RealTimeCollectionViewCell: UICollectionViewCell {
         }else{
             labelReview.text = ""
         }
+        
         imageStar.image = rateStar(rate: realtime.prodRatingAvg!)
         labelReviewNum.text = "(\(realtime.prodReviewNum!))"
         

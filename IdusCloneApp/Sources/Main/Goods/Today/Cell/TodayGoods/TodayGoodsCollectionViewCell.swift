@@ -36,9 +36,13 @@ class TodayGoodsCollectionViewCell: UICollectionViewCell {
         }else{
             if let y = todayRealtime.prodName{
                 self.labelTodayGoods.text = y
+            }else{
+                self.labelTodayGoods.text = "엠제이 폰케이스"
             }
             if let z = todayRealtime.prodImage{
                 image.sd_setImage(with: URL(string: z), completed: nil)
+            }else{
+                image.image = #imageLiteral(resourceName: "null이미지")
             }
             
             if let x = todayRealtime.reviewComment{
