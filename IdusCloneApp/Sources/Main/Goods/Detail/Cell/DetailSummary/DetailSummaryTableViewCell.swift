@@ -52,9 +52,16 @@ class DetailSummaryTableViewCell: UITableViewCell {
         
         btnAuthorName.setTitle("\(detailSummary.authorName!)>", for: .normal)
         labelProdName.text = detailSummary.authorName!
-        labelSalePercent.text = "\(detailSummary.salePercent!)%"
-        labelSaleCost.text = "\(detailSummary.saleCost!)".insertComma + "원"
-        labelProdPrice.text = "\(detailSummary.prodPrice!)".insertComma + "원"
+        if(detailSummary.salePercent! != 0){
+            labelSalePercent.text = "\(detailSummary.salePercent!)%"
+            labelSaleCost.text = "\(detailSummary.saleCost!)".insertComma + "원"
+            labelProdPrice.text = "\(detailSummary.prodPrice!)".insertComma + "원"
+        }else{
+            labelSaleCost.text = "\(detailSummary.prodPrice!)".insertComma + "원"
+            labelSalePercent.text = ""
+            labelProdPrice.text = ""
+        }
+        
         labelPoint.text = "최대 \(detailSummary.point!)P"
         btnProdReviewNum.setTitle("(\(detailSummary.prodReviewNum!))>", for: .normal)
         labelProdReviewNum.text = "고객님들이 " + "\(detailSummary.orderNum!)".insertComma + "회 구매했어요!"

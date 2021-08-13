@@ -49,6 +49,9 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
                     let accessToken = oauthToken?.accessToken
                         print("어세스코큰 \(accessToken)")
                     //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
+                    Constant.kakaoToken = accessToken!
+                    var dataManager: KakaoDataManager = KakaoDataManager()
+                    dataManager.postKakao( request: KakaoRequest(), viewController: self, kakao: Constant.kakaoToken)
                     self.setUserInfo()
                 }
         }
@@ -68,13 +71,13 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
                 // 닉네임: user?.kakaoAccount?.profile?.nickname
                 print(user?.kakaoAccount?.profile?.nickname)
                 
+                
                 // 프사: user?.kakaoAccount?.profile?.profileImageUrl
                 if let url = user?.kakaoAccount?.profile?.profileImageUrl,
                     let data = try? Data(contentsOf: url) {
                     //self.imageProfile.image = UIImage(data: data)
                 }
-                let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
-                self.changeRootViewController(mainTabBarController)
+                
             }
         }
     }
@@ -191,3 +194,16 @@ class LoginViewController: BaseViewController, NaverThirdPartyLoginConnectionDel
 }
 
 
+extension LoginViewController {
+    func didSuccessKakao(_ result: KakaoResult) {
+ 
+            Constant.kakaoToken = result.jwt!
+        let mainTabBarController = UIStoryboard(name: "MainStoryboard", bundle: nil).instantiateViewController(identifier: "MainTabBarController")
+        self.changeRootViewController(mainTabBarController)
+
+    }
+    
+    func failedToKakao(message: String) {
+        self.presentAlert(title: message)
+    }
+}
