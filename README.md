@@ -1,19 +1,22 @@
-# ⭐️ iOS 아이디어스 클론 코딩
-라이징캠프 1기 라이징테스트 아이디어스 B 초비
+# <img width=35px src=https://user-images.githubusercontent.com/77331348/150846738-e136ff18-5c6d-42e9-bdca-109d7610f30a.png> RisingTest
 
-: 라이징캠프 2주간 클라이언트/서버 협업 프로젝트 진행
+**iOS 아이디어스 클론 코딩 🧡**
 
-(21.07.31 ~ 21.08.13)
+> **프로젝트 기간 : 21.07.31 ~ 21.08.13**  
+> **라이징캠프 2주간 클라이언트/서버 협업 프로젝트 진행**
+
+
 
 ## 📌 실행 영상
 
  [![iOS openAPI를 활용한 영화 예매 앱 만들기](https://img.youtube.com/vi/vE-tcEF3iuQ/0.jpg)](https://youtu.be/vE-tcEF3iuQ?t=0s)
 
-⬆️⬆️⬆️실행 영상(유튜브 링크)⬆️⬆️⬆️
+👆🏻 👆🏻 👆🏻   `실행 영상 유튜브 링크`👆🏻 👆🏻 👆🏻  <br><br>
 
 
 ## 📌 개발 범위
-
+![스크린샷 2022-01-25 오후 3 34 34](https://user-images.githubusercontent.com/77331348/150923756-87d6a3cb-1c36-4002-9c9c-bb77c52d7953.png)
+```
 1. 회원가입
 
 2. 로그인(기존 회원, 카카오, 네이버)
@@ -33,45 +36,43 @@
 9. 클래스, 검색, 카테고리, 내 정보 탭 
 
 10. 주문 배송 조회
+```
 
 ## 📌 사용한 API
 
 ✔️ 총 13개
+```
+- 회원가입 POST API
 
-+ 회원가입 POST API
+- 로그인 POST API
 
-+ 로그인 POST API
+- 작품 홈화면 탭별 조회 GET API
 
-+ 작품 홈화면 탭별 조회 GET API
+- 작품 상세페이지 조회 GET API
 
-+ 작품 상세페이지 조회 GET API
+- 작품 옵션 조회 GET API
 
-+ 작품 옵션 조회 GET API
+- 장바구니 작품 등록 POST API
 
-+ 장바구니 작품 등록 POST API
+- 장바구니 조회 GET API
 
-+ 장바구니 조회 GET API
+- 즉시구매 주문 생성 POST API
 
-+ 즉시구매 주문 생성 POST API
+- 즉시구매 장바구니 조회 GET API
 
-+ 즉시구매 장바구니 조회 GET API
+- 결제페이지 결제 PATCH API
 
-+ 결제페이지 결제 PATCH API
+- 결제페이지 조회 GET API
 
-+ 결제페이지 조회 GET API
+- 장바구니 주문 생성 POST API
 
-+ 장바구니 주문 생성 POST API
-
-+ 카카오 로그인 POST API
-
+- 카카오 로그인 POST API
+```
 ## 📌 개발 일지
 <details markdown="1">
-<summary>초비의 개발 일지</summary>
+<summary>2021-07-31 진행 상황</summary>
 
-## 2021-07-31 진행 상황
-
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-07-31 오후 11 45 27](https://user-images.githubusercontent.com/77331348/127743692-0f1292b7-1c8f-474d-b440-977d22718a2b.png)
 ![스크린샷 2021-07-31 오후 11 52 40](https://user-images.githubusercontent.com/77331348/127743781-5898e014-9acf-438b-8b95-9f0740ec8769.png)
@@ -93,10 +94,12 @@
 + 약관 동의 체크박스 구현 - 전체/개별 동의
 
 + 키보드 delegate 활용 - return 클릭 시, 키보드 내리기
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-01 진행 상황</summary>
 
-## 2021-08-01 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-01 오후 3 05 39](https://user-images.githubusercontent.com/77331348/127772808-140b4b25-2fb6-4ec4-8bad-81ae1eff0c7a.png)
 ![스크린샷 2021-08-01 오후 3 04 56](https://user-images.githubusercontent.com/77331348/127772805-010a8a34-69ea-40ca-92a1-5d1b4f03d733.png)
@@ -111,10 +114,12 @@
 #### 3. 이메일로 로그인 페이지 - 100%
 
 #### 4. 하단/상단 탭바 및 전반적인 UI 구성 - 100%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-02 진행 상황</summary>
 
-## 2021-08-02 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-02 오후 11 20 30](https://user-images.githubusercontent.com/77331348/127877652-2fde8aca-a0b4-40c0-afd1-3eed6ca508c0.png)
 ![스크린샷 2021-08-02 오후 11 21 00](https://user-images.githubusercontent.com/77331348/127877671-95a77346-d9ba-4807-b986-73ef31fc2781.png)
@@ -137,10 +142,12 @@
 + 이벤트 스크롤 구현 
 
 + 광고/이벤트 클릭 시, 디테일 뷰와 연결 - 몇 번째 값인지 넘겨주기
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-03 진행 상황</summary>
 
-## 2021-08-03 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-03 오후 11 27 47](https://user-images.githubusercontent.com/77331348/128033151-355e4d09-dd4b-4612-b8c1-6340d094a9b0.png)
 
@@ -158,10 +165,12 @@
 + 하단 뷰 구성 - 100%
 
 + 상세 이미지, 요약 정보, 배송, 상세 정보 셀 구현 - 100%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-04 진행 상황</summary>
 
-## 2021-08-04 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-04 오후 11 29 00](https://user-images.githubusercontent.com/77331348/128199245-1b4a46cf-2c8e-4564-b385-16531dce9046.png)
 ![스크린샷 2021-08-04 오후 11 28 40](https://user-images.githubusercontent.com/77331348/128199259-55b58580-d488-428a-95c4-8f2d6fac26d4.png)
@@ -181,10 +190,12 @@
 + 작가 정보 셀 - 100%
 
 + 판매중인 다른 작품들, 이 작품과 함께 본 작품, 인기 작품 셀 - 50%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-05 진행 상황</summary>
 
-## 2021-08-05 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 <img width="340" alt="스크린샷 2021-08-05 오후 11 21 14" src="https://user-images.githubusercontent.com/77331348/128367213-ac38caa5-c13a-46db-a14c-b49c64651cca.png"><img width="341" alt="스크린샷 2021-08-05 오후 11 21 27" src="https://user-images.githubusercontent.com/77331348/128367222-5d19dd5a-6853-40b4-aae8-abee25344313.png">
 
@@ -221,10 +232,12 @@
      클라이언트) 옵션 index, 총수량, 총 가격
 - 단일 구매 넘겨줄 값 정하기: 작품별 정보, 총 가격  
 - 찜, 댓글, 배송지관련 api 논의하기
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-06 진행 상황</summary>
 
-## 2021-08-06 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-06 오후 10 39 26](https://user-images.githubusercontent.com/77331348/128519424-79edf5f6-f6ce-4366-a30b-255766f82bf8.png)
 ![스크린샷 2021-08-06 오후 10 39 43](https://user-images.githubusercontent.com/77331348/128519411-3e905500-f745-4883-8bbb-abdf32a79e4c.png)
@@ -249,10 +262,12 @@
 + 인기 작품 - 100%
 
 #### 4. 작품 -> 옵션 선택 UI - 50%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-07 진행 상황</summary>
 
-## 2021-08-07 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-07 오후 11 25 35](https://user-images.githubusercontent.com/77331348/128603470-79121ef9-1f11-4b53-b62b-1e65f0a7f3d6.png)
 ![스크린샷 2021-08-07 오후 11 25 48](https://user-images.githubusercontent.com/77331348/128603474-3c5798e5-730f-4a8f-ae9f-98b14db1869d.png)
@@ -274,10 +289,12 @@
 + 별점별 해당 별점 이미지 출력 - 100%
 
 #### 5. 작품 -> 실시간, NEW 페이지 GET API - 100%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-08 진행 상황</summary>
 
-## 2021-08-08 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-08 오후 11 21 33](https://user-images.githubusercontent.com/77331348/128636012-f0a88a9a-e8b0-4051-8c9f-79f0374c6fa3.png)
 ![스크린샷 2021-08-08 오후 11 22 00](https://user-images.githubusercontent.com/77331348/128636017-bd9c761d-f625-4812-b64c-830694198f03.png)
@@ -289,10 +306,12 @@
 ![스크린샷 2021-08-08 오후 11 22 50](https://user-images.githubusercontent.com/77331348/128636019-f189aca8-c48b-45fb-bef8-328f50e54fbc.png)
 
 #### 3. 내 정보 페이지 UI - 80%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-09 진행 상황</summary>
 
-## 2021-08-09 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-09 오후 10 44 19](https://user-images.githubusercontent.com/77331348/128722754-c18819ae-5744-4cc5-a778-0a6faa19a47b.png)
 ![스크린샷 2021-08-09 오후 10 44 38](https://user-images.githubusercontent.com/77331348/128722760-5ea06dc5-91d6-4f54-8844-fe51e2b0fcb1.png)
@@ -311,10 +330,12 @@
 #### 4. 작품 -> 즉시구매 장바구니 담기 POST API - 100%
 
 #### 5. 2차 피드백 및 서버 브린님과 3차 회의 - 100%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-10 진행 상황</summary>
 
-## 2021-08-10 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-10 오후 10 25 14](https://user-images.githubusercontent.com/77331348/128880526-ff6cffd3-7141-461a-b19e-949e29adb801.png)
 ![스크린샷 2021-08-10 오후 10 25 24](https://user-images.githubusercontent.com/77331348/128880505-dd8b455d-86e0-4a50-8f73-ff48dd4c920f.png)
@@ -332,10 +353,12 @@
 + UI와 연결 완료
 
 #### 4. 작품 -> 결제 페이지 조회 GET API - 100%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-11 진행 상황</summary>
 
-## 2021-08-10 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-11 오후 11 43 00](https://user-images.githubusercontent.com/77331348/129050801-e7068895-ef1f-443d-98c7-2218d8a9ace5.png)
 ![스크린샷 2021-08-11 오후 11 44 13](https://user-images.githubusercontent.com/77331348/129050821-9e886e64-0b3a-4dd5-b3a5-526a72e0c36b.png)
@@ -354,10 +377,12 @@
 + 1,2,3,4 모두 UI와 연결 완료
 
 #### 5. 로그인, 홈 UI 수정 - 100%
+<hr><br>
+</details>
+<details markdown="1">
+<summary>2021-08-12 진행 상황</summary>
 
-## 2021-08-12 진행 상황
-
-### 📌 성취도
+### ⭐️ 성취도
 
 ![스크린샷 2021-08-12 오후 11 32 49](https://user-images.githubusercontent.com/77331348/129216424-b324dfde-61b8-4444-a2cb-60f7b6895eab.png)
 ![스크린샷 2021-08-12 오후 11 33 11](https://user-images.githubusercontent.com/77331348/129216428-00e73c3d-28fe-467c-b52e-b7d4a287f8af.png)
@@ -378,5 +403,5 @@
 
 #### 5. 작품 -> 실시간, NEW 페이지 UI 수정 - 100%
 + 찜 하기, 이미지만 보기 구현
-
 </details>
+
