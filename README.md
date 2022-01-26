@@ -1,4 +1,4 @@
-# <img width=35px src=https://user-images.githubusercontent.com/77331348/150846738-e136ff18-5c6d-42e9-bdca-109d7610f30a.png> RisingTest
+# 🏕 RisingTest
 
 **iOS 아이디어스 클론 코딩 🧡**
 
